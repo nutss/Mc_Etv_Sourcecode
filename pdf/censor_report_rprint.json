@@ -1,0 +1,481 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			group_1: {
+			fillColor: '#D1FAD1'
+		},
+		nbgroup_1: {
+			fillColor: '#D1FAD1'
+		},
+		header_1: {
+			fillColor: '#D1FAD1',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_censorStatus: {
+			fillColor: '#D1FAD1',
+			fontSize: 15,
+			bold: true
+		},
+		group_censorStatus: {
+			fillColor: '#D1FAD1'
+		},
+
+		
+	blackshade: {
+		fontSize: 15,
+	},
+	summarycell: {
+		border:[false, true, false, true ]
+	},
+/*
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	*/	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid}
+		{
+			text: '{$jscaption Censor_Report}',
+		},
+		{END embedded_grid}
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					if( node.table.embeddedPage ) {
+						return (i === 0 || i === node.table.widths.length) ? 0.1 : 0;
+					} else  {
+						return 0.1; 
+					}
+				},
+				hLineColor: function(i, node) { return 'gray'; },
+				vLineColor: function(i, node) { return 'gray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 0 + 1 {BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 21,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel Censor_Report rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+	{BEGIN censorStatus_newgroup}
+		[
+								{
+				text: '{$jslabel Censor_Report censorStatus }',
+				style: "blackshade",
+				alignment: '{$censorStatus_align}',
+			},
+																																																																																																									
+													{
+				text: '{$jslabel Censor_Report fileNo }',
+				style: "blackshade",
+				alignment: '{$fileNo_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileName }',
+				style: "blackshade",
+				alignment: '{$fileName_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileType }',
+				style: "blackshade",
+				alignment: '{$fileType_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileDuration }',
+				style: "blackshade",
+				alignment: '{$fileDuration_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileSubject }',
+				style: "blackshade",
+				alignment: '{$fileSubject_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileTitle }',
+				style: "blackshade",
+				alignment: '{$fileTitle_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileClassLevel }',
+				style: "blackshade",
+				alignment: '{$fileClassLevel_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileTeacherName }',
+				style: "blackshade",
+				alignment: '{$fileTeacherName_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileTeacherInfo }',
+				style: "blackshade",
+				alignment: '{$fileTeacherInfo_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileRaw }',
+				style: "blackshade",
+				alignment: '{$fileRaw_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileMD5 }',
+				style: "blackshade",
+				alignment: '{$fileMD5_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report censorApproveTime }',
+				style: "blackshade",
+				alignment: '{$censorApproveTime_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report censorUsername }',
+				style: "blackshade",
+				alignment: '{$censorUsername_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report censoReson }',
+				style: "blackshade",
+				alignment: '{$censoReson_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report entryUserName }',
+				style: "blackshade",
+				alignment: '{$entryUserName_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report entryTime }',
+				style: "blackshade",
+				alignment: '{$entryTime_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report filedate }',
+				style: "blackshade",
+				alignment: '{$filedate_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report filePath }',
+				style: "blackshade",
+				alignment: '{$filePath_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report fileStatus }',
+				style: "blackshade",
+				alignment: '{$fileStatus_align}',
+			},
+											{
+				text: '{$jslabel Censor_Report playlistID }',
+				style: "blackshade",
+				alignment: '{$playlistID_align}',
+			},
+						],
+	
+	[
+													{
+					colSpan: 21,
+					text: {$censorStatus_grval},
+					style:"header_1"
+				},
+										],
+	{END censorStatus_newgroup}
+
+	{BEGIN row_data}
+	[
+			{
+			text: [
+									''
+							],
+			style: "group_1"
+		},
+									{
+			text: {$fileNo_value},
+			alignment: '{$fileNo_align}',
+		},
+							{
+			text: {$fileName_value},
+			alignment: '{$fileName_align}',
+		},
+							{
+			text: {$fileType_value},
+			alignment: '{$fileType_align}',
+		},
+							{
+			text: {$fileDuration_value},
+			alignment: '{$fileDuration_align}',
+		},
+							{
+			text: {$fileSubject_value},
+			alignment: '{$fileSubject_align}',
+		},
+							{
+			text: {$fileTitle_value},
+			alignment: '{$fileTitle_align}',
+		},
+							{
+			text: {$fileClassLevel_value},
+			alignment: '{$fileClassLevel_align}',
+		},
+							{
+			text: {$fileTeacherName_value},
+			alignment: '{$fileTeacherName_align}',
+		},
+							{
+			text: {$fileTeacherInfo_value},
+			alignment: '{$fileTeacherInfo_align}',
+		},
+							{
+			text: {$fileRaw_value},
+			alignment: '{$fileRaw_align}',
+		},
+							{
+			text: {$fileMD5_value},
+			alignment: '{$fileMD5_align}',
+		},
+							{
+			text: {$censorApproveTime_value},
+			alignment: '{$censorApproveTime_align}',
+		},
+							{
+			text: {$censorUsername_value},
+			alignment: '{$censorUsername_align}',
+		},
+							{
+			text: {$censoReson_value},
+			alignment: '{$censoReson_align}',
+		},
+							{
+			text: {$entryUserName_value},
+			alignment: '{$entryUserName_align}',
+		},
+							{
+			text: {$entryTime_value},
+			alignment: '{$entryTime_align}',
+		},
+							{
+			text: {$filedate_value},
+			alignment: '{$filedate_align}',
+		},
+							{
+			text: {$filePath_value},
+			alignment: '{$filePath_align}',
+		},
+							{
+			text: {$fileStatus_value},
+			alignment: '{$fileStatus_align}',
+		},
+							{
+			text: {$playlistID_value},
+			alignment: '{$playlistID_align}',
+		},
+				],
+	{END row_data}
+
+
+		{BEGIN censorStatus_endgroup}
+
+		[
+		
+								{
+				colSpan: 21,
+				text: [
+					'{mlang_message SUMMARY_FOR} {$jslabel Censor_Report censorStatus } ', 
+					{$censorStatus_grval},
+					' - ', 
+					{$groupcensorStatus_total_cnt}, 
+					' {mlang_message RECORDS_TOTAL}'
+				],
+				style: 'group_1',
+			},
+																																																																																																										],
+	
+	
+	
+	
+	
+	{END censorStatus_endgroup}
+	
+{END grid_row}
+
+
+
+
+
+
+
+
+
+
+									]
+			
+			}
+		},
+		{END body}
+	]
+}

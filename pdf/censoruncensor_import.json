@@ -1,0 +1,174 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel censorUncensor import}","hidden":"{$item_hide_import_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$fileNo_pdfvalue},"hidden":"{$item_hide_import_field1}"},
+				
+				
+			{"text":{$fileName_pdfvalue},"hidden":"{$item_hide_import_field2}"},
+				
+				
+			{"text":{$fileType_pdfvalue},"hidden":"{$item_hide_import_field3}"},
+				
+				
+			{"text":{$fileRaw_pdfvalue},"hidden":"{$item_hide_import_field}"},
+				
+				
+			{"text":{$fileSubject_pdfvalue},"hidden":"{$item_hide_import_field4}"},
+				
+				
+			{"text":{$fileTitle_pdfvalue},"hidden":"{$item_hide_import_field5}"},
+				
+				
+			{"text":{$fileDuration_pdfvalue},"hidden":"{$item_hide_import_field8}"},
+				
+				
+			{"text":{$fileClassLevel_pdfvalue},"hidden":"{$item_hide_import_field6}"},
+				
+				
+			{"text":{$fileTeacherName_pdfvalue},"hidden":"{$item_hide_import_field7}"},
+				
+				
+			{"text":{$censorApproveTime_pdfvalue},"hidden":"{$item_hide_import_field9}"},
+				
+				
+			{"text":{$censorUsername_pdfvalue},"hidden":"{$item_hide_import_field10}"},
+				
+				
+			{"text":{$censoReson_pdfvalue},"hidden":"{$item_hide_import_field11}"},
+				
+				
+			{"text":{$censorStatus_pdfvalue},"hidden":"{$item_hide_import_field12}"},
+				
+				
+			{"text":{$entryUserName_pdfvalue},"hidden":"{$item_hide_import_field15}"},
+				
+				
+			{"text":{$entryTime_pdfvalue},"hidden":"{$item_hide_import_field16}"},
+				
+				
+			{"text":{$fileMD5_pdfvalue},"hidden":"{$item_hide_import_field13}"},
+				
+				
+			{"text":{$fileStatus_pdfvalue},"hidden":"{$item_hide_import_field14}"},
+				
+				
+			{"text":{$filePath_pdfvalue},"hidden":"{$item_hide_import_field17}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

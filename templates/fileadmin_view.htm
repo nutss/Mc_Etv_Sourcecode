@@ -1,0 +1,499 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-view" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="full"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="view_header" data-itemid="view_header" {$item_view_header} data-pageid="{$pageid}" >{$pagetitlelabel FileAdmin view}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN fileNo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileNo}  r-vertical-field" data-fieldname="fileNo" data-signal-error-for="fileNo{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="fileNo" data-fieldname="fileNo" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileNo}">
+		
+		{BEGIN fileNo_label}{$label FileAdmin fileNo }{END fileNo_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileNo_value}	</div>
+
+		
+</div>
+
+
+{END fileNo_fieldblock}
+											
+{BEGIN fileName_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileName}  r-vertical-field" data-fieldname="fileName" data-signal-error-for="fileName{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="fileName" data-fieldname="fileName" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileName}">
+		
+		{BEGIN fileName_label}{$label FileAdmin fileName }{END fileName_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileName_value}	</div>
+
+		
+</div>
+
+
+{END fileName_fieldblock}
+											
+{BEGIN fileType_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileType}  r-vertical-field" data-fieldname="fileType" data-signal-error-for="fileType{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="fileType" data-fieldname="fileType" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileType}">
+		
+		{BEGIN fileType_label}{$label FileAdmin fileType }{END fileType_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileType_value}	</div>
+
+		
+</div>
+
+
+{END fileType_fieldblock}
+											
+{BEGIN fileDuration_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileDuration}  r-vertical-field" data-fieldname="fileDuration" data-signal-error-for="fileDuration{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="fileDuration" data-fieldname="fileDuration" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileDuration}">
+		
+		{BEGIN fileDuration_label}{$label FileAdmin fileDuration }{END fileDuration_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileDuration_value}	</div>
+
+		
+</div>
+
+
+{END fileDuration_fieldblock}
+											
+{BEGIN fileSubject_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileSubject}  r-vertical-field" data-fieldname="fileSubject" data-signal-error-for="fileSubject{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="fileSubject" data-fieldname="fileSubject" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileSubject}">
+		
+		{BEGIN fileSubject_label}{$label FileAdmin fileSubject }{END fileSubject_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileSubject_value}	</div>
+
+		
+</div>
+
+
+{END fileSubject_fieldblock}
+											
+{BEGIN fileTitle_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileTitle}  r-vertical-field" data-fieldname="fileTitle" data-signal-error-for="fileTitle{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="fileTitle" data-fieldname="fileTitle" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileTitle}">
+		
+		{BEGIN fileTitle_label}{$label FileAdmin fileTitle }{END fileTitle_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileTitle_value}	</div>
+
+		
+</div>
+
+
+{END fileTitle_fieldblock}
+											
+{BEGIN fileClassLevel_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileClassLevel}  r-vertical-field" data-fieldname="fileClassLevel" data-signal-error-for="fileClassLevel{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="fileClassLevel" data-fieldname="fileClassLevel" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileClassLevel}">
+		
+		{BEGIN fileClassLevel_label}{$label FileAdmin fileClassLevel }{END fileClassLevel_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileClassLevel_value}	</div>
+
+		
+</div>
+
+
+{END fileClassLevel_fieldblock}
+											
+{BEGIN fileTeacherName_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileTeacherName}  r-vertical-field" data-fieldname="fileTeacherName" data-signal-error-for="fileTeacherName{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="fileTeacherName" data-fieldname="fileTeacherName" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileTeacherName}">
+		
+		{BEGIN fileTeacherName_label}{$label FileAdmin fileTeacherName }{END fileTeacherName_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileTeacherName_value}	</div>
+
+		
+</div>
+
+
+{END fileTeacherName_fieldblock}
+											
+{BEGIN fileRaw_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileRaw}  r-vertical-field" data-fieldname="fileRaw" data-signal-error-for="fileRaw{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="fileRaw" data-fieldname="fileRaw" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileRaw}">
+		
+		{BEGIN fileRaw_label}{$label FileAdmin fileRaw }{END fileRaw_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileRaw_value}	</div>
+
+		
+</div>
+
+
+{END fileRaw_fieldblock}
+											
+{BEGIN fileMD5_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileMD5}  r-vertical-field" data-fieldname="fileMD5" data-signal-error-for="fileMD5{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field13" {$item_integrated_edit_field13} data-pageid="{$pageid}" data-field="fileMD5" data-fieldname="fileMD5" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileMD5}">
+		
+		{BEGIN fileMD5_label}{$label FileAdmin fileMD5 }{END fileMD5_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileMD5_value}	</div>
+
+		
+</div>
+
+
+{END fileMD5_fieldblock}
+											
+{BEGIN fileStatus_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileStatus}  r-vertical-field" data-fieldname="fileStatus" data-signal-error-for="fileStatus{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field16" {$item_integrated_edit_field16} data-pageid="{$pageid}" data-field="fileStatus" data-fieldname="fileStatus" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_fileStatus}">
+		
+		{BEGIN fileStatus_label}{$label FileAdmin fileStatus }{END fileStatus_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$fileStatus_value}	</div>
+
+		
+</div>
+
+
+{END fileStatus_fieldblock}
+											
+{BEGIN filePath_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_filePath}  r-vertical-field" data-fieldname="filePath" data-signal-error-for="filePath{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field17" {$item_integrated_edit_field17} data-pageid="{$pageid}" data-field="filePath" data-fieldname="filePath" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_filePath}">
+		
+		{BEGIN filePath_label}{$label FileAdmin filePath }{END filePath_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$filePath_value}	</div>
+
+		
+</div>
+
+
+{END filePath_fieldblock}
+											
+{BEGIN censorUsername_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_censorUsername}  r-vertical-field" data-fieldname="censorUsername" data-signal-error-for="censorUsername{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="censorUsername" data-fieldname="censorUsername" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_censorUsername}">
+		
+		{BEGIN censorUsername_label}{$label FileAdmin censorUsername }{END censorUsername_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$censorUsername_value}	</div>
+
+		
+</div>
+
+
+{END censorUsername_fieldblock}
+											
+{BEGIN censorApproveTime_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_censorApproveTime}  r-vertical-field" data-fieldname="censorApproveTime" data-signal-error-for="censorApproveTime{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="censorApproveTime" data-fieldname="censorApproveTime" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_censorApproveTime}">
+		
+		{BEGIN censorApproveTime_label}{$label FileAdmin censorApproveTime }{END censorApproveTime_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$censorApproveTime_value}	</div>
+
+		
+</div>
+
+
+{END censorApproveTime_fieldblock}
+											
+{BEGIN censoReson_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_censoReson}  r-vertical-field" data-fieldname="censoReson" data-signal-error-for="censoReson{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="censoReson" data-fieldname="censoReson" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_censoReson}">
+		
+		{BEGIN censoReson_label}{$label FileAdmin censoReson }{END censoReson_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$censoReson_value}	</div>
+
+		
+</div>
+
+
+{END censoReson_fieldblock}
+											
+{BEGIN censorStatus_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_censorStatus}  r-vertical-field" data-fieldname="censorStatus" data-signal-error-for="censorStatus{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field11" {$item_integrated_edit_field11} data-pageid="{$pageid}" data-field="censorStatus" data-fieldname="censorStatus" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_censorStatus}">
+		
+		{BEGIN censorStatus_label}{$label FileAdmin censorStatus }{END censorStatus_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$censorStatus_value}	</div>
+
+		
+</div>
+
+
+{END censorStatus_fieldblock}
+											
+{BEGIN entryUserName_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_entryUserName}  r-vertical-field" data-fieldname="entryUserName" data-signal-error-for="entryUserName{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="entryUserName" data-fieldname="entryUserName" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_entryUserName}">
+		
+		{BEGIN entryUserName_label}{$label FileAdmin entryUserName }{END entryUserName_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$entryUserName_value}	</div>
+
+		
+</div>
+
+
+{END entryUserName_fieldblock}
+											
+{BEGIN entryTime_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_entryTime}  r-vertical-field" data-fieldname="entryTime" data-signal-error-for="entryTime{$id}" data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="entryTime" data-fieldname="entryTime" >
+
+	
+	<label class="col-md-offset-3 col-md-6" for="{$labelfor_entryTime}">
+		
+		{BEGIN entryTime_label}{$label FileAdmin entryTime }{END entryTime_label}
+	</label>
+	<div class="col-md-offset-3 col-md-6" >
+		{$entryTime_value}	</div>
+
+		
+</div>
+
+
+{END entryTime_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-6
+	">
+	 
+		{BEGIN back_button}
+<span data-itemtype="view_back_list" data-itemid="view_back_list" {$item_view_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN close_button}
+<span data-itemtype="view_close" data-itemid="view_close" {$item_view_close} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="#" {$closebutton_attrs} >
+							{mlang_message CLOSE_WINDOW}			</a>
+</span>
+{END close_button}
+	</div>			 
+				<div 
+	data-cellId="below-grid_c2" data-pageid="{$pageid}"	{$cell_below-grid_c2}
+	class="r-align-right r-ori-vert			col-md-6
+	">
+	 
+		<span data-itemtype="hamburger" data-itemid="hamburger" {$item_hamburger} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown dropup">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-menu-hamburger"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN edit_page_button}
+	<li data-itemtype="view_edit" data-itemid="view_edit" {$item_view_edit} data-pageid="{$pageid}" data-small >
+				<a  href="fileadmin_edit.php?{$editlink}" {$edit_page_button_attrs}  title="" >
+				
+		{mlang_message EDIT}		
+		</a>
+	</li>
+{END edit_page_button}
+					</ul>
+	</span>
+</span>
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

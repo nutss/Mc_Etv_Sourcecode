@@ -1,0 +1,180 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+	},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+								
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jspagetitlelabel downloadInfo export}","hidden":"{$item_hide_export_header}","fontSize":30},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+		
+				
+								
+{
+	table: {
+	
+				
+		location: 'grid',
+		
+		
+		widths: [
+								"%", 
+					 ],	
+		
+			heights: [
+								
+			"%",
+			 
+				],
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":{$fileNo_pdfvalue},"hidden":"{$item_hide_export_field1}"},
+				
+				
+			{"text":{$filedate_pdfvalue},"hidden":"{$item_hide_export_field17}"},
+				
+				
+			{"text":{$fileName_pdfvalue},"hidden":"{$item_hide_export_field2}"},
+				
+				
+			{"text":{$fileType_pdfvalue},"hidden":"{$item_hide_export_field3}"},
+				
+				
+			{"text":{$fileRaw_pdfvalue},"hidden":"{$item_hide_export_field}"},
+				
+				
+			{"text":{$fileStatus_pdfvalue},"hidden":"{$item_hide_export_field18}"},
+				
+				
+			{"text":{$fileMD5_pdfvalue},"hidden":"{$item_hide_export_field13}"},
+				
+				
+			{"text":{$filePath_pdfvalue},"hidden":"{$item_hide_export_field19}"},
+				
+				
+			{"text":{$fileSubject_pdfvalue},"hidden":"{$item_hide_export_field4}"},
+				
+				
+			{"text":{$fileTitle_pdfvalue},"hidden":"{$item_hide_export_field5}"},
+				
+				
+			{"text":{$fileDuration_pdfvalue},"hidden":"{$item_hide_export_field8}"},
+				
+				
+			{"text":{$fileClassLevel_pdfvalue},"hidden":"{$item_hide_export_field6}"},
+				
+				
+			{"text":{$fileTeacherName_pdfvalue},"hidden":"{$item_hide_export_field7}"},
+				
+				
+			{"text":{$fileTeacherInfo_pdfvalue},"hidden":"{$item_hide_export_field9}"},
+				
+				
+			{"text":{$entryUserName_pdfvalue},"hidden":"{$item_hide_export_field15}"},
+				
+				
+			{"text":{$entryTime_pdfvalue},"hidden":"{$item_hide_export_field16}"},
+				
+				
+			{"text":{$censorApproveTime_pdfvalue},"hidden":"{$item_hide_export_field10}"},
+				
+				
+			{"text":{$censorUsername_pdfvalue},"hidden":"{$item_hide_export_field11}"},
+				
+				
+			{"text":{$censoReson_pdfvalue},"hidden":"{$item_hide_export_field12}"},
+				
+				
+			{"text":{$censorStatus_pdfvalue},"hidden":"{$item_hide_export_field14}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+		
+					]
+}
+  

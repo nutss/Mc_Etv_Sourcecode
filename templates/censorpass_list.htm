@@ -1,0 +1,2011 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+	<body class="{$stylename} function-list" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		<div class="r-topbar-page">
+			<div data-menu-width="full" 
+				 
+				class="r-topheader" 
+				data-resize-name="topbar"
+				data-body-align="left"
+			>
+								{BEGIN supertop_block}
+<nav class="navbar navbar-default" 
+	data-location="supertop" id="form_supertop_{$pageid}" data-makeup="topbar" {$form_supertop} data-pageid="{$pageid}" >
+			 
+							 
+				<span data-cellId="supertop_c1" data-pageid="{$pageid}" class="r-align-left navbar-header" data-itemid="logo" {$item_logo}>
+				{BEGIN logo_block}
+	<A data-itemtype="logo" data-itemid="logo" {$item_logo} data-pageid="{$pageid}" class="navbar-brand" href="{$home_link}" data-pageid="{$pageid}" {$logo_hiddenattr}>
+		{$logo}
+	</A>
+{END logo_block}
+				<button data-pageid="1" type="button" class="navbar-toggle collapsed" data-runner-toggle="collapse" data-target="[data-mobile-controlled]">	
+					<span class="sr-only">Toggle navigation</span>	
+					<span class="icon-bar"></span>					
+				</button>				
+			</span>
+		 
+				<span data-cellId="supertop_c1" data-pageid="{$pageid}" class="r-align-left navbar-collapse" data-itemtype="menu" data-itemid="menu" {$item_menu} data-pageid="{$pageid}">
+				{$menu main horizontal}			</span>
+							 
+							 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="simple_search" {$item_simple_search} data-topcell-item-type="simple_search" >
+				<span data-itemtype="simple_search" data-itemid="simple_search" {$item_simple_search} data-pageid="{$pageid}" class="form-group">
+
+<div  class="input-group">
+{BEGIN searchform_text}
+	<input type="search" class="form-control" {$searchfor_attrs} size="25">
+{END searchform_text}
+	<span class="input-group-btn">
+	{BEGIN searchform_showall}
+				<button class="btn btn-default" {$showAllCont_attrs} {$showallbutton_attrs} title="{mlang_message SHOW_ALL}">
+			<span class="glyphicon glyphicon-remove"></span>
+		</button>
+	{END searchform_showall}
+
+	{BEGIN searchform_search}
+	<button {$searchbutton_attrs} class="btn btn-primary" >
+		<span class="glyphicon glyphicon-search"></span>
+	</button>
+	{END searchform_search}
+	</span>
+</div>
+		
+</span>			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="list_options" {$item_list_options} data-topcell-item-type="list_options" >
+				<span data-itemtype="list_options" data-itemid="list_options" {$item_list_options} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+										<span class="glyphicon glyphicon-cog"></span>
+												<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN exportselected_link}
+	<li data-itemtype="export_selected" data-itemid="export_selected" {$item_export_selected} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportselectedlink_attrs} {$exportselectedlink_span}  title="" >
+				
+		{mlang_message EXPORT_SELECTED}		
+		</a>
+	</li>
+{END exportselected_link}
+							<li role="separator" class="divider"></li>								<li data-itemtype="advsearch_link" data-itemid="advsearch_link" {$item_advsearch_link} data-pageid="{$pageid}" data-small >
+				<a   href="censorpass_search.php{$stateLink_full}" {$advsearchlink_attrs}  title="" >
+				
+		{mlang_message ADVANCED_SEARCH}		
+		</a>
+	</li>
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="show_search_panel" data-itemid="show_search_panel" {$item_show_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="showOptPanel{$id}"  title="" >
+				
+		{mlang_message SHOW_SEARCH_PANEL}		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							{BEGIN searchPanelTopButtons}
+	<li data-itemtype="hide_search_panel" data-itemid="hide_search_panel" {$item_hide_search_panel} data-pageid="{$pageid}" data-small >
+				<a  id="hideOptPanel{$id}"  title="" >
+				
+		{mlang_message HIDE_SEARCH_PANEL}		
+		</a>
+	</li>
+{END searchPanelTopButtons}
+							<li role="separator" class="divider"></li>							{BEGIN export_link}
+	<li data-itemtype="export" data-itemid="export" {$item_export} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$exportlink_attrs}  title="" >
+				
+		{mlang_message EXPORT_RESULTS}		
+		</a>
+	</li>
+{END export_link}
+							<li role="separator" class="divider"></li>							{BEGIN import_link}
+	<li data-itemtype="import" data-itemid="import" {$item_import} data-pageid="{$pageid}" data-small >
+				<a  {$importlink_attrs} href="censorpass_import.php{$stateLink_full}"  title="" >
+				
+		{mlang_message IMPORT}		
+		</a>
+	</li>
+{END import_link}
+							<li role="separator" class="divider"></li>								{BEGIN EnglishLANGLINK}
+	<li><a href="#" data-lang="English" class="rnr-langlink">
+		{BEGIN EnglishLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END EnglishLANGLINK_ACTIVE}
+		English</a></li>
+	{END EnglishLANGLINK}
+	{BEGIN ThaiLANGLINK}
+	<li><a href="#" data-lang="Thai" class="rnr-langlink">
+		{BEGIN ThaiLANGLINK_ACTIVE}<span class="glyphicon glyphicon-ok">&nbsp;</span>{END ThaiLANGLINK_ACTIVE}
+		ไทย</a></li>
+	{END ThaiLANGLINK}
+					</ul>
+	</span>
+</span>
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="loginform_login" {$item_loginform_login} data-topcell-item-type="loginform_login" >
+				{BEGIN guestloginbutton}
+<span data-itemtype="loginform_login" data-itemid="loginform_login" {$item_loginform_login} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" href="#" {$guestloginlink_attrs} >
+							{mlang_message LOGIN}			</a>
+</span>
+{END guestloginbutton}
+			</span>
+		 
+				<span class="navbar-form r-align-right navbar-collapse" data-cellId="supertop_c2" data-pageid="{$pageid}" data-itemid="username_button" {$item_username_button} data-topcell-item-type="username_button" >
+				{BEGIN loggedas_message}
+<span data-itemtype="username_button" data-itemid="username_button" {$item_username_button} data-pageid="{$pageid}" data-small data-button-item>
+	<span class="dropdown ">
+		<button type="button" title="" class="btn btn-default   dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">		
+			{BEGIN userbutton_icon}							<span class="glyphicon glyphicon-user"></span>
+						{END userbutton_icon}{$userbutton_image}			{$username}			<span class="caret"></span>
+		</button>
+		<ul class="dropdown-menu">
+							{BEGIN logoutbutton}
+	<li data-itemtype="userinfo_link" data-itemid="userinfo_link" {$item_userinfo_link} data-pageid="{$pageid}" data-small >
+				<a  href="userinfo.php"  title="" >
+				
+		{mlang_message USERINFO}		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN logoutbutton}
+	<li data-itemtype="logout_link" data-itemid="logout_link" {$item_logout_link} data-pageid="{$pageid}" data-small >
+				<a  href="#" {$logoutlink_attrs}  title="" >
+				
+		{mlang_message LOG_OUT}		
+		</a>
+	</li>
+{END logoutbutton}
+							{BEGIN adminarea_link}
+	<li data-itemtype="adminarea_link" data-itemid="adminarea_link" {$item_adminarea_link} data-pageid="{$pageid}" data-small >
+				<a  href="admin_rights_list.php"  title="" >
+				
+		{mlang_message AA_ADMINAREA}		
+		</a>
+	</li>
+{END adminarea_link}
+							{BEGIN changepwd_link}
+	<li data-itemtype="changepassword_link" data-itemid="changepassword_link" {$item_changepassword_link} data-pageid="{$pageid}" data-small >
+				<a  href="changepwd.php" {$changepwdlink_attrs} id="changePasswordButton{$id}"  title="" >
+				
+		{mlang_message CHANGE_PASSWORD}		
+		</a>
+	</li>
+{END changepwd_link}
+					</ul>
+	</span>
+</span>
+{END loggedas_message}
+			</span>
+								</nav>
+{END supertop_block}
+					{$locking}
+			</div>	
+			<div data-body-align="left"  data-body-width="full" class="r-body" data-resize-top="topbar" >
+				<div class="r-top">
+								{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="topbar" {$form_top} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN breadcrumb}
+<ol class="breadcrumb" data-itemtype="breadcrumb" data-itemid="breadcrumb" {$item_breadcrumb} data-pageid="{$pageid}">
+<li ><a href="{$crumb_home_link}"><span class="glyphicon glyphicon-home"></span></a>{$crumb_dropdown}</li>
+{BEGIN crumb}
+  <li class="{$crumb_item_class}">
+{BEGIN crumb_title_link}
+	<a {$crumb_attrs}>{$crumb_title}</a>
+{END crumb_title_link}
+{BEGIN crumb_title_span}
+	<span {$crumb_attrs}>{$crumb_title}</span>
+{END crumb_title_span}	
+	{$crumb_dropdown}
+  </li>
+{END crumb}
+</ol>
+{END breadcrumb}		</div>					</div>
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c3" data-pageid="{$pageid}"	{$cell_top_c3}
+	class=" r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}		</div>					</div>
+	</div>		
+{END top_block}
+					</div>
+				<div class="r-content">
+										<div class="r-left" {$blockattr_left} {$form_left} >
+										{BEGIN left_block}
+<table class="r-fluid r-form" data-location="left" id="form_left_{$pageid}" data-makeup="topbar" {$form_left} data-pageid="{$pageid}" >
+						<tbody>
+			
+								<tr {$row_left_0} >
+									<td 
+	class=" r-ori-vert			"
+			 
+	data-cellId="left_c1" data-pageid="{$pageid}">
+ 
+<!-- Begin Search panel content -->
+<div class="searchOptions panel panel-primary searchPanelContainer " {$srchOpt_attrs} data-itemtype="search_panel" data-itemid="search_panel" {$item_search_panel} data-pageid="{$pageid}" >
+
+	<div class="panel-heading">
+		<div class="btn-group" id="addSearchFieldButton{$id}">
+			<button id="showHideControlChooseMenu{$id}" type="button" class="btn btn-default dropdown-toggle btn-sm )" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			{mlang_message SEARCH_IN}			<span class="caret"></span>
+			</button>
+		</div>
+
+
+		<div class="btn-group searchpanel-options" id="searchPanelOptions{$id}">
+			<button type="button" class="btn btn-default dropdown-toggle btn-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<span class="glyphicon glyphicon glyphicon-option-vertical"></span>
+			</button>
+			<ul class="dropdown-menu dropdown-left">
+				<li id="showHideSearchType{$id}" {$showHideCtrlsOpt_attrs}><a>{mlang_message SEARCH_SHOW_OPTIONS_BUTTON}</a></li>
+				<li role="separator" class="divider"></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAll" {$all_checkbox}><label for="radioAll"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ALL_CONDITIONS}</label></a></li>
+				<li class="srchCritTop" style="display: none;"><a><input type="radio" name="srchType{$id}" id="radioAny" {$any_checkbox}><label for="radioAny"><span class="glyphicon">&nbsp;</span>{mlang_message SEARCH_ANY_CONDITIONS}</label></a></li>
+				<li role="separator" class="divider"></li>
+				<li><a class="close-button"><span class="glyphicon glyphicon-remove">&nbsp;</span>{mlang_message HIDE}</a></li>
+			</ul>
+		</div>
+
+
+		</div>
+	<div class="panel-body controlsBlock" {$bottomSearchButt_attrs} >
+
+
+		
+		{BEGIN searchCtrlBlock}
+		<div class="srchPanelRow form-group" {$filterRow_attrs}>
+			<label>{$fLabel}</label>	{$delCtrlButt}
+				<span class="rnr-searchtype">{$searchtype}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol}</span>
+				<span class="rnr-searchcontrol">{$searchcontrol1}</span>
+		</div>
+		{END searchCtrlBlock}
+																		{BEGIN searchCtrlBlock_fileMD5}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileMD5}" {$filterRow_attrs_fileMD5}>
+			<label>{$label censorPass fileMD5 }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileMD5}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileMD5}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileMD5}</span>
+						</div>
+		{END searchCtrlBlock_fileMD5}
+																{BEGIN searchCtrlBlock_id}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_id}" {$filterRow_attrs_id}>
+			<label>{$label censorPass id }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_id}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_id}</span>
+						</div>
+		{END searchCtrlBlock_id}
+																{BEGIN searchCtrlBlock_filePath}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_filePath}" {$filterRow_attrs_filePath}>
+			<label>{$label censorPass filePath }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_filePath}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_filePath}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_filePath}</span>
+						</div>
+		{END searchCtrlBlock_filePath}
+																{BEGIN searchCtrlBlock_fileStatus}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileStatus}" {$filterRow_attrs_fileStatus}>
+			<label>{$label censorPass fileStatus }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileStatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileStatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileStatus}</span>
+						</div>
+		{END searchCtrlBlock_fileStatus}
+																{BEGIN searchCtrlBlock_censorStatus}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_censorStatus}" {$filterRow_attrs_censorStatus}>
+			<label>{$label censorPass censorStatus }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_censorStatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_censorStatus}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_censorStatus}</span>
+						</div>
+		{END searchCtrlBlock_censorStatus}
+																{BEGIN searchCtrlBlock_censoReson}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_censoReson}" {$filterRow_attrs_censoReson}>
+			<label>{$label censorPass censoReson }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_censoReson}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_censoReson}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_censoReson}</span>
+						</div>
+		{END searchCtrlBlock_censoReson}
+																{BEGIN searchCtrlBlock_censorUsername}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_censorUsername}" {$filterRow_attrs_censorUsername}>
+			<label>{$label censorPass censorUsername }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_censorUsername}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_censorUsername}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_censorUsername}</span>
+						</div>
+		{END searchCtrlBlock_censorUsername}
+																{BEGIN searchCtrlBlock_censorApproveTime}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_censorApproveTime}" {$filterRow_attrs_censorApproveTime}>
+			<label>{$label censorPass censorApproveTime }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_censorApproveTime}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_censorApproveTime}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_censorApproveTime}</span>
+						</div>
+		{END searchCtrlBlock_censorApproveTime}
+																{BEGIN searchCtrlBlock_fileDuration}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileDuration}" {$filterRow_attrs_fileDuration}>
+			<label>{$label censorPass fileDuration }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileDuration}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileDuration}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileDuration}</span>
+						</div>
+		{END searchCtrlBlock_fileDuration}
+																{BEGIN searchCtrlBlock_fileRaw}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileRaw}" {$filterRow_attrs_fileRaw}>
+			<label>{$label censorPass fileRaw }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileRaw}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileRaw}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileRaw}</span>
+						</div>
+		{END searchCtrlBlock_fileRaw}
+																{BEGIN searchCtrlBlock_fileType}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileType}" {$filterRow_attrs_fileType}>
+			<label>{$label censorPass fileType }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileType}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileType}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileType}</span>
+						</div>
+		{END searchCtrlBlock_fileType}
+																{BEGIN searchCtrlBlock_fileTitle}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileTitle}" {$filterRow_attrs_fileTitle}>
+			<label>{$label censorPass fileTitle }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileTitle}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileTitle}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileTitle}</span>
+						</div>
+		{END searchCtrlBlock_fileTitle}
+																{BEGIN searchCtrlBlock_fileTeacherName}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileTeacherName}" {$filterRow_attrs_fileTeacherName}>
+			<label>{$label censorPass fileTeacherName }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileTeacherName}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileTeacherName}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileTeacherName}</span>
+						</div>
+		{END searchCtrlBlock_fileTeacherName}
+																{BEGIN searchCtrlBlock_fileSubject}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileSubject}" {$filterRow_attrs_fileSubject}>
+			<label>{$label censorPass fileSubject }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileSubject}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileSubject}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileSubject}</span>
+						</div>
+		{END searchCtrlBlock_fileSubject}
+																{BEGIN searchCtrlBlock_fileNo}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileNo}" {$filterRow_attrs_fileNo}>
+			<label>{$label censorPass fileNo }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileNo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileNo}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileNo}</span>
+						</div>
+		{END searchCtrlBlock_fileNo}
+																{BEGIN searchCtrlBlock_fileName}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileName}" {$filterRow_attrs_fileName}>
+			<label>{$label censorPass fileName }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileName}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileName}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileName}</span>
+						</div>
+		{END searchCtrlBlock_fileName}
+																{BEGIN searchCtrlBlock_fileClassLevel}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_fileClassLevel}" {$filterRow_attrs_fileClassLevel}>
+			<label>{$label censorPass fileClassLevel }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_fileClassLevel}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_fileClassLevel}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_fileClassLevel}</span>
+						</div>
+		{END searchCtrlBlock_fileClassLevel}
+																{BEGIN searchCtrlBlock_entryUserName}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_entryUserName}" {$filterRow_attrs_entryUserName}>
+			<label>{$label censorPass entryUserName }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_entryUserName}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_entryUserName}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_entryUserName}</span>
+						</div>
+		{END searchCtrlBlock_entryUserName}
+																{BEGIN searchCtrlBlock_entryTime}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_entryTime}" {$filterRow_attrs_entryTime}>
+			<label>{$label censorPass entryTime }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_entryTime}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_entryTime}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_entryTime}</span>
+						</div>
+		{END searchCtrlBlock_entryTime}
+		
+
+	</div>
+
+	<div class="panel-footer bottomSearchButt" {$bottomSearchButt_attrs}>
+		<button class="btn btn-primary btn-sm" id="searchButton{$id}" {$searchbutton_attrs}>{mlang_message SEARCH}</button>
+
+				<button class="btn btn-default btn-sm" {$showAllCont_attrs} {$showallbutton_attrs}>{mlang_message SHOW_ALL}</button>
+	</div>
+</div>
+<!-- End Search panel content -->
+</td>
+							</tr>
+					
+					</tbody>
+				</table>
+{END left_block}
+						</div>
+										<div class="r-data-block" data-body-width="full" >
+						
+										{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="topbar" {$form_above-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-6
+	
+">
+		{BEGIN firstAboveGridCell}
+		 
+		{BEGIN updateselected_link}
+<span data-itemtype="update_selected" data-itemid="update_selected" {$item_update_selected} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" href="censorpass_edit.php{$stateLink_full}" {$updateselectedlink_attrs} disabled data-popup >
+							{mlang_message UPDATE_SELECTED}			</a>
+</span>
+{END updateselected_link}
+			{END firstAboveGridCell}	
+	</div>			 
+				<div 
+	data-cellId="above-grid_c2" data-pageid="{$pageid}"	{$cell_above-grid_c2}
+	class="r-align-right			col-md-6
+	
+">
+		 
+		<span data-itemtype="details_found" data-itemid="details_found" {$item_details_found} data-pageid="{$pageid}" data-small >
+{$details_found_labeldetails_found}
+</span>	 
+		<span data-itemtype="page_size" data-itemid="page_size" {$item_page_size} data-pageid="{$pageid}" >
+		{$recsPerPage}
+</span>	 
+		{BEGIN print_friendly}
+<span id="printpanelblock{$id}"  data-pageid="{$pageid}" {$printpanel_hiddenattr} data-itemtype="print_panel" data-itemid="print_panel" {$item_print_panel} data-pageid="{$pageid}">
+	<button title="{mlang_message WR_PRINT_FRIENDLY}" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+					<span class="glyphicon glyphicon-print"></span>
+				<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu pull-right">
+										 
+				 
+					<li class="container-fluid 
+										">
+									<div id="print_friendly_scope{$id}">
+	<div class="row">
+		<div class="col-md-4">
+			{mlang_message PPANEL_SCOPE}		</div>
+
+			 
+		{BEGIN print_friendly_all}
+		<div class="col-md-8">
+			<label for="printAll{$id}">
+				<input type="radio" id="printAll{$id}" data-href="censorpass_print.php?all=1&amp;{$crosstable_attrs}" name="printScope" >
+									{mlang_message PPANEL_ALL_PAGES}							</label>
+		</div>
+		{END print_friendly_all}
+		</div>
+		<div class="row">
+		<div class="col-md-4">&nbsp;</div>
+		<div class="col-md-8">
+			<label for="printPage{$id}">
+				<input name="printScope" id="printPage{$id}" type="radio" checked data-href="censorpass_print.php?{$crosstable_attrs}">
+				{mlang_message PPANEL_THIS_PAGE}			</label>
+		</div>
+	</div>
+		
+		 
+	<div class="row">
+		<div class="col-md-4">
+			&nbsp;
+		</div>
+		<div class="col-md-8">
+			<label style="color: gray;" for="printSelection{$id}">
+			<input name="printScope" disabled="disabled" id="printSelection{$id}" type="radio" >
+			{mlang_message PPANEL_SELECTED}			</label>
+		</div>
+	</div>
+	</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+										">
+									<div>
+	<label for="printPerPage{$id}">
+					{mlang_message RECORDS_PP}							
+	</label>
+	<input type="number" id="printPerPage{$id}" value="{$print_recspp}" class="rnr-printrecspp">		
+</div>
+				 
+					</li>
+											<li class="divider" role="separator"></li>
+																				 
+				 
+					<li class="container-fluid 
+					 text-center 					">
+									<span data-itemtype="print_button" data-itemid="print_button" {$item_print_button} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" id="print_friendly_button{$id}" >
+							{mlang_message PPANEL_PRINT}			</a>
+</span>
+				 
+					</li>
+															</ul>
+</span>
+{END print_friendly}
+		</div>					</div>
+	</div>		
+{END above-grid_block}
+							
+						<div class="r-grid">
+										{BEGIN grid_block}
+{BEGIN grid_tabs}
+  <ul class="nav nav-tabs bsgrid_tabs">
+	{$grid_tabs_content}
+  </ul>
+{END grid_tabs}
+{BEGIN message_block}
+<div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
+{END message_block}	<style>
+@media screen and (max-width: 767px) {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileNo"]:before {
+		content: "{$label censorPass fileNo}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileName"]:before {
+		content: "{$label censorPass fileName}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileType"]:before {
+		content: "{$label censorPass fileType}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileDuration"]:before {
+		content: "{$label censorPass fileDuration}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileSubject"]:before {
+		content: "{$label censorPass fileSubject}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileTitle"]:before {
+		content: "{$label censorPass fileTitle}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileClassLevel"]:before {
+		content: "{$label censorPass fileClassLevel}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileTeacherName"]:before {
+		content: "{$label censorPass fileTeacherName}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileRaw"]:before {
+		content: "{$label censorPass fileRaw}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileMD5"]:before {
+		content: "{$label censorPass fileMD5}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileStatus"]:before {
+		content: "{$label censorPass fileStatus}";
+	}
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="censorApproveTime"]:before {
+		content: "{$label censorPass censorApproveTime}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="censorUsername"]:before {
+		content: "{$label censorPass censorUsername}";
+	}
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="censorStatus"]:before {
+		content: "{$label censorPass censorStatus}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryUserName"]:before {
+		content: "{$label censorPass entryUserName}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
+		content: "{$label censorPass entryTime}";
+	}
+	}
+</style>
+<table data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable" 
+	cellpadding="0" 
+	data-body-height="1"
+>
+						<thead>
+			{BEGIN grid_header}
+					
+		 
+						<tr {$rowattrs} {$row_grid_0} class="{$rowclass} 
+									{$gridHeader_class}
+									
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_headcell_icons}
+	<th
+	
+	{$cell_grid_headcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"		data-control-cell
+	
+	>
+
+	
+	</th>
+	{END cellblock_grid_headcell_icons}
+				 
+					{BEGIN cellblock_grid_headcell_checkbox}
+	<th
+	
+	{$cell_grid_headcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_headcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox_head" data-itemid="grid_checkbox_head" {$item_grid_checkbox_head} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkboxheader_attrs}>
+</span>
+{END checkbox_column}
+	
+	</th>
+	{END cellblock_grid_headcell_checkbox}
+				 
+					{BEGIN cellblock_grid_headcell_field}
+	<th
+	
+	{$cell_grid_headcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$censorApproveTime_class}
+			"
+
+			data-field="censorApproveTime"
+	
+	data-cellId="grid_headcell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN censorApproveTime_fieldheadercolumn}
+	{BEGIN censorApproveTime_fieldheader}
+	<SPAN {$censorApproveTime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorApproveTime" data-fieldname="censorApproveTime">
+	{$label censorPass censorApproveTime }	{$arrow_icon_censorApproveTime}
+	</SPAN>
+	{END censorApproveTime_fieldheader}
+{END censorApproveTime_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field}
+				 
+					{BEGIN cellblock_grid_headcell_field1}
+	<th
+	
+	{$cell_grid_headcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$censorUsername_class}
+			"
+
+			data-field="censorUsername"
+	
+	data-cellId="grid_headcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN censorUsername_fieldheadercolumn}
+	{BEGIN censorUsername_fieldheader}
+	<SPAN {$censorUsername_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorUsername" data-fieldname="censorUsername">
+	{$label censorPass censorUsername }	{$arrow_icon_censorUsername}
+	</SPAN>
+	{END censorUsername_fieldheader}
+{END censorUsername_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field1}
+				 
+					{BEGIN cellblock_grid_headcell_field2}
+	<th
+	
+	{$cell_grid_headcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$censorStatus_class}
+			"
+
+			data-field="censorStatus"
+	
+	data-cellId="grid_headcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN censorStatus_fieldheadercolumn}
+	{BEGIN censorStatus_fieldheader}
+	<SPAN {$censorStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorStatus" data-fieldname="censorStatus">
+	{$label censorPass censorStatus }	{$arrow_icon_censorStatus}
+	</SPAN>
+	{END censorStatus_fieldheader}
+{END censorStatus_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field2}
+				 
+					{BEGIN cellblock_grid_headcell_field3}
+	<th
+	
+	{$cell_grid_headcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileNo_class}
+			"
+
+			data-field="fileNo"
+	
+	data-cellId="grid_headcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileNo_fieldheadercolumn}
+	{BEGIN fileNo_fieldheader}
+	<SPAN {$fileNo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileNo" data-fieldname="fileNo">
+	{$label censorPass fileNo }	{$arrow_icon_fileNo}
+	</SPAN>
+	{END fileNo_fieldheader}
+{END fileNo_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field3}
+				 
+					{BEGIN cellblock_grid_headcell_field4}
+	<th
+	
+	{$cell_grid_headcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileName_class}
+			"
+
+			data-field="fileName"
+	
+	data-cellId="grid_headcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileName_fieldheadercolumn}
+	{BEGIN fileName_fieldheader}
+	<SPAN {$fileName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileName" data-fieldname="fileName">
+	{$label censorPass fileName }	{$arrow_icon_fileName}
+	</SPAN>
+	{END fileName_fieldheader}
+{END fileName_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field4}
+				 
+					{BEGIN cellblock_grid_headcell_field5}
+	<th
+	
+	{$cell_grid_headcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileType_class}
+			"
+
+			data-field="fileType"
+	
+	data-cellId="grid_headcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileType_fieldheadercolumn}
+	{BEGIN fileType_fieldheader}
+	<SPAN {$fileType_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileType" data-fieldname="fileType">
+	{$label censorPass fileType }	{$arrow_icon_fileType}
+	</SPAN>
+	{END fileType_fieldheader}
+{END fileType_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field5}
+				 
+					{BEGIN cellblock_grid_headcell_field6}
+	<th
+	
+	{$cell_grid_headcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileDuration_class}
+			"
+
+			data-field="fileDuration"
+	
+	data-cellId="grid_headcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileDuration_fieldheadercolumn}
+	{BEGIN fileDuration_fieldheader}
+	<SPAN {$fileDuration_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileDuration" data-fieldname="fileDuration">
+	{$label censorPass fileDuration }	{$arrow_icon_fileDuration}
+	</SPAN>
+	{END fileDuration_fieldheader}
+{END fileDuration_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field6}
+				 
+					{BEGIN cellblock_grid_headcell_field7}
+	<th
+	
+	{$cell_grid_headcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileSubject_class}
+			"
+
+			data-field="fileSubject"
+	
+	data-cellId="grid_headcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileSubject_fieldheadercolumn}
+	{BEGIN fileSubject_fieldheader}
+	<SPAN {$fileSubject_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileSubject" data-fieldname="fileSubject">
+	{$label censorPass fileSubject }	{$arrow_icon_fileSubject}
+	</SPAN>
+	{END fileSubject_fieldheader}
+{END fileSubject_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field7}
+				 
+					{BEGIN cellblock_grid_headcell_field8}
+	<th
+	
+	{$cell_grid_headcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileTitle_class}
+			"
+
+			data-field="fileTitle"
+	
+	data-cellId="grid_headcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileTitle_fieldheadercolumn}
+	{BEGIN fileTitle_fieldheader}
+	<SPAN {$fileTitle_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTitle" data-fieldname="fileTitle">
+	{$label censorPass fileTitle }	{$arrow_icon_fileTitle}
+	</SPAN>
+	{END fileTitle_fieldheader}
+{END fileTitle_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field8}
+				 
+					{BEGIN cellblock_grid_headcell_field9}
+	<th
+	
+	{$cell_grid_headcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileClassLevel_class}
+			"
+
+			data-field="fileClassLevel"
+	
+	data-cellId="grid_headcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileClassLevel_fieldheadercolumn}
+	{BEGIN fileClassLevel_fieldheader}
+	<SPAN {$fileClassLevel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileClassLevel" data-fieldname="fileClassLevel">
+	{$label censorPass fileClassLevel }	{$arrow_icon_fileClassLevel}
+	</SPAN>
+	{END fileClassLevel_fieldheader}
+{END fileClassLevel_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field9}
+				 
+					{BEGIN cellblock_grid_headcell_field10}
+	<th
+	
+	{$cell_grid_headcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileTeacherName_class}
+			"
+
+			data-field="fileTeacherName"
+	
+	data-cellId="grid_headcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileTeacherName_fieldheadercolumn}
+	{BEGIN fileTeacherName_fieldheader}
+	<SPAN {$fileTeacherName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTeacherName" data-fieldname="fileTeacherName">
+	{$label censorPass fileTeacherName }	{$arrow_icon_fileTeacherName}
+	</SPAN>
+	{END fileTeacherName_fieldheader}
+{END fileTeacherName_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field10}
+				 
+					{BEGIN cellblock_grid_headcell_field11}
+	<th
+	
+	{$cell_grid_headcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileRaw_class}
+			"
+
+			data-field="fileRaw"
+	
+	data-cellId="grid_headcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileRaw_fieldheadercolumn}
+	{BEGIN fileRaw_fieldheader}
+	<SPAN {$fileRaw_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileRaw" data-fieldname="fileRaw">
+	{$label censorPass fileRaw }	{$arrow_icon_fileRaw}
+	</SPAN>
+	{END fileRaw_fieldheader}
+{END fileRaw_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field11}
+				 
+					{BEGIN cellblock_grid_headcell_field12}
+	<th
+	
+	{$cell_grid_headcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileStatus_class}
+			"
+
+			data-field="fileStatus"
+	
+	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileStatus_fieldheadercolumn}
+	{BEGIN fileStatus_fieldheader}
+	<SPAN {$fileStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileStatus" data-fieldname="fileStatus">
+	{$label censorPass fileStatus }	{$arrow_icon_fileStatus}
+	</SPAN>
+	{END fileStatus_fieldheader}
+{END fileStatus_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field12}
+				 
+					{BEGIN cellblock_grid_headcell_field13}
+	<th
+	
+	{$cell_grid_headcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileMD5_class}
+			"
+
+			data-field="fileMD5"
+	
+	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileMD5_fieldheadercolumn}
+	{BEGIN fileMD5_fieldheader}
+	<SPAN {$fileMD5_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileMD5" data-fieldname="fileMD5">
+	{$label censorPass fileMD5 }	{$arrow_icon_fileMD5}
+	</SPAN>
+	{END fileMD5_fieldheader}
+{END fileMD5_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field13}
+				 
+					{BEGIN cellblock_grid_headcell_field14}
+	<th
+	
+	{$cell_grid_headcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$entryUserName_class}
+			"
+
+			data-field="entryUserName"
+	
+	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN entryUserName_fieldheadercolumn}
+	{BEGIN entryUserName_fieldheader}
+	<SPAN {$entryUserName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryUserName" data-fieldname="entryUserName">
+	{$label censorPass entryUserName }	{$arrow_icon_entryUserName}
+	</SPAN>
+	{END entryUserName_fieldheader}
+{END entryUserName_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field14}
+				 
+					{BEGIN cellblock_grid_headcell_field15}
+	<th
+	
+	{$cell_grid_headcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$entryTime_class}
+			"
+
+			data-field="entryTime"
+	
+	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN entryTime_fieldheadercolumn}
+	{BEGIN entryTime_fieldheader}
+	<SPAN {$entryTime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryTime" data-fieldname="entryTime">
+	{$label censorPass entryTime }	{$arrow_icon_entryTime}
+	</SPAN>
+	{END entryTime_fieldheader}
+{END entryTime_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+							</tr>
+					 
+					 
+					
+					{END grid_header}
+			</thead>
+															<tbody>
+					{BEGIN grid_row}
+									
+		 
+					 
+						<tr {$rowattrs} {$row_grid_1} class="{$rowclass} 
+								
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_cell_icons}
+	<td
+	
+	{$cell_grid_cell_icons}
+	{$recordattrs}
+	class="
+					"
+
+	
+	data-cellId="grid_cell_icons" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"		data-control-cell
+	
+	>
+
+	 
+		{BEGIN edit_column}
+{BEGIN edit_link}
+<span data-itemtype="grid_edit" data-itemid="grid_edit" {$item_grid_edit} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="{mlang_message EDIT}" class="btn-link   
+	 glyphicon glyphicon-pencil" href="censorpass_edit.php?{$editlink}" {$editlink_attrs} title="{mlang_message EDIT}" data-popup >		
+				
+								</a>
+</span>
+{END edit_link}
+{END edit_column}
+	 
+		{BEGIN view_column}
+{BEGIN view_link}
+<span data-itemtype="grid_view" data-itemid="grid_view" {$item_grid_view} data-pageid="{$pageid}" data-record-id="{$recId}" data-small data-button-item>
+	<a type="button" title="{mlang_message VIEW_RECORD}" class="btn-link   
+	 glyphicon glyphicon-search" href="censorpass_view.php?{$editlink}" {$viewlink_attrs} title="{mlang_message VIEW}" data-popup >		
+				
+								</a>
+</span>
+{END view_link}
+{END view_column}
+	
+	</td>
+	{END cellblock_grid_cell_icons}
+				 
+					{BEGIN cellblock_grid_cell_checkbox}
+	<td
+	
+	{$cell_grid_cell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_cell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"		data-control-cell
+	
+		data-checkbox-cell
+	>
+
+	 
+		{BEGIN checkbox_column}
+<span data-itemtype="grid_checkbox" data-itemid="grid_checkbox" {$item_grid_checkbox} data-pageid="{$pageid}" data-record-id="{$recId}" >
+	<input type="checkbox" {$checkbox_attrs}
+		>
+</span>	
+{END checkbox_column}
+	
+	</td>
+	{END cellblock_grid_cell_checkbox}
+				 
+					{BEGIN cellblock_grid_cell_field}
+	<td
+	
+	{$cell_grid_cell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$censorApproveTime_class}
+			"
+
+			data-field="censorApproveTime"
+	
+	data-cellId="grid_cell_field" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN censorApproveTime_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorApproveTime" data-fieldname="censorApproveTime" data-default-width >
+{$censorApproveTime_value}
+</span>
+{END censorApproveTime_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field}
+				 
+					{BEGIN cellblock_grid_cell_field1}
+	<td
+	
+	{$cell_grid_cell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$censorUsername_class}
+			"
+
+			data-field="censorUsername"
+	
+	data-cellId="grid_cell_field1" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN censorUsername_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field10" {$item_simple_grid_field10} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorUsername" data-fieldname="censorUsername" data-default-width >
+{$censorUsername_value}
+</span>
+{END censorUsername_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field1}
+				 
+					{BEGIN cellblock_grid_cell_field2}
+	<td
+	
+	{$cell_grid_cell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$censorStatus_class}
+			"
+
+			data-field="censorStatus"
+	
+	data-cellId="grid_cell_field2" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN censorStatus_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field12" {$item_simple_grid_field12} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorStatus" data-fieldname="censorStatus" data-default-width >
+{$censorStatus_value}
+</span>
+{END censorStatus_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field2}
+				 
+					{BEGIN cellblock_grid_cell_field3}
+	<td
+	
+	{$cell_grid_cell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileNo_class}
+			"
+
+			data-field="fileNo"
+	
+	data-cellId="grid_cell_field3" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileNo_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field1" {$item_simple_grid_field1} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileNo" data-fieldname="fileNo" data-default-width >
+{$fileNo_value}
+</span>
+{END fileNo_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field3}
+				 
+					{BEGIN cellblock_grid_cell_field4}
+	<td
+	
+	{$cell_grid_cell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileName_class}
+			"
+
+			data-field="fileName"
+	
+	data-cellId="grid_cell_field4" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileName_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field2" {$item_simple_grid_field2} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileName" data-fieldname="fileName" data-default-width >
+{$fileName_value}
+</span>
+{END fileName_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field4}
+				 
+					{BEGIN cellblock_grid_cell_field5}
+	<td
+	
+	{$cell_grid_cell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileType_class}
+			"
+
+			data-field="fileType"
+	
+	data-cellId="grid_cell_field5" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileType_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field3" {$item_simple_grid_field3} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileType" data-fieldname="fileType" data-default-width >
+{$fileType_value}
+</span>
+{END fileType_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field5}
+				 
+					{BEGIN cellblock_grid_cell_field6}
+	<td
+	
+	{$cell_grid_cell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileDuration_class}
+			"
+
+			data-field="fileDuration"
+	
+	data-cellId="grid_cell_field6" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileDuration_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field" {$item_simple_grid_field} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileDuration" data-fieldname="fileDuration" data-default-width >
+{$fileDuration_value}
+</span>
+{END fileDuration_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field6}
+				 
+					{BEGIN cellblock_grid_cell_field7}
+	<td
+	
+	{$cell_grid_cell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileSubject_class}
+			"
+
+			data-field="fileSubject"
+	
+	data-cellId="grid_cell_field7" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileSubject_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field4" {$item_simple_grid_field4} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileSubject" data-fieldname="fileSubject" data-default-width >
+{$fileSubject_value}
+</span>
+{END fileSubject_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field7}
+				 
+					{BEGIN cellblock_grid_cell_field8}
+	<td
+	
+	{$cell_grid_cell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileTitle_class}
+			"
+
+			data-field="fileTitle"
+	
+	data-cellId="grid_cell_field8" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileTitle_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field5" {$item_simple_grid_field5} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTitle" data-fieldname="fileTitle" data-default-width >
+{$fileTitle_value}
+</span>
+{END fileTitle_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field8}
+				 
+					{BEGIN cellblock_grid_cell_field9}
+	<td
+	
+	{$cell_grid_cell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileClassLevel_class}
+			"
+
+			data-field="fileClassLevel"
+	
+	data-cellId="grid_cell_field9" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileClassLevel_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field6" {$item_simple_grid_field6} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileClassLevel" data-fieldname="fileClassLevel" data-default-width >
+{$fileClassLevel_value}
+</span>
+{END fileClassLevel_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field9}
+				 
+					{BEGIN cellblock_grid_cell_field10}
+	<td
+	
+	{$cell_grid_cell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileTeacherName_class}
+			"
+
+			data-field="fileTeacherName"
+	
+	data-cellId="grid_cell_field10" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileTeacherName_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field7" {$item_simple_grid_field7} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTeacherName" data-fieldname="fileTeacherName" data-default-width >
+{$fileTeacherName_value}
+</span>
+{END fileTeacherName_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field10}
+				 
+					{BEGIN cellblock_grid_cell_field11}
+	<td
+	
+	{$cell_grid_cell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileRaw_class}
+			"
+
+			data-field="fileRaw"
+	
+	data-cellId="grid_cell_field11" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileRaw_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field8" {$item_simple_grid_field8} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileRaw" data-fieldname="fileRaw" data-default-width >
+{$fileRaw_value}
+</span>
+{END fileRaw_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field11}
+				 
+					{BEGIN cellblock_grid_cell_field12}
+	<td
+	
+	{$cell_grid_cell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileStatus_class}
+			"
+
+			data-field="fileStatus"
+	
+	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileStatus_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileStatus" data-fieldname="fileStatus" data-default-width >
+{$fileStatus_value}
+</span>
+{END fileStatus_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field12}
+				 
+					{BEGIN cellblock_grid_cell_field13}
+	<td
+	
+	{$cell_grid_cell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$fileMD5_class}
+			"
+
+			data-field="fileMD5"
+	
+	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN fileMD5_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileMD5" data-fieldname="fileMD5" data-default-width >
+{$fileMD5_value}
+</span>
+{END fileMD5_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field13}
+				 
+					{BEGIN cellblock_grid_cell_field14}
+	<td
+	
+	{$cell_grid_cell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$entryUserName_class}
+			"
+
+			data-field="entryUserName"
+	
+	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN entryUserName_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryUserName" data-fieldname="entryUserName" data-default-width >
+{$entryUserName_value}
+</span>
+{END entryUserName_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field14}
+				 
+					{BEGIN cellblock_grid_cell_field15}
+	<td
+	
+	{$cell_grid_cell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$entryTime_class}
+			"
+
+			data-field="entryTime"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN entryTime_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryTime" data-fieldname="entryTime" data-default-width >
+{$entryTime_value}
+</span>
+{END entryTime_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+							</tr>
+					 
+					
+											{END grid_row}
+					</tbody>
+													<tfoot>
+					
+		 
+					 
+					 
+						<tr {$rowattrs} {$row_grid_2} class="{$rowclass} 
+									{$gridFooter_class}
+									
+								r-gridrow
+							">
+				 
+					{BEGIN cellblock_grid_footcell_icons}
+	<td
+	
+	{$cell_grid_footcell_icons}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_icons" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_icons}
+				 
+					{BEGIN cellblock_grid_footcell_checkbox}
+	<td
+	
+	{$cell_grid_footcell_checkbox}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_checkbox" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_checkbox}
+				 
+					{BEGIN cellblock_grid_footcell_field}
+	<td
+	
+	{$cell_grid_footcell_field}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field}
+				 
+					{BEGIN cellblock_grid_footcell_field1}
+	<td
+	
+	{$cell_grid_footcell_field1}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field1" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field1}
+				 
+					{BEGIN cellblock_grid_footcell_field2}
+	<td
+	
+	{$cell_grid_footcell_field2}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field2" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field2}
+				 
+					{BEGIN cellblock_grid_footcell_field3}
+	<td
+	
+	{$cell_grid_footcell_field3}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field3" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field3}
+				 
+					{BEGIN cellblock_grid_footcell_field4}
+	<td
+	
+	{$cell_grid_footcell_field4}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field4" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field4}
+				 
+					{BEGIN cellblock_grid_footcell_field5}
+	<td
+	
+	{$cell_grid_footcell_field5}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field5" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field5}
+				 
+					{BEGIN cellblock_grid_footcell_field6}
+	<td
+	
+	{$cell_grid_footcell_field6}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field6" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field6}
+				 
+					{BEGIN cellblock_grid_footcell_field7}
+	<td
+	
+	{$cell_grid_footcell_field7}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field7" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field7}
+				 
+					{BEGIN cellblock_grid_footcell_field8}
+	<td
+	
+	{$cell_grid_footcell_field8}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field8" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field8}
+				 
+					{BEGIN cellblock_grid_footcell_field9}
+	<td
+	
+	{$cell_grid_footcell_field9}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field9" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field9}
+				 
+					{BEGIN cellblock_grid_footcell_field10}
+	<td
+	
+	{$cell_grid_footcell_field10}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field10" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field10}
+				 
+					{BEGIN cellblock_grid_footcell_field11}
+	<td
+	
+	{$cell_grid_footcell_field11}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field11" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field11}
+				 
+					{BEGIN cellblock_grid_footcell_field12}
+	<td
+	
+	{$cell_grid_footcell_field12}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field12}
+				 
+					{BEGIN cellblock_grid_footcell_field13}
+	<td
+	
+	{$cell_grid_footcell_field13}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field13}
+				 
+					{BEGIN cellblock_grid_footcell_field14}
+	<td
+	
+	{$cell_grid_footcell_field14}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field14}
+				 
+					{BEGIN cellblock_grid_footcell_field15}
+	<td
+	
+	{$cell_grid_footcell_field15}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorpass_list"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field15}
+							</tr>
+					
+					</tfoot>
+				</table>
+{END grid_block}
+							</div>
+						
+										{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="topbar" {$form_below-grid} data-pageid="{$pageid}" >		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="r-align-center r-ori-vert			col-md-12
+	
+">
+		 
+		{BEGIN pagination_block}
+<span data-itemtype="pagination" data-itemid="pagination" {$item_pagination} data-pageid="{$pageid}" >
+{$pagination}
+</span>
+{END pagination_block}
+		</div>					</div>
+	</div>		
+{END below-grid_block}
+							
+					</div>
+				</div>
+			</div>
+		</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

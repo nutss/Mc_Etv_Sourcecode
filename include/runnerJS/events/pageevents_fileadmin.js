@@ -1,0 +1,2 @@
+
+Runner.pages.PageSettings.addPageEvent('FileAdmin',Runner.pages.constants.PAGE_EDIT,"afterPageReady",function(pageObj,proxy,pageid,inlineRow,inlineObject,row){var ctrl_censorStatus=Runner.getControl(pageid,'censorStatus');if(ctrl_censorStatus.getValue()=="PLAYLIST"){ctrl_censorStatus.makeReadonly();}});

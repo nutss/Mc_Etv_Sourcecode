@@ -1,0 +1,559 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-search" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="full"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="search_header" data-itemid="search_header" {$item_search_header} data-pageid="{$pageid}" >{$pagetitlelabel censorPass search}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="6"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="6"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN id_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="id{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_id}">
+		{$label censorPass id }	</label>
+	<div class="r-search-option">
+		{$searchtype_id}
+	</div>
+	<div class="r-search-field">
+		{$id_editcontrol}	</div>
+	<div class="r-search-field">
+		{$id_editcontrol1}
+	</div>
+	
+</div>
+
+{END id_fieldblock}
+											
+{BEGIN fileNo_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileNo}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileNo{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field1" {$item_integrated_search_field1} data-pageid="{$pageid}" data-field="fileNo" data-fieldname="fileNo" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileNo}">
+		{$label censorPass fileNo }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileNo}
+	</div>
+	<div class="r-search-field">
+		{$fileNo_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileNo_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileNo_fieldblock}
+											
+{BEGIN fileName_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileName}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileName{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field2" {$item_integrated_search_field2} data-pageid="{$pageid}" data-field="fileName" data-fieldname="fileName" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileName}">
+		{$label censorPass fileName }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileName}
+	</div>
+	<div class="r-search-field">
+		{$fileName_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileName_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileName_fieldblock}
+											
+{BEGIN fileType_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileType}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileType{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field3" {$item_integrated_search_field3} data-pageid="{$pageid}" data-field="fileType" data-fieldname="fileType" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileType}">
+		{$label censorPass fileType }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileType}
+	</div>
+	<div class="r-search-field">
+		{$fileType_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileType_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileType_fieldblock}
+											
+{BEGIN fileDuration_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileDuration}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileDuration{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field13" {$item_integrated_search_field13} data-pageid="{$pageid}" data-field="fileDuration" data-fieldname="fileDuration" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileDuration}">
+		{$label censorPass fileDuration }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileDuration}
+	</div>
+	<div class="r-search-field">
+		{$fileDuration_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileDuration_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileDuration_fieldblock}
+											
+{BEGIN fileSubject_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileSubject}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileSubject{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="fileSubject" data-fieldname="fileSubject" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileSubject}">
+		{$label censorPass fileSubject }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileSubject}
+	</div>
+	<div class="r-search-field">
+		{$fileSubject_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileSubject_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileSubject_fieldblock}
+											
+{BEGIN fileTitle_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileTitle}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileTitle{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field5" {$item_integrated_search_field5} data-pageid="{$pageid}" data-field="fileTitle" data-fieldname="fileTitle" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileTitle}">
+		{$label censorPass fileTitle }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileTitle}
+	</div>
+	<div class="r-search-field">
+		{$fileTitle_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileTitle_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileTitle_fieldblock}
+											
+{BEGIN fileRaw_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileRaw}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileRaw{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="fileRaw" data-fieldname="fileRaw" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileRaw}">
+		{$label censorPass fileRaw }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileRaw}
+	</div>
+	<div class="r-search-field">
+		{$fileRaw_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileRaw_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileRaw_fieldblock}
+											
+{BEGIN fileClassLevel_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileClassLevel}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileClassLevel{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field6" {$item_integrated_search_field6} data-pageid="{$pageid}" data-field="fileClassLevel" data-fieldname="fileClassLevel" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileClassLevel}">
+		{$label censorPass fileClassLevel }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileClassLevel}
+	</div>
+	<div class="r-search-field">
+		{$fileClassLevel_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileClassLevel_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileClassLevel_fieldblock}
+											
+{BEGIN fileTeacherName_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileTeacherName}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileTeacherName{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="fileTeacherName" data-fieldname="fileTeacherName" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileTeacherName}">
+		{$label censorPass fileTeacherName }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileTeacherName}
+	</div>
+	<div class="r-search-field">
+		{$fileTeacherName_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileTeacherName_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileTeacherName_fieldblock}
+											
+{BEGIN censorApproveTime_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_censorApproveTime}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="censorApproveTime{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field9" {$item_integrated_search_field9} data-pageid="{$pageid}" data-field="censorApproveTime" data-fieldname="censorApproveTime" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_censorApproveTime}">
+		{$label censorPass censorApproveTime }	</label>
+	<div class="r-search-option">
+		{$searchtype_censorApproveTime}
+	</div>
+	<div class="r-search-field">
+		{$censorApproveTime_editcontrol}	</div>
+	<div class="r-search-field">
+		{$censorApproveTime_editcontrol1}
+	</div>
+	
+</div>
+
+{END censorApproveTime_fieldblock}
+											
+{BEGIN censorUsername_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_censorUsername}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="censorUsername{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field10" {$item_integrated_search_field10} data-pageid="{$pageid}" data-field="censorUsername" data-fieldname="censorUsername" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_censorUsername}">
+		{$label censorPass censorUsername }	</label>
+	<div class="r-search-option">
+		{$searchtype_censorUsername}
+	</div>
+	<div class="r-search-field">
+		{$censorUsername_editcontrol}	</div>
+	<div class="r-search-field">
+		{$censorUsername_editcontrol1}
+	</div>
+	
+</div>
+
+{END censorUsername_fieldblock}
+											
+{BEGIN censoReson_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_censoReson}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="censoReson{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field11" {$item_integrated_search_field11} data-pageid="{$pageid}" data-field="censoReson" data-fieldname="censoReson" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_censoReson}">
+		{$label censorPass censoReson }	</label>
+	<div class="r-search-option">
+		{$searchtype_censoReson}
+	</div>
+	<div class="r-search-field">
+		{$censoReson_editcontrol}	</div>
+	<div class="r-search-field">
+		{$censoReson_editcontrol1}
+	</div>
+	
+</div>
+
+{END censoReson_fieldblock}
+											
+{BEGIN censorStatus_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_censorStatus}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="censorStatus{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field12" {$item_integrated_search_field12} data-pageid="{$pageid}" data-field="censorStatus" data-fieldname="censorStatus" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_censorStatus}">
+		{$label censorPass censorStatus }	</label>
+	<div class="r-search-option">
+		{$searchtype_censorStatus}
+	</div>
+	<div class="r-search-field">
+		{$censorStatus_editcontrol}	</div>
+	<div class="r-search-field">
+		{$censorStatus_editcontrol1}
+	</div>
+	
+</div>
+
+{END censorStatus_fieldblock}
+											
+{BEGIN entryUserName_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_entryUserName}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="entryUserName{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field15" {$item_integrated_search_field15} data-pageid="{$pageid}" data-field="entryUserName" data-fieldname="entryUserName" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_entryUserName}">
+		{$label censorPass entryUserName }	</label>
+	<div class="r-search-option">
+		{$searchtype_entryUserName}
+	</div>
+	<div class="r-search-field">
+		{$entryUserName_editcontrol}	</div>
+	<div class="r-search-field">
+		{$entryUserName_editcontrol1}
+	</div>
+	
+</div>
+
+{END entryUserName_fieldblock}
+											
+{BEGIN entryTime_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_entryTime}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="entryTime{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field16" {$item_integrated_search_field16} data-pageid="{$pageid}" data-field="entryTime" data-fieldname="entryTime" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_entryTime}">
+		{$label censorPass entryTime }	</label>
+	<div class="r-search-option">
+		{$searchtype_entryTime}
+	</div>
+	<div class="r-search-field">
+		{$entryTime_editcontrol}	</div>
+	<div class="r-search-field">
+		{$entryTime_editcontrol1}
+	</div>
+	
+</div>
+
+{END entryTime_fieldblock}
+											
+{BEGIN fileMD5_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileMD5}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileMD5{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field14" {$item_integrated_search_field14} data-pageid="{$pageid}" data-field="fileMD5" data-fieldname="fileMD5" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileMD5}">
+		{$label censorPass fileMD5 }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileMD5}
+	</div>
+	<div class="r-search-field">
+		{$fileMD5_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileMD5_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileMD5_fieldblock}
+											
+{BEGIN fileStatus_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileStatus}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="fileStatus{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field17" {$item_integrated_search_field17} data-pageid="{$pageid}" data-field="fileStatus" data-fieldname="fileStatus" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_fileStatus}">
+		{$label censorPass fileStatus }	</label>
+	<div class="r-search-option">
+		{$searchtype_fileStatus}
+	</div>
+	<div class="r-search-field">
+		{$fileStatus_editcontrol}	</div>
+	<div class="r-search-field">
+		{$fileStatus_editcontrol1}
+	</div>
+	
+</div>
+
+{END fileStatus_fieldblock}
+											
+{BEGIN filePath_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_filePath}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="filePath{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field18" {$item_integrated_search_field18} data-pageid="{$pageid}" data-field="filePath" data-fieldname="filePath" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_filePath}">
+		{$label censorPass filePath }	</label>
+	<div class="r-search-option">
+		{$searchtype_filePath}
+	</div>
+	<div class="r-search-field">
+		{$filePath_editcontrol}	</div>
+	<div class="r-search-field">
+		{$filePath_editcontrol1}
+	</div>
+	
+</div>
+
+{END filePath_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="6"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="search_search" data-itemid="search_search" {$item_search_search} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$searchbutton_attrs} >
+							{mlang_message SEARCH}			</a>
+</span>
+	 
+		<span data-itemtype="search_reset" data-itemid="search_reset" {$item_search_reset} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$resetbutton_attrs} >
+							{mlang_message RESET}			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="search_back_list" data-itemid="search_back_list" {$item_search_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" {$backbutton_attrs} >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="search_cancel" data-itemid="search_cancel" {$item_search_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							{mlang_message CANCEL}			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>

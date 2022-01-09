@@ -1,0 +1,351 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid}
+		{
+			text: '{$jscaption MediaInfo_Report}',
+		},
+		{END embedded_grid}
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					if( node.table.embeddedPage ) {
+						return (i === 0 || i === node.table.widths.length) ? 0.1 : 0;
+					} else  {
+						return 0.1; 
+					}
+				},
+				hLineColor: function(i, node) { return 'gray'; },
+				vLineColor: function(i, node) { return 'gray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 0 + 1 {BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 15,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"","hidden":"{$item_hide_breadcrumb}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+											"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+																							{
+	cellId: 'c2',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message DISPLAYING}","hidden":"{$item_hide_details_found}","isHtml":true,"page_indicator":true},
+				
+				
+			{"text":"","hidden":"{$item_hide_page_size}"},
+				
+				
+			{"text":"","hidden":"{$item_hide_print_panel}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'right',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+[	
+		{
+		text: '{$jslabel MediaInfo_Report fileNo }',
+		alignment: '{$fileNo_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileName }',
+		alignment: '{$fileName_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileType }',
+		alignment: '{$fileType_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileRaw }',
+		alignment: '{$fileRaw_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileMD5 }',
+		alignment: '{$fileMD5_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report filePath }',
+		alignment: '{$filePath_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileDuration }',
+		alignment: '{$fileDuration_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileSubject }',
+		alignment: '{$fileSubject_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileTitle }',
+		alignment: '{$fileTitle_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileClassLevel }',
+		alignment: '{$fileClassLevel_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileTeacherName }',
+		alignment: '{$fileTeacherName_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report fileTeacherInfo }',
+		alignment: '{$fileTeacherInfo_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report censorApproveTime }',
+		alignment: '{$censorApproveTime_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report censorUsername }',
+		alignment: '{$censorUsername_align}',
+	},
+		{
+		text: '{$jslabel MediaInfo_Report censorStatus }',
+		alignment: '{$censorStatus_align}',
+	},
+	],
+
+{BEGIN grid_row}
+	{BEGIN row_data}
+[	
+		{	
+		text: {$fileNo_value},
+		alignment: '{$fileNo_align}',
+	},
+		{	
+		text: {$fileName_value},
+		alignment: '{$fileName_align}',
+	},
+		{	
+		text: {$fileType_value},
+		alignment: '{$fileType_align}',
+	},
+		{	
+		text: {$fileRaw_value},
+		alignment: '{$fileRaw_align}',
+	},
+		{	
+		text: {$fileMD5_value},
+		alignment: '{$fileMD5_align}',
+	},
+		{	
+		text: {$filePath_value},
+		alignment: '{$filePath_align}',
+	},
+		{	
+		text: {$fileDuration_value},
+		alignment: '{$fileDuration_align}',
+	},
+		{	
+		text: {$fileSubject_value},
+		alignment: '{$fileSubject_align}',
+	},
+		{	
+		text: {$fileTitle_value},
+		alignment: '{$fileTitle_align}',
+	},
+		{	
+		text: {$fileClassLevel_value},
+		alignment: '{$fileClassLevel_align}',
+	},
+		{	
+		text: {$fileTeacherName_value},
+		alignment: '{$fileTeacherName_align}',
+	},
+		{	
+		text: {$fileTeacherInfo_value},
+		alignment: '{$fileTeacherInfo_align}',
+	},
+		{	
+		text: {$censorApproveTime_value},
+		alignment: '{$censorApproveTime_align}',
+	},
+		{	
+		text: {$censorUsername_value},
+		alignment: '{$censorUsername_align}',
+	},
+		{	
+		text: {$censorStatus_value},
+		alignment: '{$censorStatus_align}',
+	},
+	],
+	{END row_data}
+{END grid_row}
+
+
+
+
+
+
+
+
+
+
+
+									]
+			
+			}
+		},
+		{END body}
+	]
+}

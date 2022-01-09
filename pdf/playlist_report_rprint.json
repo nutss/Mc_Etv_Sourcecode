@@ -1,0 +1,497 @@
+
+pdfDocument = {
+{BEGIN backgroundImage}
+	background: {
+		image: {$backgroundImage},
+		{BEGIN bgWidth}
+		imgWidth: {$bgWidth},
+		imgHeight: {$bgHeight},
+		{END bgWidth}
+	},
+{END backgroundImage}
+	styles: {
+				bodycell: {
+			fontSize:12,
+		},
+		headcell: {
+			fontSize:12,
+			bold: true
+		},
+
+	
+						pagesummary: {
+		fillColor: '#ffffbb',
+	},
+	globalsummary: {
+		fillColor: '#ffe0b0',
+	},
+			group_1: {
+			fillColor: '#DEEFEF'
+		},
+		nbgroup_1: {
+			fillColor: '#DEEFEF'
+		},
+		header_1: {
+			fillColor: '#DEEFEF',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_palylistOnair: {
+			fillColor: '#DEEFEF',
+			fontSize: 15,
+			bold: true
+		},
+		group_palylistOnair: {
+			fillColor: '#DEEFEF'
+		},
+
+			group_2: {
+			fillColor: '#FFEAEE'
+		},
+		nbgroup_2: {
+			fillColor: '#FFEAEE'
+		},
+		header_2: {
+			fillColor: '#FFEAEE',
+			fontSize: 15,
+			bold: true
+		},
+		/* new style styles */
+		header_playlistTitle: {
+			fillColor: '#FFEAEE',
+			fontSize: 15,
+			bold: true
+		},
+		group_playlistTitle: {
+			fillColor: '#FFEAEE'
+		},
+
+		
+	blackshade: {
+		fontSize: 15,
+	},
+	summarycell: {
+		border:[false, true, false, true ]
+	},
+/*
+		td.blackshade {
+		border-bottom:solid #808080 1px; 
+	}
+	.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	*/	
+			},
+	defaultStyle: {
+		fontSize: 14,
+	},
+	"content": [
+		{BEGIN body}
+		{BEGIN embedded_grid}
+		{
+			text: '{$jscaption playlist_Report}',
+		},
+		{END embedded_grid}
+		{ 
+			{BEGIN standalone_page}
+			pageBreak: 'before',
+			{END standalone_page}
+			{BEGIN embedded_grid}
+			embeddedPage: true,
+			{END embedded_grid}
+			layout: {
+				hLineWidth: function(i, node) { return 0.1; },
+				vLineWidth: function(i, node) { 
+					if( node.table.embeddedPage ) {
+						return (i === 0 || i === node.table.widths.length) ? 0.1 : 0;
+					} else  {
+						return 0.1; 
+					}
+				},
+				hLineColor: function(i, node) { return 'gray'; },
+				vLineColor: function(i, node) { return 'gray'; },
+			},
+			table: {
+				{BEGIN embedded_grid}
+				embeddedPage: true,
+				{END embedded_grid}
+				
+				tableForm: true,
+				headerRows: 0 + 1 {BEGIN embedded_grid} -1 {END embedded_grid} ,
+
+				widths: [
+														"%",
+										"%",
+										"%",
+										"%",
+										"%",
+										"%",
+															],
+							
+				body: [
+				{BEGIN standalone_page}
+					[
+						{
+							colSpan: 6,
+							border:[false, false,false,false],
+							stack: [
+
+																										
+{
+	table: {
+	
+				
+		location: 'top',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c2',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"stack": [
+		
+				
+			{"text":"{$jspagetitlelabel playlist_Report rprint}","hidden":"{$item_hide_print_header}","fontSize":30},
+				
+				
+			{"text":"{$printtabheader_text}","hidden":"{$item_hide_print_subheader}"},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+								
+																										
+{
+	table: {
+	
+				
+		location: 'above-grid',
+		
+		
+		widths: [
+								"*", 
+					 ],	
+		
+	
+		body: [
+				
+				[
+																{
+	cellId: 'c1',
+	col:0,
+	row:0,
+		
+		
+	//	static colspan/rowspan
+		
+			
+	
+	
+			"text": [
+		
+				
+			{"text":"{mlang_message PRINT_PAGES}","hidden":"{$item_hide_print_pages}","isHtml":true,"page_indicator":true},
+				
+		  ],
+  "border": [ false, false, false, false ],
+              "alignment": 'left',
+  },
+
+											],
+		
+		]
+	}
+}
+,
+															]
+						},
+					],
+				{END standalone_page}
+
+																
+
+
+{BEGIN grid_row}
+			{BEGIN palylistOnair_newgroup}
+		[
+						{
+				colSpan: 6,
+				text: ['{$jslabel playlist_Report palylistOnair } ', {$palylistOnair_grval}],
+				style: 'header_1',
+			}
+		],
+
+				{END palylistOnair_newgroup}
+			{BEGIN playlistTitle_newgroup}
+		[
+						{
+				text: [''],
+				style: 'group_1',
+			},
+						{
+				colSpan: 5,
+				text: ['{$jslabel playlist_Report playlistTitle } ', {$playlistTitle_grval}],
+				style: 'header_2',
+			}
+		],
+
+				[
+								{
+					text: [''],
+					style: 'group_1',
+				},
+								{
+					text: [''],
+					style: 'group_2',
+				},
+																																				{
+						text: '{$jslabel playlist_Report fileName }',
+						style: 'blackshade'
+					},
+																			{
+						text: '{$jslabel playlist_Report fileDuration }',
+						style: 'blackshade'
+					},
+																			{
+						text: '{$jslabel playlist_Report playlistDescription }',
+						style: 'blackshade'
+					},
+																			{
+						text: '{$jslabel playlist_Report fileNo }',
+						style: 'blackshade'
+					},
+											],
+				{END playlistTitle_newgroup}
+	
+			{BEGIN row_data}
+		[
+						{
+							text: '',
+							style: 'group_1',
+			},
+						{
+							text: '',
+							style: 'group_2',
+			},
+			
+																									{
+					text: {$fileName_value},
+					alignment: '{$fileName_align}',
+				},
+															{
+					text: {$fileDuration_value},
+					alignment: '{$fileDuration_align}',
+				},
+															{
+					text: {$playlistDescription_value},
+					alignment: '{$playlistDescription_align}',
+				},
+															{
+					text: {$fileNo_value},
+					alignment: '{$fileNo_align}',
+				},
+									],
+		{END row_data}
+	
+					{BEGIN playlistTitle_endgroup}
+
+				[
+											{
+					text: [''],
+					style: 'group_1',
+				},
+							
+						{
+				colSpan:5,
+				text: ['{mlang_message SUMMARY_FOR} {$jslabel playlist_Report playlistTitle } ', 
+					{$playlistTitle_grval},
+					' - ', 
+					{$groupplaylistTitle_total_cnt}, 
+					' {mlang_message RECORDS_TOTAL}'],
+				style: 'group_2',
+			},
+					],
+			
+				[
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_1',
+			
+						},
+									{
+				text: [
+				
+									'{mlang_message SUM} ',
+						
+				],
+							style: 'group_2',
+			
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_2',
+			
+						},
+									{
+				text: [
+				
+									{$groupplaylistTitle_totalfileDuration_sum},
+						
+				],
+							style: 'group_2',
+			
+							alignment: '{$fileDuration_align}',
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_2',
+			
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_2',
+			
+						},
+					],
+		
+		
+		
+		
+		{END playlistTitle_endgroup}
+							{BEGIN palylistOnair_endgroup}
+
+				[
+			
+						{
+				colSpan:6,
+				text: ['{mlang_message SUMMARY_FOR} {$jslabel playlist_Report palylistOnair } ', 
+					{$palylistOnair_grval},
+					' - ', 
+					{$grouppalylistOnair_total_cnt}, 
+					' {mlang_message RECORDS_TOTAL}'],
+				style: 'group_1',
+			},
+					],
+			
+				[
+									{
+				text: [
+				
+									'{mlang_message SUM} ',
+						
+				],
+							style: 'group_1',
+			
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_1',
+			
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_1',
+			
+						},
+									{
+				text: [
+				
+									{$grouppalylistOnair_totalfileDuration_sum},
+						
+				],
+							style: 'group_1',
+			
+							alignment: '{$fileDuration_align}',
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_1',
+			
+						},
+									{
+				text: [
+				
+									''
+						
+				],
+							style: 'group_1',
+			
+						},
+					],
+		
+		
+		
+		
+		{END palylistOnair_endgroup}
+			
+{END grid_row}
+
+
+
+
+
+
+
+
+
+
+
+									]
+			
+			}
+		},
+		{END body}
+	]
+}

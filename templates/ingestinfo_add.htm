@@ -1,0 +1,458 @@
+<!doctype html>
+<html  {$html_attrs}>
+	<head>
+				<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{$pagetitle}</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<base href="{$projectPath}">
+		<link REL="stylesheet" href="styles/default.css?{$wizardBuildKey}" type="text/css">
+	{BEGIN rtlCSS}
+	<link REL="stylesheet" href="styles/defaultRTL.css?{$wizardBuildKey}" type="text/css">
+	{END rtlCSS}
+	{BEGIN styleCSSFiles}
+	<link REL="stylesheet" href="{$stylepath}" type="text/css">
+	{END styleCSSFiles}
+	</head>
+
+	<body class="{$stylename} function-add" {$bodyattrs}>
+	{BEGIN body}
+		{$header}
+		<style>
+			{$containerCss}
+		</style>
+		{$locking}
+		<div class="r-small-page" 
+			data-body-align="center"
+			data-body-width="full"
+		>
+							{BEGIN top_block}
+<div class="r-form" data-location="top" id="form_top_{$pageid}" data-makeup="small" {$form_top} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="top_c1" data-pageid="{$pageid}"	{$cell_top_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		<h2 data-itemtype="add_header" data-itemid="add_header" {$item_add_header} data-pageid="{$pageid}" >{$pagetitlelabel IngestInfo add}</h2>
+	</div>					</div>
+	</div>		
+{END top_block}
+									{BEGIN above-grid_block}
+<div class="r-form" data-location="above-grid" id="form_above-grid_{$pageid}" data-makeup="small" {$form_above-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="above-grid_c1" data-pageid="{$pageid}"	{$cell_above-grid_c1}
+	class=" r-ori-vert			col-md-12
+	">
+	 
+		{BEGIN message_block}
+<div data-itemtype="add_message" data-itemid="add_message" {$item_add_message} data-pageid="{$pageid}" class="alert {$message_class}" role="alert">
+<h5>{$message}</h5>
+<div>
+{BEGIN back_button}
+		
+	<button class="btn btn-sm btn-default" {$backbutton_attrs}>{mlang_message BACK_TO_LIST}</button>
+	{END back_button}
+{BEGIN view_page_button}
+	<button class="btn btn-sm btn-default" {$view_page_button_attrs}>{mlang_message VIEW}</button>
+{END view_page_button}
+{BEGIN edit_page_button}
+	<button class="btn btn-sm btn-default" {$edit_page_button_attrs}>{mlang_message EDIT}</button>
+{END edit_page_button}
+</div>
+</div>
+{END message_block}	</div>					</div>
+	</div>		
+{END above-grid_block}
+									{BEGIN grid_block}
+
+
+
+
+ 
+	 
+												{BEGIN mastertable_block}
+<div data-itemtype="master_info" data-itemid="master_info" {$item_master_info} data-pageid="{$pageid}">
+	{$showmasterfile}
+</div>
+{END mastertable_block}											<table 
+	data-body-align="center"
+	data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" 
+	class="r-edit-form" cellpadding="0" cellspacing="0" 
+	{$grid_hiddenattr} 
+		data-form-width="1"
+		
+		data-v-width="4"
+	>
+	<tbody>
+										<tr {$row_grid_0} >
+										
+
+{BEGIN cellblock_grid_c3}
+<td
+	{$cell_grid_c3}
+	class=" r-ori-vert"
+	
+				data-fullwidth
+		
+			data-cellId="grid_c3" data-pageid="{$pageid}"
+		data-v-cell="4"
+		
+>
+	<div edit-form-cell class="clearfix">
+				
+{BEGIN fileNo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileNo}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileNo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field" {$item_integrated_edit_field} data-pageid="{$pageid}" data-field="fileNo" data-fieldname="fileNo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileNo}">
+		{BEGIN fileNo_label}{$label IngestInfo fileNo }{END fileNo_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileNo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileNo">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileNo }		</div>
+	</div>
+</div>
+
+
+{END fileNo_fieldblock}
+											
+{BEGIN filedate_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_filedate}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="filedate{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field10" {$item_integrated_edit_field10} data-pageid="{$pageid}" data-field="filedate" data-fieldname="filedate" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_filedate}">
+		{BEGIN filedate_label}{$label IngestInfo filedate }{END filedate_label}
+	</label>
+	<div class="r-edit-field">
+		{$filedate_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="filedate">
+		<div class="text-muted" >
+		{$tooltip IngestInfo filedate }		</div>
+	</div>
+</div>
+
+
+{END filedate_fieldblock}
+											
+{BEGIN fileName_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileName}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileName{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field1" {$item_integrated_edit_field1} data-pageid="{$pageid}" data-field="fileName" data-fieldname="fileName" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileName}">
+		{BEGIN fileName_label}{$label IngestInfo fileName }{END fileName_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileName_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileName">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileName }		</div>
+	</div>
+</div>
+
+
+{END fileName_fieldblock}
+											
+{BEGIN fileType_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileType}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileType{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field2" {$item_integrated_edit_field2} data-pageid="{$pageid}" data-field="fileType" data-fieldname="fileType" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileType}">
+		{BEGIN fileType_label}{$label IngestInfo fileType }{END fileType_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileType_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileType">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileType }		</div>
+	</div>
+</div>
+
+
+{END fileType_fieldblock}
+											
+{BEGIN fileTitle_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileTitle}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileTitle{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field4" {$item_integrated_edit_field4} data-pageid="{$pageid}" data-field="fileTitle" data-fieldname="fileTitle" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileTitle}">
+		{BEGIN fileTitle_label}{$label IngestInfo fileTitle }{END fileTitle_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileTitle_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileTitle">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileTitle }		</div>
+	</div>
+</div>
+
+
+{END fileTitle_fieldblock}
+											
+{BEGIN fileSubject_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileSubject}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileSubject{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field3" {$item_integrated_edit_field3} data-pageid="{$pageid}" data-field="fileSubject" data-fieldname="fileSubject" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileSubject}">
+		{BEGIN fileSubject_label}{$label IngestInfo fileSubject }{END fileSubject_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileSubject_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileSubject">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileSubject }		</div>
+	</div>
+</div>
+
+
+{END fileSubject_fieldblock}
+											
+{BEGIN fileTeacherName_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileTeacherName}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileTeacherName{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field6" {$item_integrated_edit_field6} data-pageid="{$pageid}" data-field="fileTeacherName" data-fieldname="fileTeacherName" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileTeacherName}">
+		{BEGIN fileTeacherName_label}{$label IngestInfo fileTeacherName }{END fileTeacherName_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileTeacherName_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileTeacherName">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileTeacherName }		</div>
+	</div>
+</div>
+
+
+{END fileTeacherName_fieldblock}
+											
+{BEGIN fileTeacherInfo_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileTeacherInfo}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileTeacherInfo{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field9" {$item_integrated_edit_field9} data-pageid="{$pageid}" data-field="fileTeacherInfo" data-fieldname="fileTeacherInfo" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileTeacherInfo}">
+		{BEGIN fileTeacherInfo_label}{$label IngestInfo fileTeacherInfo }{END fileTeacherInfo_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileTeacherInfo_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileTeacherInfo">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileTeacherInfo }		</div>
+	</div>
+</div>
+
+
+{END fileTeacherInfo_fieldblock}
+											
+{BEGIN fileClassLevel_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileClassLevel}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileClassLevel{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field5" {$item_integrated_edit_field5} data-pageid="{$pageid}" data-field="fileClassLevel" data-fieldname="fileClassLevel" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileClassLevel}">
+		{BEGIN fileClassLevel_label}{$label IngestInfo fileClassLevel }{END fileClassLevel_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileClassLevel_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileClassLevel">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileClassLevel }		</div>
+	</div>
+</div>
+
+
+{END fileClassLevel_fieldblock}
+											
+{BEGIN fileRaw_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileRaw}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileRaw{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field7" {$item_integrated_edit_field7} data-pageid="{$pageid}" data-field="fileRaw" data-fieldname="fileRaw" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileRaw}">
+		{BEGIN fileRaw_label}{$label IngestInfo fileRaw }{END fileRaw_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileRaw_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileRaw">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileRaw }		</div>
+	</div>
+</div>
+
+
+{END fileRaw_fieldblock}
+											
+{BEGIN fileMD5_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileMD5}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileMD5{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field8" {$item_integrated_edit_field8} data-pageid="{$pageid}" data-field="fileMD5" data-fieldname="fileMD5" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileMD5}">
+		{BEGIN fileMD5_label}{$label IngestInfo fileMD5 }{END fileMD5_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileMD5_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileMD5">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileMD5 }		</div>
+	</div>
+</div>
+
+
+{END fileMD5_fieldblock}
+											
+{BEGIN fileDuration_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_fileDuration}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="fileDuration{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field12" {$item_integrated_edit_field12} data-pageid="{$pageid}" data-field="fileDuration" data-fieldname="fileDuration" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_fileDuration}">
+		{BEGIN fileDuration_label}{$label IngestInfo fileDuration }{END fileDuration_label}
+	</label>
+	<div class="r-edit-field">
+		{$fileDuration_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="fileDuration">
+		<div class="text-muted" >
+		{$tooltip IngestInfo fileDuration }		</div>
+	</div>
+</div>
+
+
+{END fileDuration_fieldblock}
+											
+{BEGIN entryUserName_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_entryUserName}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="entryUserName{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field14" {$item_integrated_edit_field14} data-pageid="{$pageid}" data-field="entryUserName" data-fieldname="entryUserName" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_entryUserName}">
+		{BEGIN entryUserName_label}{$label IngestInfo entryUserName }{END entryUserName_label}
+	</label>
+	<div class="r-edit-field">
+		{$entryUserName_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="entryUserName">
+		<div class="text-muted" >
+		{$tooltip IngestInfo entryUserName }		</div>
+	</div>
+</div>
+
+
+{END entryUserName_fieldblock}
+											
+{BEGIN entryTime_fieldblock}
+
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_entryTime}  r-horizontal-field form-horizontal" 
+	data-signal-error-for="entryTime{$id}" 
+	data-itemtype="integrated_edit_field" data-itemid="integrated_edit_field15" {$item_integrated_edit_field15} data-pageid="{$pageid}" data-field="entryTime" data-fieldname="entryTime" >
+
+	<label class="r-edit-label control-label" for="{$labelfor_entryTime}">
+		{BEGIN entryTime_label}{$label IngestInfo entryTime }{END entryTime_label}
+	</label>
+	<div class="r-edit-field">
+		{$entryTime_editcontrol}	</div>
+	<div class="r-edit-tooltip" data-helpfor="entryTime">
+		<div class="text-muted" >
+		{$tooltip IngestInfo entryTime }		</div>
+	</div>
+</div>
+
+
+{END entryTime_fieldblock}
+	
+								</td>
+			{END cellblock_grid_c3}
+								</tr>
+			</tbody></table>
+{END grid_block}
+									{BEGIN below-grid_block}
+<div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}"
+		data-v-width="4"
+	data-v-margin="1"
+	
+>		
+	 
+		<div class="row">
+			 
+				<div 
+	data-cellId="below-grid_c1" data-pageid="{$pageid}"	{$cell_below-grid_c1}
+	class="			col-md-12
+	">
+	 
+		<span data-itemtype="add_save" data-itemid="add_save" {$item_add_save} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-primary   
+	" {$savebutton_attrs} >
+							{mlang_message SAVE}			</a>
+</span>
+	 
+		{BEGIN back_button}
+<span data-itemtype="add_back_list" data-itemid="add_back_list" {$item_add_back_list} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="backButton{$id}" >
+							{mlang_message BACK_TO_LIST}			</a>
+</span>
+{END back_button}
+	 
+		{BEGIN cancel_button}
+<span data-itemtype="add_cancel" data-itemid="add_cancel" {$item_add_cancel} data-pageid="{$pageid}" data-small data-button-item>
+	<a type="button" title="" class="btn btn-default   
+	" id="cancelButton{$id}" >
+							{mlang_message CANCEL}			</a>
+</span>
+{END cancel_button}
+	</div>					</div>
+	</div>		
+{END below-grid_block}
+			</div>
+		{$footer}
+	{END body}
+	</body>
+</html>
