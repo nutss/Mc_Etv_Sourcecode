@@ -41,6 +41,7 @@ function GetPathYDM($CensorStatus) {
 
 function GetPathDatePlaylistYDM($DatePlaylist,$CensorStatus) {
 	
+	global $path_www_mc;
 
 	if ($CensorStatus == "PASS") {
 		
@@ -64,6 +65,21 @@ function GetPathDatePlaylistYDM($DatePlaylist,$CensorStatus) {
 		$year_path = $upload_path."/".$current_year."/";
 		$month_path = $upload_path."/".$current_year."/".$current_month."/";
 		$day_path = $upload_path."/".$current_year."/".$current_month."/".$current_day."/";
+
+
+		if (!file_exists($year_path)) {
+			mkdir($path_www_mc."".$year_path, 0777, true);
+		}
+		
+		
+		if (!file_exists($month_path)) {
+			mkdir($path_www_mc."".$month_path, 0777, true);
+		}
+		
+		if (!file_exists($day_path)) {
+			mkdir($path_www_mc."".$day_path, 0777, true);
+		}
+
 
 	return ($day_path);
 

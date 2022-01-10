@@ -107,6 +107,7 @@ $DB = mysqli_connect($host_db, $user_db, $pass_db, $database_db) or die("Could n
 															while($RS3_ROW = mysqli_fetch_array($RS3)){
 
 																	$newFileName = GetPathDatePlaylistYDM($RS3_ROW["playlistOnairDate"],$RS1_ROW["censorStatus"])."".$newName;
+																	echo $newFileName;
 															}
 														}								
 
