@@ -42,7 +42,7 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 
 		
 PlaylistStatusProcess($values['mediaInfoID'],"PLAYLIST");
-FileMoveFolder($values['mediaInfoID']);
+FileMoveFolder($values['mediaInfoID'],$values['id']);
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -130,9 +130,11 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 			PlaylistStatusProcess($values['mediaInfoID'],"PLAYLIST");
 			PlaylistStatusProcess($oldvalues['mediaInfoID'],"PASS");
 			
-			FileMoveFolder($values['mediaInfoID']);
+			FileMoveFolder($values['mediaInfoID'],$values['id']);
 
 	}
+
+
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.

@@ -92,7 +92,29 @@ $DB = mysqli_connect($host_db, $user_db, $pass_db, $database_db) or die("Could n
 								elseif ($RS1_ROW["censorStatus"] == "PLAYLIST"){
 										
 										
-									
+									$SQLCommand = "SELECT * FROM playlistSub WHERE (id=".$_POST["playlistSubID"].")";
+										$RS2 = mysqli_query($DB,$SQLCommand) or die("");
+										
+										if ($RS2->num_rows > 0) {
+											
+											while($RS2_ROW = mysqli_fetch_array($RS2)){
+
+												$SQLCommand = "SELECT * FROM playlistMain WHERE (id=".$RS2_ROW["playlistID"].")";
+														$RS3 = mysqli_query($DB,$SQLCommand) or die("");
+														
+														if ($RS3->num_rows > 0) {
+															
+															while($RS3_ROW = mysqli_fetch_array($RS3)){
+
+																	$newFileName = GetPathDatePlaylistYDM($RS3_ROW["playlistOnairDate"],$RS1_ROW["censorStatus"])."".$newName;
+															}
+														}								
+
+											}
+										}
+
+
+
 									copy($path_www_mc."".$fileName,$path_www_mc."".$newFileName);
 									copy($path_www_mc."".$fileName.".md5",$path_www_mc."".$newFileName.".md5");
 									
@@ -102,7 +124,6 @@ $DB = mysqli_connect($host_db, $user_db, $pass_db, $database_db) or die("Could n
 
 
 								$SQLCommand = "UPDATE mediaInfo SET fileStatus='READY',fileMD5='".$valuesMD5."',fileDuration='".$fileDuration."' WHERE (id=".$_POST["id"].");";
-								//$SQLCommand = "UPDATE mediaInfo SET fileStatus='READY' WHERE (id=".$_POST["id"].");";
 								$Query = mysqli_query($DB,$SQLCommand);
 								
 						}

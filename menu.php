@@ -28,6 +28,8 @@ if (($_SESSION["MyURL"] == "") || (!Security::isGuest())) {
 require_once('include/xtempl.php');
 require_once(getabspath("classes/cipherer.php"));
 
+include_once(getabspath("include/playlistmain_events.php"));
+$tableEvents["playlistMain"] = new eventclass_playlistmain;
 include_once(getabspath("include/playlistsub_events.php"));
 $tableEvents["playlistSub"] = new eventclass_playlistsub;
 include_once(getabspath("include/mediainfo_events.php"));

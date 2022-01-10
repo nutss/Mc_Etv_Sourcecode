@@ -39,6 +39,36 @@ function GetPathYDM($CensorStatus) {
 }
 
 
+function GetPathDatePlaylistYDM($DatePlaylist,$CensorStatus) {
+	
+
+	if ($CensorStatus == "PASS") {
+		
+		$upload_path = "files/share";
+	}
+	elseif (($CensorStatus == "UNCENSOR") OR ($CensorStatus == "REJECT")) {
+		
+		$upload_path = "files/ingest";
+	}
+	elseif (($CensorStatus == "PLAYLIST")) {
+		
+		$upload_path = "files/onair";
+	}
+		$DateCurrent=date_create($DatePlaylist);
+		
+	
+		$current_year = date_format($DateCurrent,"Y");
+		$current_month = date_format($DateCurrent,"m");
+		$current_day = date_format($DateCurrent,"d");
+		
+		$year_path = $upload_path."/".$current_year."/";
+		$month_path = $upload_path."/".$current_year."/".$current_month."/";
+		$day_path = $upload_path."/".$current_year."/".$current_month."/".$current_day."/";
+
+	return ($day_path);
+
+}
+
 function GetPathFileNoYDM($FileNo,$CensorStatus) {
 	
 
@@ -178,7 +208,7 @@ function FileCreate_MD5($id,$fileName) {
 
 	
 	
-function FileMoveFolder($mediaInfoID) {
+function FileMoveFolder($mediaInfoID,$playlistSubID) {
 /*	
 	
 	$curl_cmd = curl_init();
@@ -199,7 +229,8 @@ function FileMoveFolder($mediaInfoID) {
 	global $hostname_mc,$wget_command;
 
 	$Url = "http://".$hostname_mc."/scripts/file2MoveFolder.php";
-	$UrlOption.= "id=".$mediaInfoID;
+	$UrlOption.= "id=".$mediaInfoID."&";
+	$UrlOption.= "playlistSubID=".$playlistSubID;
 
 	
 	$command_sh = $wget_command." ".$Url." --post-data \"".$UrlOption."\"";

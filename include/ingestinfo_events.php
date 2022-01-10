@@ -291,7 +291,7 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 {
 
 		
-		FileMoveFolder($values["id"]);
+		FileMoveFolder($values['id'],"0");
 
 
 // Place event code here.
@@ -363,7 +363,7 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 
 		
 
-		FileMoveFolder($values["id"]);
+		FileMoveFolder($values['id'],"0");
 
 
 // Place event code here.

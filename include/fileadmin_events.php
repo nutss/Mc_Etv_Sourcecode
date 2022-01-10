@@ -229,7 +229,7 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 
 
 		if (($oldvalues['censorStatus']  <> "PLAYLIST") OR ($values['censorStatus'] <> "PLAYLIST")) {
-			FileMoveFolder($values['id']);
+			FileMoveFolder($values['id'],"0");
 		}
 
 

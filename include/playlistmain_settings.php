@@ -2067,7 +2067,8 @@ $tdataplaylistmain[".sqlquery"] = $queryData_playlistmain;
 
 
 
-$tableEvents["playlistMain"] = new eventsBase;
-$tdataplaylistmain[".hasEvents"] = false;
+include_once(getabspath("include/playlistmain_events.php"));
+$tableEvents["playlistMain"] = new eventclass_playlistmain;
+$tdataplaylistmain[".hasEvents"] = true;
 
 ?>
