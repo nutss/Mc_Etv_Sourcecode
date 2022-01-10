@@ -253,6 +253,40 @@
 								<span class="rnr-searchcontrol">{$searchcontrol_playlistDescription}</span>
 						</div>
 		{END searchCtrlBlock_playlistDescription}
+																{BEGIN searchCtrlBlock_palylistOnairTime2}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_palylistOnairTime2}" {$filterRow_attrs_palylistOnairTime2}>
+			<label>{$label playlist_Report palylistOnairTime2 }</label>
+
+			
+								<span class="rnr-searchtype" style="display: none;">{$searchtype_palylistOnairTime2}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_palylistOnairTime2}</span>
+						</div>
+		{END searchCtrlBlock_palylistOnairTime2}
+																{BEGIN searchCtrlBlock_playlistOnairTime1}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_playlistOnairTime1}" {$filterRow_attrs_playlistOnairTime1}>
+			<label>{$label playlist_Report playlistOnairTime1 }</label>
+
+			
+								<span class="rnr-searchtype" style="display: none;">{$searchtype_playlistOnairTime1}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_playlistOnairTime1}</span>
+						</div>
+		{END searchCtrlBlock_playlistOnairTime1}
+																{BEGIN searchCtrlBlock_playlistOnairDate}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_playlistOnairDate}" {$filterRow_attrs_playlistOnairDate}>
+			<label>{$label playlist_Report playlistOnairDate }</label>
+
+			
+								<span class="rnr-searchtype" style="display: none;">{$searchtype_playlistOnairDate}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_playlistOnairDate}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_playlistOnairDate}</span>
+						</div>
+		{END searchCtrlBlock_playlistOnairDate}
 																{BEGIN searchCtrlBlock_playlistTitle}
 
 
@@ -286,18 +320,6 @@
 								<span class="rnr-searchcontrol">{$searchcontrol_fileName}</span>
 						</div>
 		{END searchCtrlBlock_fileName}
-																{BEGIN searchCtrlBlock_palylistOnair}
-
-
-		<div class="form-group srchPanelRow {$filterRow_class_palylistOnair}" {$filterRow_attrs_palylistOnair}>
-			<label>{$label playlist_Report palylistOnair }</label>
-
-			
-								<span class="rnr-searchtype" style="display: none;">{$searchtype_palylistOnair}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol_palylistOnair}</span>
-								<span class="rnr-searchcontrol">{$searchcontrol1_palylistOnair}</span>
-						</div>
-		{END searchCtrlBlock_palylistOnair}
 		
 
 	</div>
@@ -450,24 +472,12 @@
 		padding: 2px; 4px;
 	}
 			td.group_1{
-			background-color: #DEEFEF;
+			background-color: #FFEAEE;
 		}
 		td.nbgroup_1{
-			background-color: #DEEFEF;
+			background-color: #FFEAEE;
 		}
 		td.header_1 {
-			background-color: #DEEFEF; 
-			font-size: 120%;
-			padding: 2px 8px;
-			font-weight: bold;
-		}
-			td.group_2{
-			background-color: #FFEAEE;
-		}
-		td.nbgroup_2{
-			background-color: #FFEAEE;
-		}
-		td.header_2 {
 			background-color: #FFEAEE; 
 			font-size: 120%;
 			padding: 2px 8px;
@@ -497,39 +507,27 @@
 	<tbody>
 {BEGIN grid_row}
 		<!--  group headers -->
-			{BEGIN palylistOnair_newgroup}
+			{BEGIN playlistOnairDate_newgroup}
 
 		<tr class="group-spliter-1" >
 				
-			<td class="header_1" colspan="6">
-				{$label playlist_Report palylistOnair }:&nbsp;
-										<span data-itemtype="grid_field" data-field="palylistOnair" data-itemid="grid_field2" data-pageid={$pageid} data-record-id="{$recId}">
-{$palylistOnair_grval}
-</span>			</td>
-		</tr>
-
-					{END palylistOnair_newgroup}
-			{BEGIN playlistTitle_newgroup}
-
-		<tr class="group-spliter-2" >
-							<td class="group_1">&nbsp;</td>
-				
-			<td class="header_2" colspan="5">
-				{$label playlist_Report playlistTitle }:&nbsp;
-										<span data-itemtype="grid_field" data-field="playlistTitle" data-itemid="grid_field3" data-pageid={$pageid} data-record-id="{$recId}">
-{$playlistTitle_grval}
+			<td class="header_1" colspan="7">
+				{$label playlist_Report playlistOnairDate }:&nbsp;
+										<span data-itemtype="grid_field" data-field="playlistOnairDate" data-itemid="grid_field2" data-pageid={$pageid} data-record-id="{$recId}">
+{$playlistOnairDate_grval}
 </span>			</td>
 		</tr>
 
 					<tr class="group-headers">
 							<td class="group_1">&nbsp;</td>
-							<td class="group_2">&nbsp;</td>
-																																		<td class="blackshade {$fieldclass_fileNo}">{$label playlist_Report fileNo }</td>
+																									<td class="blackshade {$fieldclass_playlistOnairTime1}">{$label playlist_Report playlistOnairTime1 }</td>
+																	<td class="blackshade {$fieldclass_palylistOnairTime2}">{$label playlist_Report palylistOnairTime2 }</td>
+																	<td class="blackshade {$fieldclass_fileNo}">{$label playlist_Report fileNo }</td>
 																	<td class="blackshade {$fieldclass_fileName}">{$label playlist_Report fileName }</td>
 																	<td class="blackshade {$fieldclass_fileDuration}">{$label playlist_Report fileDuration }</td>
 																	<td class="blackshade {$fieldclass_playlistDescription}">{$label playlist_Report playlistDescription }</td>
 											</tr>
-					{END playlistTitle_newgroup}
+					{END playlistOnairDate_newgroup}
 	
 			<!--  data-->
 		{BEGIN row_data}
@@ -537,72 +535,42 @@
 							<td class="group_1">
 									&nbsp;
 								</td>
-							<td class="group_2">
-									&nbsp;
-								</td>
 				
-																														<td class="data {$fieldclass_fileNo}">
-								<span data-itemtype="grid_field" data-field="fileNo" data-itemid="grid_field4" data-pageid={$pageid} data-record-id="{$recId}">
+																					<td class="data {$fieldclass_playlistOnairTime1}">
+								<span data-itemtype="grid_field" data-field="playlistOnairTime1" data-itemid="grid_field3" data-pageid={$pageid} data-record-id="{$recId}">
+{$playlistOnairTime1_value}
+</span>			</td>
+																	<td class="data {$fieldclass_palylistOnairTime2}">
+								<span data-itemtype="grid_field" data-field="palylistOnairTime2" data-itemid="grid_field4" data-pageid={$pageid} data-record-id="{$recId}">
+{$palylistOnairTime2_value}
+</span>			</td>
+																	<td class="data {$fieldclass_fileNo}">
+								<span data-itemtype="grid_field" data-field="fileNo" data-itemid="grid_field5" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileNo_value}
 </span>			</td>
 																	<td class="data {$fieldclass_fileName}">
-								<span data-itemtype="grid_field" data-field="fileName" data-itemid="grid_field5" data-pageid={$pageid} data-record-id="{$recId}">
+								<span data-itemtype="grid_field" data-field="fileName" data-itemid="grid_field6" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileName_value}
 </span>			</td>
 																	<td class="data {$fieldclass_fileDuration}">
-								<span data-itemtype="grid_field" data-field="fileDuration" data-itemid="grid_field6" data-pageid={$pageid} data-record-id="{$recId}">
+								<span data-itemtype="grid_field" data-field="fileDuration" data-itemid="grid_field7" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileDuration_value}
 </span>			</td>
 																	<td class="data {$fieldclass_playlistDescription}">
-								<span data-itemtype="grid_field" data-field="playlistDescription" data-itemid="grid_field7" data-pageid={$pageid} data-record-id="{$recId}">
+								<span data-itemtype="grid_field" data-field="playlistDescription" data-itemid="grid_field8" data-pageid={$pageid} data-record-id="{$recId}">
 {$playlistDescription_value}
 </span>			</td>
 											</tr>
 		{END row_data}
 	
 	<!---  group summary-->
-					{BEGIN playlistTitle_endgroup}
-
-		<tr class="summaryrow" >
-										<td class="group_1" style="border-top: none;"></td>
-							
-						<td  class="group_2" colspan=5 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label playlist_Report playlistTitle }&nbsp;{$playlistTitle_grval}
-					- <span class="summary-2" data-type="summary">{$groupplaylistTitle_total_cnt}
-					</span> {mlang_message RECORDS_TOTAL}			</td>
-					</tr>
-
-		<!--  Sum -->
-		<tr class="grouptotalsrow" >
-					
-						<td class="group_1">&nbsp;</td>
-								
-						<td class="group_2">{mlang_message SUM}</td>
-								
-						<td class="group_2">&nbsp;</td>
-								
-						<td class="group_2">&nbsp;</td>
-								
-						<td class="{$fieldclass_fileDuration} group_2">
-				<span class="summary-2" data-type="sum" data-field="fileDuration">
-					{$groupplaylistTitle_totalfileDuration_sum}
-				</span>
-			</td>
-								
-						<td class="group_2">&nbsp;</td>
-							</tr>
-	
-	
-	
-	
-		{END playlistTitle_endgroup}
-							{BEGIN palylistOnair_endgroup}
+					{BEGIN playlistOnairDate_endgroup}
 
 		<tr class="summaryrow" >
 			
-						<td  class="group_1" colspan=6 >
-				{mlang_message SUMMARY_FOR}&nbsp;{$label playlist_Report palylistOnair }&nbsp;{$palylistOnair_grval}
-					- <span class="summary-1" data-type="summary">{$grouppalylistOnair_total_cnt}
+						<td  class="group_1" colspan=7 >
+				{mlang_message SUMMARY_FOR}&nbsp;{$label playlist_Report playlistOnairDate }&nbsp;{$playlistOnairDate_grval}
+					- <span class="summary-1" data-type="summary">{$groupplaylistOnairDate_total_cnt}
 					</span> {mlang_message RECORDS_TOTAL}			</td>
 					</tr>
 
@@ -617,9 +585,11 @@
 								
 						<td class="group_1">&nbsp;</td>
 								
+						<td class="group_1">&nbsp;</td>
+								
 						<td class="{$fieldclass_fileDuration} group_1">
 				<span class="summary-1" data-type="sum" data-field="fileDuration">
-					{$grouppalylistOnair_totalfileDuration_sum}
+					{$groupplaylistOnairDate_totalfileDuration_sum}
 				</span>
 			</td>
 								
@@ -629,7 +599,7 @@
 	
 	
 	
-		{END palylistOnair_endgroup}
+		{END playlistOnairDate_endgroup}
 			
 {END grid_row}
 

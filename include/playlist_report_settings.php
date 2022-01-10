@@ -37,9 +37,6 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsplaylist_report["English"]["playlistClassLevel"] = "Class Level";
 	$fieldToolTipsplaylist_report["English"]["playlistClassLevel"] = "";
 	$placeHoldersplaylist_report["English"]["playlistClassLevel"] = "";
-	$fieldLabelsplaylist_report["English"]["palylistOnair"] = "Onair";
-	$fieldToolTipsplaylist_report["English"]["palylistOnair"] = "";
-	$placeHoldersplaylist_report["English"]["palylistOnair"] = "";
 	$fieldLabelsplaylist_report["English"]["fileNo"] = "File No";
 	$fieldToolTipsplaylist_report["English"]["fileNo"] = "";
 	$placeHoldersplaylist_report["English"]["fileNo"] = "";
@@ -88,6 +85,15 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsplaylist_report["English"]["filedate"] = "File Date";
 	$fieldToolTipsplaylist_report["English"]["filedate"] = "";
 	$placeHoldersplaylist_report["English"]["filedate"] = "";
+	$fieldLabelsplaylist_report["English"]["playlistOnairDate"] = "Playlist Onair Date";
+	$fieldToolTipsplaylist_report["English"]["playlistOnairDate"] = "";
+	$placeHoldersplaylist_report["English"]["playlistOnairDate"] = "";
+	$fieldLabelsplaylist_report["English"]["playlistOnairTime1"] = "Playlist Onair Time1";
+	$fieldToolTipsplaylist_report["English"]["playlistOnairTime1"] = "";
+	$placeHoldersplaylist_report["English"]["playlistOnairTime1"] = "";
+	$fieldLabelsplaylist_report["English"]["palylistOnairTime2"] = "Palylist Onair Time2";
+	$fieldToolTipsplaylist_report["English"]["palylistOnairTime2"] = "";
+	$placeHoldersplaylist_report["English"]["palylistOnairTime2"] = "";
 	if (count($fieldToolTipsplaylist_report["English"]))
 		$tdataplaylist_report[".isUseToolTips"] = true;
 }
@@ -109,9 +115,6 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsplaylist_report["Thai"]["playlistClassLevel"] = "ระดับการศึกษา";
 	$fieldToolTipsplaylist_report["Thai"]["playlistClassLevel"] = "";
 	$placeHoldersplaylist_report["Thai"]["playlistClassLevel"] = "";
-	$fieldLabelsplaylist_report["Thai"]["palylistOnair"] = "เวลาออกอากาศ";
-	$fieldToolTipsplaylist_report["Thai"]["palylistOnair"] = "";
-	$placeHoldersplaylist_report["Thai"]["palylistOnair"] = "";
 	$fieldLabelsplaylist_report["Thai"]["fileNo"] = "หมายเลขไฟล์";
 	$fieldToolTipsplaylist_report["Thai"]["fileNo"] = "";
 	$placeHoldersplaylist_report["Thai"]["fileNo"] = "";
@@ -160,6 +163,15 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsplaylist_report["Thai"]["filedate"] = "วันที่ไฟล์";
 	$fieldToolTipsplaylist_report["Thai"]["filedate"] = "";
 	$placeHoldersplaylist_report["Thai"]["filedate"] = "";
+	$fieldLabelsplaylist_report["Thai"]["playlistOnairDate"] = "วันที่ออกอากาศ";
+	$fieldToolTipsplaylist_report["Thai"]["playlistOnairDate"] = "";
+	$placeHoldersplaylist_report["Thai"]["playlistOnairDate"] = "";
+	$fieldLabelsplaylist_report["Thai"]["playlistOnairTime1"] = "เวลาออกอากาศ";
+	$fieldToolTipsplaylist_report["Thai"]["playlistOnairTime1"] = "";
+	$placeHoldersplaylist_report["Thai"]["playlistOnairTime1"] = "";
+	$fieldLabelsplaylist_report["Thai"]["palylistOnairTime2"] = "เวลาสิ้นสุดออกอากาศ";
+	$fieldToolTipsplaylist_report["Thai"]["palylistOnairTime2"] = "";
+	$placeHoldersplaylist_report["Thai"]["palylistOnairTime2"] = "";
 	if (count($fieldToolTipsplaylist_report["Thai"]))
 		$tdataplaylist_report[".isUseToolTips"] = true;
 }
@@ -278,11 +290,12 @@ $tdataplaylist_report[".filterFields"] = array();
 $tdataplaylist_report[".requiredSearchFields"] = array();
 
 $tdataplaylist_report[".googleLikeFields"] = array();
-$tdataplaylist_report[".googleLikeFields"][] = "id";
 $tdataplaylist_report[".googleLikeFields"][] = "playlistDescription";
 $tdataplaylist_report[".googleLikeFields"][] = "playlistSubject";
 $tdataplaylist_report[".googleLikeFields"][] = "playlistClassLevel";
-$tdataplaylist_report[".googleLikeFields"][] = "palylistOnair";
+$tdataplaylist_report[".googleLikeFields"][] = "playlistOnairDate";
+$tdataplaylist_report[".googleLikeFields"][] = "playlistOnairTime1";
+$tdataplaylist_report[".googleLikeFields"][] = "palylistOnairTime2";
 $tdataplaylist_report[".googleLikeFields"][] = "fileNo";
 $tdataplaylist_report[".googleLikeFields"][] = "fileName";
 $tdataplaylist_report[".googleLikeFields"][] = "fileType";
@@ -298,7 +311,6 @@ $tdataplaylist_report[".googleLikeFields"][] = "censorStatus";
 $tdataplaylist_report[".googleLikeFields"][] = "mediaInfoID";
 $tdataplaylist_report[".googleLikeFields"][] = "playlistID";
 $tdataplaylist_report[".googleLikeFields"][] = "playlistTitle";
-$tdataplaylist_report[".googleLikeFields"][] = "filedate";
 
 
 
@@ -327,21 +339,20 @@ $tdataplaylist_report[".pageSizeRecords"] = 20;
 
 
 
-$tdataplaylist_report[".noRecordsFirstPage"] = true;
 
 
 
 
-$tstrOrderBy = "ORDER BY playlistMain.palylistOnair";
+$tstrOrderBy = "ORDER BY playlistMain.playlistOnairDate";
 $tdataplaylist_report[".strOrderBy"] = $tstrOrderBy;
 
 $tdataplaylist_report[".orderindexes"] = array();
-	$tdataplaylist_report[".orderindexes"][] = array(5, (1 ? "ASC" : "DESC"), "playlistMain.palylistOnair");
+	$tdataplaylist_report[".orderindexes"][] = array(5, (1 ? "ASC" : "DESC"), "playlistMain.playlistOnairDate");
 
 
 
-$tdataplaylist_report[".sqlHead"] = "SELECT playlistMain.id, playlistMain.playlistDescription, playlistMain.playlistSubject, playlistMain.playlistClassLevel, playlistMain.palylistOnair, mediaInfo.fileNo, mediaInfo.fileName, mediaInfo.fileType, mediaInfo.fileDuration, mediaInfo.fileTitle, mediaInfo.fileTeacherName, mediaInfo.fileTeacherInfo, mediaInfo.fileMD5, mediaInfo.censorApproveTime, mediaInfo.censorUsername, mediaInfo.censoReson, mediaInfo.censorStatus, playlistSub.mediaInfoID, playlistSub.playlistID, playlistMain.playlistTitle, mediaInfo.filedate";
-$tdataplaylist_report[".sqlFrom"] = "FROM playlistMain INNER JOIN playlistSub ON playlistMain.id = playlistSub.playlistID INNER JOIN mediaInfo ON playlistSub.mediaInfoID = mediaInfo.id";
+$tdataplaylist_report[".sqlHead"] = "SELECT playlistMain.id,  playlistMain.playlistDescription,  playlistMain.playlistSubject,  playlistMain.playlistClassLevel,  playlistMain.playlistOnairDate,  playlistMain.playlistOnairTime1,  playlistMain.palylistOnairTime2,  mediaInfo.fileNo,  mediaInfo.fileName,  mediaInfo.fileType,  mediaInfo.fileDuration,  mediaInfo.fileTitle,  mediaInfo.fileTeacherName,  mediaInfo.fileTeacherInfo,  mediaInfo.fileMD5,  mediaInfo.censorApproveTime,  mediaInfo.censorUsername,  mediaInfo.censoReson,  mediaInfo.censorStatus,  playlistSub.mediaInfoID,  playlistSub.playlistID,  playlistMain.playlistTitle,  mediaInfo.filedate";
+$tdataplaylist_report[".sqlFrom"] = "FROM playlistMain  INNER JOIN playlistSub ON playlistMain.id = playlistSub.playlistID  INNER JOIN mediaInfo ON playlistSub.mediaInfoID = mediaInfo.id";
 $tdataplaylist_report[".sqlWhereExpr"] = "";
 $tdataplaylist_report[".sqlTail"] = "";
 
@@ -992,26 +1003,27 @@ $tdataplaylist_report[".hideMobileList"] = array();
 
 	$tdataplaylist_report["playlistClassLevel"] = $fdata;
 		$tdataplaylist_report[".searchableFields"][] = "playlistClassLevel";
-//	palylistOnair
+//	playlistOnairDate
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 5;
-	$fdata["strName"] = "palylistOnair";
-	$fdata["GoodName"] = "palylistOnair";
+	$fdata["strName"] = "playlistOnairDate";
+	$fdata["GoodName"] = "playlistOnairDate";
 	$fdata["ownerTable"] = "playlistMain";
-	$fdata["Label"] = GetFieldLabel("playlist_Report","palylistOnair");
-	$fdata["FieldType"] = 200;
+	$fdata["Label"] = GetFieldLabel("playlist_Report","playlistOnairDate");
+	$fdata["FieldType"] = 7;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "palylistOnair";
+		$fdata["strField"] = "playlistOnairDate";
 
-	
+		$fdata["sourceSingle"] = "playlistOnairDate";
+
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "playlistMain.palylistOnair";
+	$fdata["FullName"] = "playlistMain.playlistOnairDate";
 
 	
 	
@@ -1020,7 +1032,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "Datetime");
+	$vdata = array("ViewFormat" => "Short Date");
 
 	
 	
@@ -1049,9 +1061,8 @@ $tdataplaylist_report[".hideMobileList"] = array();
 
 	$edata = array("EditFormat" => "Date");
 
-		$edata["ShowTime"] = true;
-
-		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
 	$edata["weekdays"] = "[]";
 
 
@@ -1060,7 +1071,8 @@ $tdataplaylist_report[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1071,7 +1083,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 
 	
 	
-		$edata["DateEditType"] = 2;
+		$edata["DateEditType"] = 13;
 	$edata["InitialYearFactor"] = 100;
 	$edata["LastYearFactor"] = 100;
 
@@ -1084,7 +1096,8 @@ $tdataplaylist_report[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -1105,18 +1118,15 @@ $tdataplaylist_report[".hideMobileList"] = array();
 // the field's search options settings
 		$fdata["defaultSearchOption"] = "Between";
 
-			// the user's search options list
-		$fdata["searchOptionsList"] = array();
-		$fdata["searchOptionsList"][] = "Equals";
-		$fdata["searchOptionsList"][] = "Between";
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
 // the end of search options settings
 
 
 //Filters settings
 	$fdata["filterTotals"] = 0;
 		$fdata["filterMultiSelect"] = 0;
-		$fdata["filterTotalFields"] = "id";
-		$fdata["filterFormat"] = "Values list";
+			$fdata["filterFormat"] = "Values list";
 		$fdata["showCollapsed"] = false;
 
 		$fdata["sortValueType"] = 0;
@@ -1131,12 +1141,312 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdataplaylist_report["palylistOnair"] = $fdata;
-		$tdataplaylist_report[".searchableFields"][] = "palylistOnair";
-//	fileNo
+	$tdataplaylist_report["playlistOnairDate"] = $fdata;
+		$tdataplaylist_report[".searchableFields"][] = "playlistOnairDate";
+//	playlistOnairTime1
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 6;
+	$fdata["strName"] = "playlistOnairTime1";
+	$fdata["GoodName"] = "playlistOnairTime1";
+	$fdata["ownerTable"] = "playlistMain";
+	$fdata["Label"] = GetFieldLabel("playlist_Report","playlistOnairTime1");
+	$fdata["FieldType"] = 134;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "playlistOnairTime1";
+
+		$fdata["sourceSingle"] = "playlistOnairTime1";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "playlistMain.playlistOnairTime1";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Time");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		$vdata["timeFormatData"] = array(
+		"showSeconds" => false,
+		"showDaysInTotals" => false,
+		"timeFormat" => 0
+	);
+	$vdata["timeFormatData"]["showSeconds"] = true;
+	$vdata["timeFormatData"]["showDaysInTotals"] = true;
+
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Time");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+	//	End validation
+
+	
+	
+				$hours = 24;
+	$edata["FormatTimeAttrs"] = array("useTimePicker" => 0,
+									  "hours" => $hours,
+									  "minutes" => 1,
+									  "showSeconds" => 0);
+
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataplaylist_report["playlistOnairTime1"] = $fdata;
+		$tdataplaylist_report[".searchableFields"][] = "playlistOnairTime1";
+//	palylistOnairTime2
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
+	$fdata["strName"] = "palylistOnairTime2";
+	$fdata["GoodName"] = "palylistOnairTime2";
+	$fdata["ownerTable"] = "playlistMain";
+	$fdata["Label"] = GetFieldLabel("playlist_Report","palylistOnairTime2");
+	$fdata["FieldType"] = 134;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "palylistOnairTime2";
+
+		$fdata["sourceSingle"] = "palylistOnairTime2";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "playlistMain.palylistOnairTime2";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Time");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+		$vdata["timeFormatData"] = array(
+		"showSeconds" => false,
+		"showDaysInTotals" => false,
+		"timeFormat" => 0
+	);
+	$vdata["timeFormatData"]["showSeconds"] = true;
+	$vdata["timeFormatData"]["showDaysInTotals"] = true;
+
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Time");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+		$edata["IsRequired"] = true;
+
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+		$edata["EditParams"] = "";
+		
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
+	
+	//	End validation
+
+	
+	
+				$hours = 24;
+	$edata["FormatTimeAttrs"] = array("useTimePicker" => 0,
+									  "hours" => $hours,
+									  "minutes" => 1,
+									  "showSeconds" => 0);
+
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataplaylist_report["palylistOnairTime2"] = $fdata;
+		$tdataplaylist_report[".searchableFields"][] = "palylistOnairTime2";
+//	fileNo
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 8;
 	$fdata["strName"] = "fileNo";
 	$fdata["GoodName"] = "fileNo";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -1272,7 +1582,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	fileName
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 7;
+	$fdata["Index"] = 9;
 	$fdata["strName"] = "fileName";
 	$fdata["GoodName"] = "fileName";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -1408,7 +1718,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	fileType
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 8;
+	$fdata["Index"] = 10;
 	$fdata["strName"] = "fileType";
 	$fdata["GoodName"] = "fileType";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -1544,7 +1854,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	fileDuration
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 9;
+	$fdata["Index"] = 11;
 	$fdata["strName"] = "fileDuration";
 	$fdata["GoodName"] = "fileDuration";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -1692,7 +2002,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	fileTitle
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 10;
+	$fdata["Index"] = 12;
 	$fdata["strName"] = "fileTitle";
 	$fdata["GoodName"] = "fileTitle";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -1828,7 +2138,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	fileTeacherName
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 11;
+	$fdata["Index"] = 13;
 	$fdata["strName"] = "fileTeacherName";
 	$fdata["GoodName"] = "fileTeacherName";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -1964,7 +2274,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	fileTeacherInfo
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 12;
+	$fdata["Index"] = 14;
 	$fdata["strName"] = "fileTeacherInfo";
 	$fdata["GoodName"] = "fileTeacherInfo";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -2100,7 +2410,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	fileMD5
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 13;
+	$fdata["Index"] = 15;
 	$fdata["strName"] = "fileMD5";
 	$fdata["GoodName"] = "fileMD5";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -2236,7 +2546,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	censorApproveTime
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 14;
+	$fdata["Index"] = 16;
 	$fdata["strName"] = "censorApproveTime";
 	$fdata["GoodName"] = "censorApproveTime";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -2375,7 +2685,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	censorUsername
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 15;
+	$fdata["Index"] = 17;
 	$fdata["strName"] = "censorUsername";
 	$fdata["GoodName"] = "censorUsername";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -2511,7 +2821,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	censoReson
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 16;
+	$fdata["Index"] = 18;
 	$fdata["strName"] = "censoReson";
 	$fdata["GoodName"] = "censoReson";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -2647,7 +2957,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	censorStatus
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 17;
+	$fdata["Index"] = 19;
 	$fdata["strName"] = "censorStatus";
 	$fdata["GoodName"] = "censorStatus";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -2783,7 +3093,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	mediaInfoID
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 18;
+	$fdata["Index"] = 20;
 	$fdata["strName"] = "mediaInfoID";
 	$fdata["GoodName"] = "mediaInfoID";
 	$fdata["ownerTable"] = "playlistSub";
@@ -2922,7 +3232,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	playlistID
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 19;
+	$fdata["Index"] = 21;
 	$fdata["strName"] = "playlistID";
 	$fdata["GoodName"] = "playlistID";
 	$fdata["ownerTable"] = "playlistSub";
@@ -3061,7 +3371,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	playlistTitle
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 20;
+	$fdata["Index"] = 22;
 	$fdata["strName"] = "playlistTitle";
 	$fdata["GoodName"] = "playlistTitle";
 	$fdata["ownerTable"] = "playlistMain";
@@ -3198,7 +3508,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 //	filedate
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 21;
+	$fdata["Index"] = 23;
 	$fdata["strName"] = "filedate";
 	$fdata["GoodName"] = "filedate";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -3375,10 +3685,10 @@ function createSqlQuery_playlist_report()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "playlistMain.id, playlistMain.playlistDescription, playlistMain.playlistSubject, playlistMain.playlistClassLevel, playlistMain.palylistOnair, mediaInfo.fileNo, mediaInfo.fileName, mediaInfo.fileType, mediaInfo.fileDuration, mediaInfo.fileTitle, mediaInfo.fileTeacherName, mediaInfo.fileTeacherInfo, mediaInfo.fileMD5, mediaInfo.censorApproveTime, mediaInfo.censorUsername, mediaInfo.censoReson, mediaInfo.censorStatus, playlistSub.mediaInfoID, playlistSub.playlistID, playlistMain.playlistTitle, mediaInfo.filedate";
-$proto0["m_strFrom"] = "FROM playlistMain INNER JOIN playlistSub ON playlistMain.id = playlistSub.playlistID INNER JOIN mediaInfo ON playlistSub.mediaInfoID = mediaInfo.id";
+$proto0["m_strFieldList"] = "playlistMain.id,  playlistMain.playlistDescription,  playlistMain.playlistSubject,  playlistMain.playlistClassLevel,  playlistMain.playlistOnairDate,  playlistMain.playlistOnairTime1,  playlistMain.palylistOnairTime2,  mediaInfo.fileNo,  mediaInfo.fileName,  mediaInfo.fileType,  mediaInfo.fileDuration,  mediaInfo.fileTitle,  mediaInfo.fileTeacherName,  mediaInfo.fileTeacherInfo,  mediaInfo.fileMD5,  mediaInfo.censorApproveTime,  mediaInfo.censorUsername,  mediaInfo.censoReson,  mediaInfo.censorStatus,  playlistSub.mediaInfoID,  playlistSub.playlistID,  playlistMain.playlistTitle,  mediaInfo.filedate";
+$proto0["m_strFrom"] = "FROM playlistMain  INNER JOIN playlistSub ON playlistMain.id = playlistSub.playlistID  INNER JOIN mediaInfo ON playlistSub.mediaInfoID = mediaInfo.id";
 $proto0["m_strWhere"] = "";
-$proto0["m_strOrderBy"] = "ORDER BY playlistMain.palylistOnair";
+$proto0["m_strOrderBy"] = "ORDER BY playlistMain.playlistOnairDate";
 	
 		;
 			$proto0["cipherer"] = null;
@@ -3473,12 +3783,12 @@ $obj = new SQLFieldListItem($proto12);
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
-	"m_strName" => "palylistOnair",
+	"m_strName" => "playlistOnairDate",
 	"m_strTable" => "playlistMain",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto14["m_sql"] = "playlistMain.palylistOnair";
+$proto14["m_sql"] = "playlistMain.playlistOnairDate";
 $proto14["m_srcTableName"] = "playlist Report";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -3487,12 +3797,12 @@ $obj = new SQLFieldListItem($proto14);
 $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileNo",
-	"m_strTable" => "mediaInfo",
+	"m_strName" => "playlistOnairTime1",
+	"m_strTable" => "playlistMain",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto16["m_sql"] = "mediaInfo.fileNo";
+$proto16["m_sql"] = "playlistMain.playlistOnairTime1";
 $proto16["m_srcTableName"] = "playlist Report";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -3501,12 +3811,12 @@ $obj = new SQLFieldListItem($proto16);
 $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileName",
-	"m_strTable" => "mediaInfo",
+	"m_strName" => "palylistOnairTime2",
+	"m_strTable" => "playlistMain",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto18["m_sql"] = "mediaInfo.fileName";
+$proto18["m_sql"] = "playlistMain.palylistOnairTime2";
 $proto18["m_srcTableName"] = "playlist Report";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -3515,12 +3825,12 @@ $obj = new SQLFieldListItem($proto18);
 $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileType",
+	"m_strName" => "fileNo",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto20["m_sql"] = "mediaInfo.fileType";
+$proto20["m_sql"] = "mediaInfo.fileNo";
 $proto20["m_srcTableName"] = "playlist Report";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -3529,12 +3839,12 @@ $obj = new SQLFieldListItem($proto20);
 $proto0["m_fieldlist"][]=$obj;
 						$proto22=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileDuration",
+	"m_strName" => "fileName",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto22["m_sql"] = "mediaInfo.fileDuration";
+$proto22["m_sql"] = "mediaInfo.fileName";
 $proto22["m_srcTableName"] = "playlist Report";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -3543,12 +3853,12 @@ $obj = new SQLFieldListItem($proto22);
 $proto0["m_fieldlist"][]=$obj;
 						$proto24=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileTitle",
+	"m_strName" => "fileType",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto24["m_sql"] = "mediaInfo.fileTitle";
+$proto24["m_sql"] = "mediaInfo.fileType";
 $proto24["m_srcTableName"] = "playlist Report";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "";
@@ -3557,12 +3867,12 @@ $obj = new SQLFieldListItem($proto24);
 $proto0["m_fieldlist"][]=$obj;
 						$proto26=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileTeacherName",
+	"m_strName" => "fileDuration",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto26["m_sql"] = "mediaInfo.fileTeacherName";
+$proto26["m_sql"] = "mediaInfo.fileDuration";
 $proto26["m_srcTableName"] = "playlist Report";
 $proto26["m_expr"]=$obj;
 $proto26["m_alias"] = "";
@@ -3571,12 +3881,12 @@ $obj = new SQLFieldListItem($proto26);
 $proto0["m_fieldlist"][]=$obj;
 						$proto28=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileTeacherInfo",
+	"m_strName" => "fileTitle",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto28["m_sql"] = "mediaInfo.fileTeacherInfo";
+$proto28["m_sql"] = "mediaInfo.fileTitle";
 $proto28["m_srcTableName"] = "playlist Report";
 $proto28["m_expr"]=$obj;
 $proto28["m_alias"] = "";
@@ -3585,12 +3895,12 @@ $obj = new SQLFieldListItem($proto28);
 $proto0["m_fieldlist"][]=$obj;
 						$proto30=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileMD5",
+	"m_strName" => "fileTeacherName",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto30["m_sql"] = "mediaInfo.fileMD5";
+$proto30["m_sql"] = "mediaInfo.fileTeacherName";
 $proto30["m_srcTableName"] = "playlist Report";
 $proto30["m_expr"]=$obj;
 $proto30["m_alias"] = "";
@@ -3599,12 +3909,12 @@ $obj = new SQLFieldListItem($proto30);
 $proto0["m_fieldlist"][]=$obj;
 						$proto32=array();
 			$obj = new SQLField(array(
-	"m_strName" => "censorApproveTime",
+	"m_strName" => "fileTeacherInfo",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto32["m_sql"] = "mediaInfo.censorApproveTime";
+$proto32["m_sql"] = "mediaInfo.fileTeacherInfo";
 $proto32["m_srcTableName"] = "playlist Report";
 $proto32["m_expr"]=$obj;
 $proto32["m_alias"] = "";
@@ -3613,12 +3923,12 @@ $obj = new SQLFieldListItem($proto32);
 $proto0["m_fieldlist"][]=$obj;
 						$proto34=array();
 			$obj = new SQLField(array(
-	"m_strName" => "censorUsername",
+	"m_strName" => "fileMD5",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto34["m_sql"] = "mediaInfo.censorUsername";
+$proto34["m_sql"] = "mediaInfo.fileMD5";
 $proto34["m_srcTableName"] = "playlist Report";
 $proto34["m_expr"]=$obj;
 $proto34["m_alias"] = "";
@@ -3627,12 +3937,12 @@ $obj = new SQLFieldListItem($proto34);
 $proto0["m_fieldlist"][]=$obj;
 						$proto36=array();
 			$obj = new SQLField(array(
-	"m_strName" => "censoReson",
+	"m_strName" => "censorApproveTime",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto36["m_sql"] = "mediaInfo.censoReson";
+$proto36["m_sql"] = "mediaInfo.censorApproveTime";
 $proto36["m_srcTableName"] = "playlist Report";
 $proto36["m_expr"]=$obj;
 $proto36["m_alias"] = "";
@@ -3641,12 +3951,12 @@ $obj = new SQLFieldListItem($proto36);
 $proto0["m_fieldlist"][]=$obj;
 						$proto38=array();
 			$obj = new SQLField(array(
-	"m_strName" => "censorStatus",
+	"m_strName" => "censorUsername",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto38["m_sql"] = "mediaInfo.censorStatus";
+$proto38["m_sql"] = "mediaInfo.censorUsername";
 $proto38["m_srcTableName"] = "playlist Report";
 $proto38["m_expr"]=$obj;
 $proto38["m_alias"] = "";
@@ -3655,12 +3965,12 @@ $obj = new SQLFieldListItem($proto38);
 $proto0["m_fieldlist"][]=$obj;
 						$proto40=array();
 			$obj = new SQLField(array(
-	"m_strName" => "mediaInfoID",
-	"m_strTable" => "playlistSub",
+	"m_strName" => "censoReson",
+	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto40["m_sql"] = "playlistSub.mediaInfoID";
+$proto40["m_sql"] = "mediaInfo.censoReson";
 $proto40["m_srcTableName"] = "playlist Report";
 $proto40["m_expr"]=$obj;
 $proto40["m_alias"] = "";
@@ -3669,12 +3979,12 @@ $obj = new SQLFieldListItem($proto40);
 $proto0["m_fieldlist"][]=$obj;
 						$proto42=array();
 			$obj = new SQLField(array(
-	"m_strName" => "playlistID",
-	"m_strTable" => "playlistSub",
+	"m_strName" => "censorStatus",
+	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto42["m_sql"] = "playlistSub.playlistID";
+$proto42["m_sql"] = "mediaInfo.censorStatus";
 $proto42["m_srcTableName"] = "playlist Report";
 $proto42["m_expr"]=$obj;
 $proto42["m_alias"] = "";
@@ -3683,12 +3993,12 @@ $obj = new SQLFieldListItem($proto42);
 $proto0["m_fieldlist"][]=$obj;
 						$proto44=array();
 			$obj = new SQLField(array(
-	"m_strName" => "playlistTitle",
-	"m_strTable" => "playlistMain",
+	"m_strName" => "mediaInfoID",
+	"m_strTable" => "playlistSub",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto44["m_sql"] = "playlistMain.playlistTitle";
+$proto44["m_sql"] = "playlistSub.mediaInfoID";
 $proto44["m_srcTableName"] = "playlist Report";
 $proto44["m_expr"]=$obj;
 $proto44["m_alias"] = "";
@@ -3697,87 +4007,79 @@ $obj = new SQLFieldListItem($proto44);
 $proto0["m_fieldlist"][]=$obj;
 						$proto46=array();
 			$obj = new SQLField(array(
-	"m_strName" => "filedate",
-	"m_strTable" => "mediaInfo",
+	"m_strName" => "playlistID",
+	"m_strTable" => "playlistSub",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto46["m_sql"] = "mediaInfo.filedate";
+$proto46["m_sql"] = "playlistSub.playlistID";
 $proto46["m_srcTableName"] = "playlist Report";
 $proto46["m_expr"]=$obj;
 $proto46["m_alias"] = "";
 $obj = new SQLFieldListItem($proto46);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto48=array();
-$proto48["m_link"] = "SQLL_MAIN";
-			$proto49=array();
-$proto49["m_strName"] = "playlistMain";
-$proto49["m_srcTableName"] = "playlist Report";
-$proto49["m_columns"] = array();
-$proto49["m_columns"][] = "entryTime";
-$proto49["m_columns"][] = "entryUserName";
-$proto49["m_columns"][] = "id";
-$proto49["m_columns"][] = "palylistOnair";
-$proto49["m_columns"][] = "playlistClassLevel";
-$proto49["m_columns"][] = "playlistDescription";
-$proto49["m_columns"][] = "playlistSubject";
-$proto49["m_columns"][] = "playlistTitle";
-$obj = new SQLTable($proto49);
-
-$proto48["m_table"] = $obj;
-$proto48["m_sql"] = "playlistMain";
-$proto48["m_alias"] = "";
-$proto48["m_srcTableName"] = "playlist Report";
-$proto50=array();
-$proto50["m_sql"] = "";
-$proto50["m_uniontype"] = "SQLL_UNKNOWN";
-	$obj = new SQLNonParsed(array(
-	"m_sql" => ""
+						$proto48=array();
+			$obj = new SQLField(array(
+	"m_strName" => "playlistTitle",
+	"m_strTable" => "playlistMain",
+	"m_srcTableName" => "playlist Report"
 ));
 
-$proto50["m_column"]=$obj;
-$proto50["m_contained"] = array();
-$proto50["m_strCase"] = "";
-$proto50["m_havingmode"] = false;
-$proto50["m_inBrackets"] = false;
-$proto50["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto50);
+$proto48["m_sql"] = "playlistMain.playlistTitle";
+$proto48["m_srcTableName"] = "playlist Report";
+$proto48["m_expr"]=$obj;
+$proto48["m_alias"] = "";
+$obj = new SQLFieldListItem($proto48);
 
-$proto48["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto48);
+$proto0["m_fieldlist"][]=$obj;
+						$proto50=array();
+			$obj = new SQLField(array(
+	"m_strName" => "filedate",
+	"m_strTable" => "mediaInfo",
+	"m_srcTableName" => "playlist Report"
+));
 
-$proto0["m_fromlist"][]=$obj;
+$proto50["m_sql"] = "mediaInfo.filedate";
+$proto50["m_srcTableName"] = "playlist Report";
+$proto50["m_expr"]=$obj;
+$proto50["m_alias"] = "";
+$obj = new SQLFieldListItem($proto50);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
 												$proto52=array();
-$proto52["m_link"] = "SQLL_INNERJOIN";
+$proto52["m_link"] = "SQLL_MAIN";
 			$proto53=array();
-$proto53["m_strName"] = "playlistSub";
+$proto53["m_strName"] = "playlistMain";
 $proto53["m_srcTableName"] = "playlist Report";
 $proto53["m_columns"] = array();
 $proto53["m_columns"][] = "entryTime";
 $proto53["m_columns"][] = "entryUserName";
 $proto53["m_columns"][] = "id";
-$proto53["m_columns"][] = "mediaInfoID";
-$proto53["m_columns"][] = "playlistID";
+$proto53["m_columns"][] = "palylistOnairTime2";
+$proto53["m_columns"][] = "playlistClassLevel";
+$proto53["m_columns"][] = "playlistDescription";
+$proto53["m_columns"][] = "playlistOnairDate";
+$proto53["m_columns"][] = "playlistOnairTime1";
+$proto53["m_columns"][] = "playlistSubject";
+$proto53["m_columns"][] = "playlistTitle";
 $obj = new SQLTable($proto53);
 
 $proto52["m_table"] = $obj;
-$proto52["m_sql"] = "INNER JOIN playlistSub ON playlistMain.id = playlistSub.playlistID";
+$proto52["m_sql"] = "playlistMain";
 $proto52["m_alias"] = "";
 $proto52["m_srcTableName"] = "playlist Report";
 $proto54=array();
-$proto54["m_sql"] = "playlistMain.id = playlistSub.playlistID";
+$proto54["m_sql"] = "";
 $proto54["m_uniontype"] = "SQLL_UNKNOWN";
-						$obj = new SQLField(array(
-	"m_strName" => "id",
-	"m_strTable" => "playlistMain",
-	"m_srcTableName" => "playlist Report"
+	$obj = new SQLNonParsed(array(
+	"m_sql" => ""
 ));
 
 $proto54["m_column"]=$obj;
 $proto54["m_contained"] = array();
-$proto54["m_strCase"] = "= playlistSub.playlistID";
+$proto54["m_strCase"] = "";
 $proto54["m_havingmode"] = false;
 $proto54["m_inBrackets"] = false;
 $proto54["m_useAlias"] = false;
@@ -3790,49 +4092,32 @@ $proto0["m_fromlist"][]=$obj;
 												$proto56=array();
 $proto56["m_link"] = "SQLL_INNERJOIN";
 			$proto57=array();
-$proto57["m_strName"] = "mediaInfo";
+$proto57["m_strName"] = "playlistSub";
 $proto57["m_srcTableName"] = "playlist Report";
 $proto57["m_columns"] = array();
-$proto57["m_columns"][] = "censorApproveTime";
-$proto57["m_columns"][] = "censoReson";
-$proto57["m_columns"][] = "censorStatus";
-$proto57["m_columns"][] = "censorUsername";
 $proto57["m_columns"][] = "entryTime";
 $proto57["m_columns"][] = "entryUserName";
-$proto57["m_columns"][] = "fileClassLevel";
-$proto57["m_columns"][] = "filedate";
-$proto57["m_columns"][] = "fileDuration";
-$proto57["m_columns"][] = "fileMD5";
-$proto57["m_columns"][] = "fileName";
-$proto57["m_columns"][] = "fileNo";
-$proto57["m_columns"][] = "filePath";
-$proto57["m_columns"][] = "fileRaw";
-$proto57["m_columns"][] = "fileStatus";
-$proto57["m_columns"][] = "fileSubject";
-$proto57["m_columns"][] = "fileTeacherInfo";
-$proto57["m_columns"][] = "fileTeacherName";
-$proto57["m_columns"][] = "fileTitle";
-$proto57["m_columns"][] = "fileType";
 $proto57["m_columns"][] = "id";
+$proto57["m_columns"][] = "mediaInfoID";
 $proto57["m_columns"][] = "playlistID";
 $obj = new SQLTable($proto57);
 
 $proto56["m_table"] = $obj;
-$proto56["m_sql"] = "INNER JOIN mediaInfo ON playlistSub.mediaInfoID = mediaInfo.id";
+$proto56["m_sql"] = "INNER JOIN playlistSub ON playlistMain.id = playlistSub.playlistID";
 $proto56["m_alias"] = "";
 $proto56["m_srcTableName"] = "playlist Report";
 $proto58=array();
-$proto58["m_sql"] = "playlistSub.mediaInfoID = mediaInfo.id";
+$proto58["m_sql"] = "playlistMain.id = playlistSub.playlistID";
 $proto58["m_uniontype"] = "SQLL_UNKNOWN";
 						$obj = new SQLField(array(
-	"m_strName" => "mediaInfoID",
-	"m_strTable" => "playlistSub",
+	"m_strName" => "id",
+	"m_strTable" => "playlistMain",
 	"m_srcTableName" => "playlist Report"
 ));
 
 $proto58["m_column"]=$obj;
 $proto58["m_contained"] = array();
-$proto58["m_strCase"] = "= mediaInfo.id";
+$proto58["m_strCase"] = "= playlistSub.playlistID";
 $proto58["m_havingmode"] = false;
 $proto58["m_inBrackets"] = false;
 $proto58["m_useAlias"] = false;
@@ -3842,19 +4127,74 @@ $proto56["m_joinon"] = $obj;
 $obj = new SQLFromListItem($proto56);
 
 $proto0["m_fromlist"][]=$obj;
+												$proto60=array();
+$proto60["m_link"] = "SQLL_INNERJOIN";
+			$proto61=array();
+$proto61["m_strName"] = "mediaInfo";
+$proto61["m_srcTableName"] = "playlist Report";
+$proto61["m_columns"] = array();
+$proto61["m_columns"][] = "censorApproveTime";
+$proto61["m_columns"][] = "censoReson";
+$proto61["m_columns"][] = "censorStatus";
+$proto61["m_columns"][] = "censorUsername";
+$proto61["m_columns"][] = "entryTime";
+$proto61["m_columns"][] = "entryUserName";
+$proto61["m_columns"][] = "fileClassLevel";
+$proto61["m_columns"][] = "filedate";
+$proto61["m_columns"][] = "fileDuration";
+$proto61["m_columns"][] = "fileMD5";
+$proto61["m_columns"][] = "fileName";
+$proto61["m_columns"][] = "fileNo";
+$proto61["m_columns"][] = "filePath";
+$proto61["m_columns"][] = "fileRaw";
+$proto61["m_columns"][] = "fileStatus";
+$proto61["m_columns"][] = "fileSubject";
+$proto61["m_columns"][] = "fileTeacherInfo";
+$proto61["m_columns"][] = "fileTeacherName";
+$proto61["m_columns"][] = "fileTitle";
+$proto61["m_columns"][] = "fileType";
+$proto61["m_columns"][] = "id";
+$proto61["m_columns"][] = "playlistID";
+$obj = new SQLTable($proto61);
+
+$proto60["m_table"] = $obj;
+$proto60["m_sql"] = "INNER JOIN mediaInfo ON playlistSub.mediaInfoID = mediaInfo.id";
+$proto60["m_alias"] = "";
+$proto60["m_srcTableName"] = "playlist Report";
+$proto62=array();
+$proto62["m_sql"] = "playlistSub.mediaInfoID = mediaInfo.id";
+$proto62["m_uniontype"] = "SQLL_UNKNOWN";
+						$obj = new SQLField(array(
+	"m_strName" => "mediaInfoID",
+	"m_strTable" => "playlistSub",
+	"m_srcTableName" => "playlist Report"
+));
+
+$proto62["m_column"]=$obj;
+$proto62["m_contained"] = array();
+$proto62["m_strCase"] = "= mediaInfo.id";
+$proto62["m_havingmode"] = false;
+$proto62["m_inBrackets"] = false;
+$proto62["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto62);
+
+$proto60["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto60);
+
+$proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto60=array();
+												$proto64=array();
 						$obj = new SQLField(array(
-	"m_strName" => "palylistOnair",
+	"m_strName" => "playlistOnairDate",
 	"m_strTable" => "playlistMain",
 	"m_srcTableName" => "playlist Report"
 ));
 
-$proto60["m_column"]=$obj;
-$proto60["m_bAsc"] = 1;
-$proto60["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto60);
+$proto64["m_column"]=$obj;
+$proto64["m_bAsc"] = 1;
+$proto64["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto64);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="playlist Report";		
@@ -3868,7 +4208,7 @@ $queryData_playlist_report = createSqlQuery_playlist_report();
 	
 		;
 
-																					
+																							
 
 $tdataplaylist_report[".sqlquery"] = $queryData_playlist_report;
 

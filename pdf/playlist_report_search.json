@@ -116,9 +116,6 @@ pdfDocument = {
 			"stack": [
 		
 				
-			{"text":{$id_value},"hidden":"{$item_hide_integrated_search_field}"},
-				
-				
 			{"text":{$playlistDescription_value},"hidden":"{$item_hide_integrated_search_field1}"},
 				
 				
@@ -126,9 +123,6 @@ pdfDocument = {
 				
 				
 			{"text":{$playlistClassLevel_value},"hidden":"{$item_hide_integrated_search_field3}"},
-				
-				
-			{"text":{$palylistOnair_value},"hidden":"{$item_hide_integrated_search_field4}"},
 				
 				
 			{"text":{$fileNo_value},"hidden":"{$item_hide_integrated_search_field9}"},
@@ -177,6 +171,15 @@ pdfDocument = {
 				
 				
 			{"text":{$filedate_value},"hidden":"{$item_hide_integrated_search_field6}"},
+				
+				
+			{"text":{$playlistOnairDate_value},"hidden":"{$item_hide_integrated_search_field4}"},
+				
+				
+			{"text":{$playlistOnairTime1_value},"hidden":"{$item_hide_integrated_search_field7}"},
+				
+				
+			{"text":{$palylistOnairTime2_value},"hidden":"{$item_hide_integrated_search_field8}"},
 				
 		  ],
   "border": [ false, false, false, false ],

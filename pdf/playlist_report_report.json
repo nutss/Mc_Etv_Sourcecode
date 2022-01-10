@@ -64,13 +64,14 @@ pdfDocument = {
 										"%",
 										"%",
 										"%",
+										"%",
 															],
 							
 				body: [
 				{BEGIN standalone_page}
 					[
 						{
-							colSpan: 6,
+							colSpan: 7,
 							border:[false, false,false,false],
 							stack: [
 
@@ -196,26 +197,12 @@ pdfDocument = {
 
 
 {BEGIN grid_row}
-			{BEGIN palylistOnair_newgroup}
+			{BEGIN playlistOnairDate_newgroup}
 		[
 						{
-				colSpan: 6,
-				text: ['{$jslabel playlist_Report palylistOnair } ', {$palylistOnair_grval}],
+				colSpan: 7,
+				text: ['{$jslabel playlist_Report playlistOnairDate } ', {$playlistOnairDate_grval}],
 				style: 'header_1',
-			}
-		],
-
-				{END palylistOnair_newgroup}
-			{BEGIN playlistTitle_newgroup}
-		[
-						{
-				text: [''],
-				style: 'group_1',
-			},
-						{
-				colSpan: 5,
-				text: ['{$jslabel playlist_Report playlistTitle } ', {$playlistTitle_grval}],
-				style: 'header_2',
 			}
 		],
 
@@ -224,11 +211,15 @@ pdfDocument = {
 					text: [''],
 					style: 'group_1',
 				},
-								{
-					text: [''],
-					style: 'group_2',
-				},
-																																				{
+																											{
+						text: '{$jslabel playlist_Report playlistOnairTime1 }',
+						style: 'blackshade'
+					},
+																			{
+						text: '{$jslabel playlist_Report palylistOnairTime2 }',
+						style: 'blackshade'
+					},
+																			{
 						text: '{$jslabel playlist_Report fileNo }',
 						style: 'blackshade'
 					},
@@ -245,7 +236,7 @@ pdfDocument = {
 						style: 'blackshade'
 					},
 											],
-				{END playlistTitle_newgroup}
+				{END playlistOnairDate_newgroup}
 	
 			{BEGIN row_data}
 		[
@@ -253,12 +244,16 @@ pdfDocument = {
 							text: '',
 							style: 'group_1',
 			},
-						{
-							text: '',
-							style: 'group_2',
-			},
 			
-																									{
+																		{
+					text: {$playlistOnairTime1_value},
+					alignment: '{$playlistOnairTime1_align}',
+				},
+															{
+					text: {$palylistOnairTime2_value},
+					alignment: '{$palylistOnairTime2_align}',
+				},
+															{
 					text: {$fileNo_value},
 					alignment: '{$fileNo_align}',
 				},
@@ -277,97 +272,16 @@ pdfDocument = {
 									],
 		{END row_data}
 	
-					{BEGIN playlistTitle_endgroup}
-
-				[
-											{
-					text: [''],
-					style: 'group_1',
-				},
-							
-						{
-				colSpan:5,
-				text: ['{mlang_message SUMMARY_FOR} {$jslabel playlist_Report playlistTitle } ', 
-					{$playlistTitle_grval},
-					' - ', 
-					{$groupplaylistTitle_total_cnt}, 
-					' {mlang_message RECORDS_TOTAL}'],
-				style: 'group_2',
-			},
-					],
-			
-				[
-									{
-				text: [
-				
-									''
-						
-				],
-							style: 'group_1',
-			
-						},
-									{
-				text: [
-				
-									'{mlang_message SUM} ',
-						
-				],
-							style: 'group_2',
-			
-						},
-									{
-				text: [
-				
-									''
-						
-				],
-							style: 'group_2',
-			
-						},
-									{
-				text: [
-				
-									''
-						
-				],
-							style: 'group_2',
-			
-						},
-									{
-				text: [
-				
-									{$groupplaylistTitle_totalfileDuration_sum},
-						
-				],
-							style: 'group_2',
-			
-							alignment: '{$fileDuration_align}',
-						},
-									{
-				text: [
-				
-									''
-						
-				],
-							style: 'group_2',
-			
-						},
-					],
-		
-		
-		
-		
-		{END playlistTitle_endgroup}
-							{BEGIN palylistOnair_endgroup}
+					{BEGIN playlistOnairDate_endgroup}
 
 				[
 			
 						{
-				colSpan:6,
-				text: ['{mlang_message SUMMARY_FOR} {$jslabel playlist_Report palylistOnair } ', 
-					{$palylistOnair_grval},
+				colSpan:7,
+				text: ['{mlang_message SUMMARY_FOR} {$jslabel playlist_Report playlistOnairDate } ', 
+					{$playlistOnairDate_grval},
 					' - ', 
-					{$grouppalylistOnair_total_cnt}, 
+					{$groupplaylistOnairDate_total_cnt}, 
 					' {mlang_message RECORDS_TOTAL}'],
 				style: 'group_1',
 			},
@@ -413,7 +327,16 @@ pdfDocument = {
 									{
 				text: [
 				
-									{$grouppalylistOnair_totalfileDuration_sum},
+									''
+						
+				],
+							style: 'group_1',
+			
+						},
+									{
+				text: [
+				
+									{$groupplaylistOnairDate_totalfileDuration_sum},
 						
 				],
 							style: 'group_1',
@@ -434,7 +357,7 @@ pdfDocument = {
 		
 		
 		
-		{END palylistOnair_endgroup}
+		{END playlistOnairDate_endgroup}
 			
 {END grid_row}
 

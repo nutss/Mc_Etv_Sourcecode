@@ -85,28 +85,6 @@
 >
 	<div edit-form-cell class="clearfix">
 				
-{BEGIN id_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_id}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="id{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field" {$item_integrated_search_field} data-pageid="{$pageid}" data-field="id" data-fieldname="id" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_id}">
-		{$label playlist_Report id }	</label>
-	<div class="r-search-option">
-		{$searchtype_id}
-	</div>
-	<div class="r-search-field">
-		{$id_editcontrol}	</div>
-	<div class="r-search-field">
-		{$id_editcontrol1}
-	</div>
-	
-</div>
-
-{END id_fieldblock}
-											
 {BEGIN playlistDescription_fieldblock}
 
 <div class="r-integrated-field form-group clearfix {$fielddispclass_playlistDescription}  r-horizontal-field form-horizontal" 	
@@ -172,28 +150,6 @@
 </div>
 
 {END playlistClassLevel_fieldblock}
-											
-{BEGIN palylistOnair_fieldblock}
-
-<div class="r-integrated-field form-group clearfix {$fielddispclass_palylistOnair}  r-horizontal-field form-horizontal" 	
-	data-signal-error-for="palylistOnair{$id}" 
-	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="palylistOnair" data-fieldname="palylistOnair" >
-
-
-	<label class="r-search-label control-label" for="{$labelfor_palylistOnair}">
-		{$label playlist_Report palylistOnair }	</label>
-	<div class="r-search-option">
-		{$searchtype_palylistOnair}
-	</div>
-	<div class="r-search-field">
-		{$palylistOnair_editcontrol}	</div>
-	<div class="r-search-field">
-		{$palylistOnair_editcontrol1}
-	</div>
-	
-</div>
-
-{END palylistOnair_fieldblock}
 											
 {BEGIN fileNo_fieldblock}
 
@@ -546,6 +502,72 @@
 </div>
 
 {END filedate_fieldblock}
+											
+{BEGIN playlistOnairDate_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_playlistOnairDate}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="playlistOnairDate{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field4" {$item_integrated_search_field4} data-pageid="{$pageid}" data-field="playlistOnairDate" data-fieldname="playlistOnairDate" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_playlistOnairDate}">
+		{$label playlist_Report playlistOnairDate }	</label>
+	<div class="r-search-option">
+		{$searchtype_playlistOnairDate}
+	</div>
+	<div class="r-search-field">
+		{$playlistOnairDate_editcontrol}	</div>
+	<div class="r-search-field">
+		{$playlistOnairDate_editcontrol1}
+	</div>
+	
+</div>
+
+{END playlistOnairDate_fieldblock}
+											
+{BEGIN playlistOnairTime1_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_playlistOnairTime1}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="playlistOnairTime1{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field7" {$item_integrated_search_field7} data-pageid="{$pageid}" data-field="playlistOnairTime1" data-fieldname="playlistOnairTime1" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_playlistOnairTime1}">
+		{$label playlist_Report playlistOnairTime1 }	</label>
+	<div class="r-search-option">
+		{$searchtype_playlistOnairTime1}
+	</div>
+	<div class="r-search-field">
+		{$playlistOnairTime1_editcontrol}	</div>
+	<div class="r-search-field">
+		{$playlistOnairTime1_editcontrol1}
+	</div>
+	
+</div>
+
+{END playlistOnairTime1_fieldblock}
+											
+{BEGIN palylistOnairTime2_fieldblock}
+
+<div class="r-integrated-field form-group clearfix {$fielddispclass_palylistOnairTime2}  r-horizontal-field form-horizontal" 	
+	data-signal-error-for="palylistOnairTime2{$id}" 
+	data-itemtype="integrated_search_field" data-itemid="integrated_search_field8" {$item_integrated_search_field8} data-pageid="{$pageid}" data-field="palylistOnairTime2" data-fieldname="palylistOnairTime2" >
+
+
+	<label class="r-search-label control-label" for="{$labelfor_palylistOnairTime2}">
+		{$label playlist_Report palylistOnairTime2 }	</label>
+	<div class="r-search-option">
+		{$searchtype_palylistOnairTime2}
+	</div>
+	<div class="r-search-field">
+		{$palylistOnairTime2_editcontrol}	</div>
+	<div class="r-search-field">
+		{$palylistOnairTime2_editcontrol1}
+	</div>
+	
+</div>
+
+{END palylistOnairTime2_fieldblock}
 	
 								</td>
 			{END cellblock_grid_c3}
