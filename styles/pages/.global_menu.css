@@ -13,5 +13,8 @@
 [data-page=".global_menu"][data-itemid="welcome_item4"] > .bs-welcome-header {
   background-color: #B22222;
 }
+[data-page=".global_menu"][data-itemid="welcome_item5"] > .bs-welcome-header {
+  background-color: #DC143C;
+}
 
 

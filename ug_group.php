@@ -36,6 +36,7 @@ $nonAdminTablesArr[] = "playlist Report";
 $nonAdminTablesArr[] = "IngestInfo";
 $nonAdminTablesArr[] = "downloadInfo";
 $nonAdminTablesArr[] = "deleteInfo";
+$nonAdminTablesArr[] = "producer";
 
 $ug_connection = $cman->getForUserGroups();
 

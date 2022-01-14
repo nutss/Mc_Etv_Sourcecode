@@ -16,6 +16,8 @@
 
 		$this->events["AfterEdit"]=true;
 
+		$this->events["AfterDelete"]=true;
+
 
 	}
 
@@ -42,7 +44,7 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 
 		
 PlaylistStatusProcess($values['mediaInfoID'],"PLAYLIST");
-FileMoveFolder($values['mediaInfoID'],$values['id']);
+FileMoveFolder($values['mediaInfoID'],"",$values['id']);
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.
@@ -130,7 +132,7 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 			PlaylistStatusProcess($values['mediaInfoID'],"PLAYLIST");
 			PlaylistStatusProcess($oldvalues['mediaInfoID'],"PASS");
 			
-			FileMoveFolder($values['mediaInfoID'],$values['id']);
+			FileMoveFolder($values['mediaInfoID'],"",$values['id']);
 
 	}
 
@@ -141,6 +143,81 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 ;		
 } // function AfterEdit
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				// After record deleted
+function AfterDelete($where, &$deleted_values, &$message, $pageObject)
+{
+
+		
+	PlaylistStatusProcess($deleted_values['mediaInfoID'],"PASS");	
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function AfterDelete
+
+		
+		
+		
+		
 		
 		
 		

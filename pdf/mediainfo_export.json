@@ -143,6 +143,9 @@ pdfDocument = {
 			{"text":{$fileTeacherName_pdfvalue},"hidden":"{$item_hide_export_field7}"},
 				
 				
+			{"text":{$producerName_pdfvalue},"hidden":"{$item_hide_export_field20}"},
+				
+				
 			{"text":{$entryUserName_pdfvalue},"hidden":"{$item_hide_export_field15}"},
 				
 				

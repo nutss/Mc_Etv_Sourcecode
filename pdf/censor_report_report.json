@@ -315,9 +315,9 @@ pdfDocument = {
 				alignment: '{$fileStatus_align}',
 			},
 											{
-				text: '{$jslabel Censor_Report playlistID }',
+				text: '{$jslabel Censor_Report producerName }',
 				style: "blackshade",
-				alignment: '{$playlistID_align}',
+				alignment: '{$producerName_align}',
 			},
 						],
 	
@@ -415,8 +415,8 @@ pdfDocument = {
 			alignment: '{$fileStatus_align}',
 		},
 							{
-			text: {$playlistID_value},
-			alignment: '{$playlistID_align}',
+			text: {$producerName_value},
+			alignment: '{$producerName_align}',
 		},
 				],
 	{END row_data}

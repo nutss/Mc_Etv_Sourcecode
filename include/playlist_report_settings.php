@@ -1451,7 +1451,7 @@ $tdataplaylist_report[".hideMobileList"] = array();
 	$fdata["GoodName"] = "fileNo";
 	$fdata["ownerTable"] = "mediaInfo";
 	$fdata["Label"] = GetFieldLabel("playlist_Report","fileNo");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 3;
 
 
 	
@@ -1510,7 +1510,8 @@ $tdataplaylist_report[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -1533,7 +1534,9 @@ $tdataplaylist_report[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -4154,7 +4157,7 @@ $proto61["m_columns"][] = "fileTeacherName";
 $proto61["m_columns"][] = "fileTitle";
 $proto61["m_columns"][] = "fileType";
 $proto61["m_columns"][] = "id";
-$proto61["m_columns"][] = "playlistID";
+$proto61["m_columns"][] = "producerName";
 $obj = new SQLTable($proto61);
 
 $proto60["m_table"] = $obj;

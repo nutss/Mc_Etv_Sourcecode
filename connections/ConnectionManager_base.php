@@ -260,6 +260,7 @@ class ConnectionManager_Base
 		$connectionsIds["IngestInfo"] = "mc_at_192_168_1_111";
 		$connectionsIds["downloadInfo"] = "mc_at_192_168_1_111";
 		$connectionsIds["deleteInfo"] = "mc_at_192_168_1_111";
+		$connectionsIds["producer"] = "mc_at_192_168_1_111";
 
 		$this->_tablesConnectionIds = &$connectionsIds;
 	}

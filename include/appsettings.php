@@ -743,9 +743,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "476_1641539395";
+$projectBuildKey = "502_1642074531";
 $wizardBuildKey = "37251";
-$projectBuildNumber = "476";
+$projectBuildNumber = "502";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -789,6 +789,7 @@ $tableCaptions["English"]["playlist_Report"] = "Playlist Report";
 $tableCaptions["English"]["IngestInfo"] = "Ingest Info";
 $tableCaptions["English"]["downloadInfo"] = "Download Info";
 $tableCaptions["English"]["deleteInfo"] = "Delete Info";
+$tableCaptions["English"]["producer"] = "Producer";
 $tableCaptions["Thai"] = array();
 $tableCaptions["Thai"][""] = "";
 $tableCaptions["Thai"]["playlistMain"] = "เพลย์ลิสต์";
@@ -812,6 +813,7 @@ $tableCaptions["Thai"]["playlist_Report"] = "รายงาน เพลย์�
 $tableCaptions["Thai"]["IngestInfo"] = "นำเข้าไฟล์";
 $tableCaptions["Thai"]["downloadInfo"] = "ดาวน์โหลด";
 $tableCaptions["Thai"]["deleteInfo"] = "การจัดการไฟล์ (ลบ)";
+$tableCaptions["Thai"]["producer"] = "ผู้ผลิต";
 
 
 $globalEvents = new class_GlobalEvents;

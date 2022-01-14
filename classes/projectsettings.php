@@ -3351,6 +3351,8 @@ function fillProjectEntites()
 	$projectEntitiesReverse[ "downloadinfo" ] = "downloadInfo";
 	$projectEntities[ "deleteInfo" ] = array( "url" => "deleteinfo", "type" => 1 );
 	$projectEntitiesReverse[ "deleteinfo" ] = "deleteInfo";
+	$projectEntities[ "producer" ] = array( "url" => "producer", "type" => 0 );
+	$projectEntitiesReverse[ "producer" ] = "producer";
 }
 
 function findTable( $table ) {

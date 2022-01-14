@@ -106,6 +106,9 @@ pdfDocument = {
 										{BEGIN col_grid_15}
 					"%",
 					{END col_grid_15}
+										{BEGIN col_grid_16}
+					"%",
+					{END col_grid_16}
 															],
 											heights: [ // first height for header part
 					"%",
@@ -273,7 +276,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileNo }","hidden":"{$item_hide_simple_grid_field12}","bold":true},
+			{"text":"{$jslabel IngestInfo fileNo }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -325,7 +328,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileName }","hidden":"{$item_hide_simple_grid_field14}","bold":true},
+			{"text":"{$jslabel IngestInfo fileName }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -351,7 +354,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileType }","hidden":"{$item_hide_simple_grid_field19}","bold":true},
+			{"text":"{$jslabel IngestInfo fileType }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -377,7 +380,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileDuration }","hidden":"{$item_hide_simple_grid_field20}","bold":true},
+			{"text":"{$jslabel IngestInfo fileDuration }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -403,7 +406,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileSubject }","hidden":"{$item_hide_simple_grid_field21}","bold":true},
+			{"text":"{$jslabel IngestInfo fileSubject }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -429,7 +432,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileTitle }","hidden":"{$item_hide_simple_grid_field22}","bold":true},
+			{"text":"{$jslabel IngestInfo fileTitle }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -455,7 +458,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileRaw }","hidden":"{$item_hide_simple_grid_field23}","bold":true},
+			{"text":"{$jslabel IngestInfo fileRaw }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -481,7 +484,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileStatus }","hidden":"{$item_hide_simple_grid_field24}","bold":true},
+			{"text":"{$jslabel IngestInfo fileStatus }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -507,7 +510,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileMD5 }","hidden":"{$item_hide_simple_grid_field25}","bold":true},
+			{"text":"{$jslabel IngestInfo fileMD5 }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -533,7 +536,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo filePath }","hidden":"{$item_hide_simple_grid_field26}","bold":true},
+			{"text":"{$jslabel IngestInfo filePath }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -559,7 +562,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileClassLevel }","hidden":"{$item_hide_simple_grid_field27}","bold":true},
+			{"text":"{$jslabel IngestInfo fileClassLevel }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -585,7 +588,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileTeacherName }","hidden":"{$item_hide_simple_grid_field28}","bold":true},
+			{"text":"{$jslabel IngestInfo fileTeacherName }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -611,7 +614,7 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo fileTeacherInfo }","hidden":"{$item_hide_simple_grid_field29}","bold":true},
+			{"text":"{$jslabel IngestInfo fileTeacherInfo }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
@@ -637,11 +640,11 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo entryUserName }","hidden":"{$item_hide_simple_grid_field30}","bold":true},
+			{"text":"{$jslabel IngestInfo producerName }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
-              "alignment": '{$entryUserName_align}',
+              "alignment": '{$producerName_align}',
   },
 
 {END cellblock_grid_headcell_field14}
@@ -663,14 +666,40 @@ pdfDocument = {
 			"text": [
 		
 				
-			{"text":"{$jslabel IngestInfo entryTime }","hidden":"{$item_hide_simple_grid_field31}","bold":true},
+			{"text":"{$jslabel IngestInfo entryUserName }","hidden":"{$item_hide_simple_grid_field32}","bold":true},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$entryUserName_align}',
+  },
+
+{END cellblock_grid_headcell_field15}
+																							{BEGIN cellblock_grid_headcell_field16}
+{
+	cellId: 'headcell_field16',
+	col:0,
+	row:0,
+			style: 'headcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
+			{"text":"{$jslabel IngestInfo entryTime }","hidden":"{$item_hide_simple_grid_field33}","bold":true},
 				
 		  ],
   "border": [ true, true, true, true ],
               "alignment": '{$entryTime_align}',
   },
 
-{END cellblock_grid_headcell_field15}
+{END cellblock_grid_headcell_field16}
 											],
 				{END row_grid_0}
 		
@@ -1062,6 +1091,32 @@ pdfDocument = {
 			"text": [
 		
 				
+			{"text":{$producerName_pdfvalue},"hidden":"{$item_hide_simple_grid_field12}"},
+				
+		  ],
+  "border": [ true, true, true, true ],
+              "alignment": '{$producerName_align}',
+  },
+
+{END cellblock_grid_cell_field14}
+																							{BEGIN cellblock_grid_cell_field15}
+{
+	cellId: 'cell_field15',
+	col:0,
+	row:0,
+			style: 'bodycell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				
 			{"text":{$entryUserName_pdfvalue},"hidden":"{$item_hide_simple_grid_field15}"},
 				
 		  ],
@@ -1069,10 +1124,10 @@ pdfDocument = {
               "alignment": '{$entryUserName_align}',
   },
 
-{END cellblock_grid_cell_field14}
-																							{BEGIN cellblock_grid_cell_field15}
+{END cellblock_grid_cell_field15}
+																							{BEGIN cellblock_grid_cell_field16}
 {
-	cellId: 'cell_field15',
+	cellId: 'cell_field16',
 	col:0,
 	row:0,
 			style: 'bodycell',
@@ -1095,7 +1150,7 @@ pdfDocument = {
               "alignment": '{$entryTime_align}',
   },
 
-{END cellblock_grid_cell_field15}
+{END cellblock_grid_cell_field16}
 											],
 				{END row_grid_1}
 		
@@ -1489,6 +1544,30 @@ pdfDocument = {
   },
 
 {END cellblock_grid_footcell_field15}
+																							{BEGIN cellblock_grid_footcell_field16}
+{
+	cellId: 'footcell_field16',
+	col:0,
+	row:0,
+			style: 'footcell',
+		
+		
+	//	dynamic colspan/rowspan
+
+		
+						
+	
+	
+	
+			"text": [
+		
+				'',
+	  ],
+  "border": [ true, true, true, true ],
+              "alignment": 'left',
+  },
+
+{END cellblock_grid_footcell_field16}
 											],
 				{END row_grid_2}
 		

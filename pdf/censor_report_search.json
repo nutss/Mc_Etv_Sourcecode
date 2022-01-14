@@ -179,7 +179,7 @@ pdfDocument = {
 			{"text":{$fileStatus_value},"hidden":"{$item_hide_integrated_search_field20}"},
 				
 				
-			{"text":{$playlistID_value},"hidden":"{$item_hide_integrated_search_field21}"},
+			{"text":{$producerName_value},"hidden":"{$item_hide_integrated_search_field21}"},
 				
 		  ],
   "border": [ false, false, false, false ],

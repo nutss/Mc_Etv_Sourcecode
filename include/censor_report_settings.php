@@ -88,9 +88,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelscensor_report["English"]["fileStatus"] = "File Status";
 	$fieldToolTipscensor_report["English"]["fileStatus"] = "";
 	$placeHolderscensor_report["English"]["fileStatus"] = "";
-	$fieldLabelscensor_report["English"]["playlistID"] = "Playlist ID";
-	$fieldToolTipscensor_report["English"]["playlistID"] = "";
-	$placeHolderscensor_report["English"]["playlistID"] = "";
+	$fieldLabelscensor_report["English"]["producerName"] = "Producer Name";
+	$fieldToolTipscensor_report["English"]["producerName"] = "";
+	$placeHolderscensor_report["English"]["producerName"] = "";
 	if (count($fieldToolTipscensor_report["English"]))
 		$tdatacensor_report[".isUseToolTips"] = true;
 }
@@ -163,9 +163,9 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensor_report["Thai"]["fileStatus"] = "File Status";
 	$fieldToolTipscensor_report["Thai"]["fileStatus"] = "";
 	$placeHolderscensor_report["Thai"]["fileStatus"] = "";
-	$fieldLabelscensor_report["Thai"]["playlistID"] = "Playlist ID";
-	$fieldToolTipscensor_report["Thai"]["playlistID"] = "";
-	$placeHolderscensor_report["Thai"]["playlistID"] = "";
+	$fieldLabelscensor_report["Thai"]["producerName"] = "Producer Name";
+	$fieldToolTipscensor_report["Thai"]["producerName"] = "";
+	$placeHolderscensor_report["Thai"]["producerName"] = "";
 	if (count($fieldToolTipscensor_report["Thai"]))
 		$tdatacensor_report[".isUseToolTips"] = true;
 }
@@ -305,7 +305,7 @@ $tdatacensor_report[".googleLikeFields"][] = "fileTeacherName";
 $tdatacensor_report[".googleLikeFields"][] = "fileTitle";
 $tdatacensor_report[".googleLikeFields"][] = "fileType";
 $tdatacensor_report[".googleLikeFields"][] = "id";
-$tdatacensor_report[".googleLikeFields"][] = "playlistID";
+$tdatacensor_report[".googleLikeFields"][] = "producerName";
 
 
 
@@ -344,7 +344,7 @@ $tdatacensor_report[".strOrderBy"] = $tstrOrderBy;
 $tdatacensor_report[".orderindexes"] = array();
 
 
-$tdatacensor_report[".sqlHead"] = "SELECT censorApproveTime,  	censoReson,  	censorStatus,  	censorUsername,  	entryTime,  	entryUserName,  	fileClassLevel,  	filedate,  	fileDuration,  	fileMD5,  	fileName,  	fileNo,  	filePath,  	fileRaw,  	fileStatus,  	fileSubject,  	fileTeacherInfo,  	fileTeacherName,  	fileTitle,  	fileType,  	id,  	playlistID";
+$tdatacensor_report[".sqlHead"] = "SELECT censorApproveTime,  	censoReson,  	censorStatus,  	censorUsername,  	entryTime,  	entryUserName,  	fileClassLevel,  	filedate,  	fileDuration,  	fileMD5,  	fileName,  	fileNo,  	filePath,  	fileRaw,  	fileStatus,  	fileSubject,  	fileTeacherInfo,  	fileTeacherName,  	fileTitle,  	fileType,  	id,  	producerName";
 $tdatacensor_report[".sqlFrom"] = "FROM mediaInfo";
 $tdatacensor_report[".sqlWhereExpr"] = "";
 $tdatacensor_report[".sqlTail"] = "";
@@ -1941,7 +1941,7 @@ $tdatacensor_report[".hideMobileList"] = array();
 	$fdata["GoodName"] = "fileNo";
 	$fdata["ownerTable"] = "mediaInfo";
 	$fdata["Label"] = GetFieldLabel("Censor_Report","fileNo");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 3;
 
 
 	
@@ -3351,27 +3351,27 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 	$tdatacensor_report["id"] = $fdata;
 		$tdatacensor_report[".searchableFields"][] = "id";
-//	playlistID
+//	producerName
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 22;
-	$fdata["strName"] = "playlistID";
-	$fdata["GoodName"] = "playlistID";
+	$fdata["strName"] = "producerName";
+	$fdata["GoodName"] = "producerName";
 	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","playlistID");
-	$fdata["FieldType"] = 13;
+	$fdata["Label"] = GetFieldLabel("Censor_Report","producerName");
+	$fdata["FieldType"] = 200;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "playlistID";
+		$fdata["strField"] = "producerName";
 
-		$fdata["sourceSingle"] = "playlistID";
+		$fdata["sourceSingle"] = "producerName";
 
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "playlistID";
+	$fdata["FullName"] = "producerName";
 
 	
 	
@@ -3419,8 +3419,7 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 
 
-		$edata["IsRequired"] = true;
-
+	
 	
 	
 	
@@ -3436,16 +3435,15 @@ $tdatacensor_report[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-		
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
+	
 	
 	//	End validation
 
@@ -3489,8 +3487,8 @@ $tdatacensor_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacensor_report["playlistID"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "playlistID";
+	$tdatacensor_report["producerName"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "producerName";
 
 
 $tables_data["Censor Report"]=&$tdatacensor_report;
@@ -3532,7 +3530,7 @@ function createSqlQuery_censor_report()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "censorApproveTime,  	censoReson,  	censorStatus,  	censorUsername,  	entryTime,  	entryUserName,  	fileClassLevel,  	filedate,  	fileDuration,  	fileMD5,  	fileName,  	fileNo,  	filePath,  	fileRaw,  	fileStatus,  	fileSubject,  	fileTeacherInfo,  	fileTeacherName,  	fileTitle,  	fileType,  	id,  	playlistID";
+$proto0["m_strFieldList"] = "censorApproveTime,  	censoReson,  	censorStatus,  	censorUsername,  	entryTime,  	entryUserName,  	fileClassLevel,  	filedate,  	fileDuration,  	fileMD5,  	fileName,  	fileNo,  	filePath,  	fileRaw,  	fileStatus,  	fileSubject,  	fileTeacherInfo,  	fileTeacherName,  	fileTitle,  	fileType,  	id,  	producerName";
 $proto0["m_strFrom"] = "FROM mediaInfo";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -3868,12 +3866,12 @@ $obj = new SQLFieldListItem($proto46);
 $proto0["m_fieldlist"][]=$obj;
 						$proto48=array();
 			$obj = new SQLField(array(
-	"m_strName" => "playlistID",
+	"m_strName" => "producerName",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto48["m_sql"] = "playlistID";
+$proto48["m_sql"] = "producerName";
 $proto48["m_srcTableName"] = "Censor Report";
 $proto48["m_expr"]=$obj;
 $proto48["m_alias"] = "";
@@ -3908,7 +3906,7 @@ $proto51["m_columns"][] = "fileTeacherName";
 $proto51["m_columns"][] = "fileTitle";
 $proto51["m_columns"][] = "fileType";
 $proto51["m_columns"][] = "id";
-$proto51["m_columns"][] = "playlistID";
+$proto51["m_columns"][] = "producerName";
 $obj = new SQLTable($proto51);
 
 $proto50["m_table"] = $obj;

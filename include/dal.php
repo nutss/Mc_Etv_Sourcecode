@@ -55,6 +55,7 @@ class tDAL
 	var $tblmc_at_192_168_1_111__mediaInfo;
 	var $tblmc_at_192_168_1_111__playlistMain;
 	var $tblmc_at_192_168_1_111__playlistSub;
+	var $tblmc_at_192_168_1_111__producer;
 	var $tblmc_at_192_168_1_111__staffUsers;
 	var $tblmc_at_192_168_1_111__subject;
 	var $tblmc_at_192_168_1_111__teacher;
@@ -73,6 +74,7 @@ class tDAL
 		$this->lstTables[] = array("name" => "mediaInfo", "varname" => "mc_at_192_168_1_111__mediaInfo", "altvarname" => "mediaInfo", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "playlistMain", "varname" => "mc_at_192_168_1_111__playlistMain", "altvarname" => "playlistMain", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "playlistSub", "varname" => "mc_at_192_168_1_111__playlistSub", "altvarname" => "playlistSub", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
+		$this->lstTables[] = array("name" => "producer", "varname" => "mc_at_192_168_1_111__producer", "altvarname" => "producer", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "staffUsers", "varname" => "mc_at_192_168_1_111__staffUsers", "altvarname" => "staffUsers", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "subject", "varname" => "mc_at_192_168_1_111__subject", "altvarname" => "subject", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "teacher", "varname" => "mc_at_192_168_1_111__teacher", "altvarname" => "teacher", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");

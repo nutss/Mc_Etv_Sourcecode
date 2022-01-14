@@ -132,7 +132,7 @@
 														<td class="blackshade {$fieldclass_filedate}">{$label Censor_Report filedate }</td>
 														<td class="blackshade {$fieldclass_filePath}">{$label Censor_Report filePath }</td>
 														<td class="blackshade {$fieldclass_fileStatus}">{$label Censor_Report fileStatus }</td>
-														<td class="blackshade {$fieldclass_playlistID}">{$label Censor_Report playlistID }</td>
+														<td class="blackshade {$fieldclass_producerName}">{$label Censor_Report producerName }</td>
 									</tr>
 		
 		<tr class="group-spliter-1" {$rowattrs} >
@@ -245,10 +245,10 @@
 								<span data-itemtype="grid_field" data-field="fileStatus" data-itemid="grid_field21" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileStatus_value}
 </span>			</td>
-											<td class="data {$fieldclass_playlistID}">
-				{$xplaylistID_value}
-								<span data-itemtype="grid_field" data-field="playlistID" data-itemid="grid_field22" data-pageid={$pageid} data-record-id="{$recId}">
-{$playlistID_value}
+											<td class="data {$fieldclass_producerName}">
+				{$xproducerName_value}
+								<span data-itemtype="grid_field" data-field="producerName" data-itemid="grid_field22" data-pageid={$pageid} data-record-id="{$recId}">
+{$producerName_value}
 </span>			</td>
 							</tr>
 		{END row_data}

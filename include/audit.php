@@ -494,6 +494,10 @@ class AuditTrailTable
 		{
 			return true;
 		}
+		if($table=="producer")
+		{
+			return false;
+		}
 	}
 
 	protected function insert($datetime, $ip, $user, $table, $action, $description)
@@ -939,6 +943,10 @@ class AuditTrailFile
 		if($table=="deleteInfo")
 		{
 			return true;
+		}
+		if($table=="producer")
+		{
+			return false;
 		}
 	}
 

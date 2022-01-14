@@ -306,6 +306,19 @@
 								<span class="rnr-searchcontrol">{$searchcontrol1_fileMD5}</span>
 						</div>
 		{END searchCtrlBlock_fileMD5}
+																{BEGIN searchCtrlBlock_producerName}
+
+
+		<div class="form-group srchPanelRow {$filterRow_class_producerName}" {$filterRow_attrs_producerName}>
+			<label>{$label mediaInfo producerName }</label>
+
+							{$delCtrlButt}
+			
+								<span class="rnr-searchtype">{$searchtype_producerName}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol_producerName}</span>
+								<span class="rnr-searchcontrol">{$searchcontrol1_producerName}</span>
+						</div>
+		{END searchCtrlBlock_producerName}
 																{BEGIN searchCtrlBlock_censoReson}
 
 
@@ -766,6 +779,9 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
 		content: "{$label mediaInfo entryTime}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="producerName"]:before {
+		content: "{$label mediaInfo producerName}";
+	}
 	}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable" 
@@ -816,7 +832,7 @@
 	 
 		{BEGIN fileNo_fieldheadercolumn}
 	{BEGIN fileNo_fieldheader}
-	<SPAN {$fileNo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileNo" data-fieldname="fileNo">
+	<SPAN {$fileNo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileNo" data-fieldname="fileNo">
 	{$label mediaInfo fileNo }	{$arrow_icon_fileNo}
 	</SPAN>
 	{END fileNo_fieldheader}
@@ -843,7 +859,7 @@
 	 
 		{BEGIN filedate_fieldheadercolumn}
 	{BEGIN filedate_fieldheader}
-	<SPAN {$filedate_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="filedate" data-fieldname="filedate">
+	<SPAN {$filedate_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="filedate" data-fieldname="filedate">
 	{$label mediaInfo filedate }	{$arrow_icon_filedate}
 	</SPAN>
 	{END filedate_fieldheader}
@@ -870,7 +886,7 @@
 	 
 		{BEGIN fileName_fieldheadercolumn}
 	{BEGIN fileName_fieldheader}
-	<SPAN {$fileName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileName" data-fieldname="fileName">
+	<SPAN {$fileName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileName" data-fieldname="fileName">
 	{$label mediaInfo fileName }	{$arrow_icon_fileName}
 	</SPAN>
 	{END fileName_fieldheader}
@@ -897,7 +913,7 @@
 	 
 		{BEGIN fileStatus_fieldheadercolumn}
 	{BEGIN fileStatus_fieldheader}
-	<SPAN {$fileStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileStatus" data-fieldname="fileStatus">
+	<SPAN {$fileStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileStatus" data-fieldname="fileStatus">
 	{$label mediaInfo fileStatus }	{$arrow_icon_fileStatus}
 	</SPAN>
 	{END fileStatus_fieldheader}
@@ -924,7 +940,7 @@
 	 
 		{BEGIN fileRaw_fieldheadercolumn}
 	{BEGIN fileRaw_fieldheader}
-	<SPAN {$fileRaw_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileRaw" data-fieldname="fileRaw">
+	<SPAN {$fileRaw_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileRaw" data-fieldname="fileRaw">
 	{$label mediaInfo fileRaw }	{$arrow_icon_fileRaw}
 	</SPAN>
 	{END fileRaw_fieldheader}
@@ -951,7 +967,7 @@
 	 
 		{BEGIN fileMD5_fieldheadercolumn}
 	{BEGIN fileMD5_fieldheader}
-	<SPAN {$fileMD5_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileMD5" data-fieldname="fileMD5">
+	<SPAN {$fileMD5_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileMD5" data-fieldname="fileMD5">
 	{$label mediaInfo fileMD5 }	{$arrow_icon_fileMD5}
 	</SPAN>
 	{END fileMD5_fieldheader}
@@ -978,7 +994,7 @@
 	 
 		{BEGIN censorStatus_fieldheadercolumn}
 	{BEGIN censorStatus_fieldheader}
-	<SPAN {$censorStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorStatus" data-fieldname="censorStatus">
+	<SPAN {$censorStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorStatus" data-fieldname="censorStatus">
 	{$label mediaInfo censorStatus }	{$arrow_icon_censorStatus}
 	</SPAN>
 	{END censorStatus_fieldheader}
@@ -1005,7 +1021,7 @@
 	 
 		{BEGIN fileTitle_fieldheadercolumn}
 	{BEGIN fileTitle_fieldheader}
-	<SPAN {$fileTitle_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTitle" data-fieldname="fileTitle">
+	<SPAN {$fileTitle_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTitle" data-fieldname="fileTitle">
 	{$label mediaInfo fileTitle }	{$arrow_icon_fileTitle}
 	</SPAN>
 	{END fileTitle_fieldheader}
@@ -1032,7 +1048,7 @@
 	 
 		{BEGIN fileSubject_fieldheadercolumn}
 	{BEGIN fileSubject_fieldheader}
-	<SPAN {$fileSubject_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileSubject" data-fieldname="fileSubject">
+	<SPAN {$fileSubject_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileSubject" data-fieldname="fileSubject">
 	{$label mediaInfo fileSubject }	{$arrow_icon_fileSubject}
 	</SPAN>
 	{END fileSubject_fieldheader}
@@ -1059,7 +1075,7 @@
 	 
 		{BEGIN fileType_fieldheadercolumn}
 	{BEGIN fileType_fieldheader}
-	<SPAN {$fileType_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileType" data-fieldname="fileType">
+	<SPAN {$fileType_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileType" data-fieldname="fileType">
 	{$label mediaInfo fileType }	{$arrow_icon_fileType}
 	</SPAN>
 	{END fileType_fieldheader}
@@ -1086,7 +1102,7 @@
 	 
 		{BEGIN fileClassLevel_fieldheadercolumn}
 	{BEGIN fileClassLevel_fieldheader}
-	<SPAN {$fileClassLevel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileClassLevel" data-fieldname="fileClassLevel">
+	<SPAN {$fileClassLevel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileClassLevel" data-fieldname="fileClassLevel">
 	{$label mediaInfo fileClassLevel }	{$arrow_icon_fileClassLevel}
 	</SPAN>
 	{END fileClassLevel_fieldheader}
@@ -1113,7 +1129,7 @@
 	 
 		{BEGIN fileTeacherName_fieldheadercolumn}
 	{BEGIN fileTeacherName_fieldheader}
-	<SPAN {$fileTeacherName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTeacherName" data-fieldname="fileTeacherName">
+	<SPAN {$fileTeacherName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTeacherName" data-fieldname="fileTeacherName">
 	{$label mediaInfo fileTeacherName }	{$arrow_icon_fileTeacherName}
 	</SPAN>
 	{END fileTeacherName_fieldheader}
@@ -1140,7 +1156,7 @@
 	 
 		{BEGIN fileTeacherInfo_fieldheadercolumn}
 	{BEGIN fileTeacherInfo_fieldheader}
-	<SPAN {$fileTeacherInfo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTeacherInfo" data-fieldname="fileTeacherInfo">
+	<SPAN {$fileTeacherInfo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTeacherInfo" data-fieldname="fileTeacherInfo">
 	{$label mediaInfo fileTeacherInfo }	{$arrow_icon_fileTeacherInfo}
 	</SPAN>
 	{END fileTeacherInfo_fieldheader}
@@ -1156,22 +1172,22 @@
 	{$cell_grid_headcell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$fileDuration_class}
+		 r-ori-vert				{$producerName_class}
 			"
 
-			data-field="fileDuration"
+			data-field="producerName"
 	
 	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN fileDuration_fieldheadercolumn}
-	{BEGIN fileDuration_fieldheader}
-	<SPAN {$fileDuration_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileDuration" data-fieldname="fileDuration">
-	{$label mediaInfo fileDuration }	{$arrow_icon_fileDuration}
+		{BEGIN producerName_fieldheadercolumn}
+	{BEGIN producerName_fieldheader}
+	<SPAN {$producerName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="producerName" data-fieldname="producerName">
+	{$label mediaInfo producerName }	{$arrow_icon_producerName}
 	</SPAN>
-	{END fileDuration_fieldheader}
-{END fileDuration_fieldheadercolumn}
+	{END producerName_fieldheader}
+{END producerName_fieldheadercolumn}
 
 	
 	</th>
@@ -1183,22 +1199,22 @@
 	{$cell_grid_headcell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$entryUserName_class}
+		 r-ori-vert				{$fileDuration_class}
 			"
 
-			data-field="entryUserName"
+			data-field="fileDuration"
 	
 	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN entryUserName_fieldheadercolumn}
-	{BEGIN entryUserName_fieldheader}
-	<SPAN {$entryUserName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryUserName" data-fieldname="entryUserName">
-	{$label mediaInfo entryUserName }	{$arrow_icon_entryUserName}
+		{BEGIN fileDuration_fieldheadercolumn}
+	{BEGIN fileDuration_fieldheader}
+	<SPAN {$fileDuration_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileDuration" data-fieldname="fileDuration">
+	{$label mediaInfo fileDuration }	{$arrow_icon_fileDuration}
 	</SPAN>
-	{END entryUserName_fieldheader}
-{END entryUserName_fieldheadercolumn}
+	{END fileDuration_fieldheader}
+{END fileDuration_fieldheadercolumn}
 
 	
 	</th>
@@ -1210,18 +1226,45 @@
 	{$cell_grid_headcell_field15}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$entryTime_class}
+		 r-ori-vert				{$entryUserName_class}
 			"
 
-			data-field="entryTime"
+			data-field="entryUserName"
 	
 	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
+		{BEGIN entryUserName_fieldheadercolumn}
+	{BEGIN entryUserName_fieldheader}
+	<SPAN {$entryUserName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field32" {$item_simple_grid_field32} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryUserName" data-fieldname="entryUserName">
+	{$label mediaInfo entryUserName }	{$arrow_icon_entryUserName}
+	</SPAN>
+	{END entryUserName_fieldheader}
+{END entryUserName_fieldheadercolumn}
+
+	
+	</th>
+	{END cellblock_grid_headcell_field15}
+				 
+					{BEGIN cellblock_grid_headcell_field16}
+	<th
+	
+	{$cell_grid_headcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert				{$entryTime_class}
+			"
+
+			data-field="entryTime"
+	
+	data-cellId="grid_headcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
 		{BEGIN entryTime_fieldheadercolumn}
 	{BEGIN entryTime_fieldheader}
-	<SPAN {$entryTime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryTime" data-fieldname="entryTime">
+	<SPAN {$entryTime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field33" {$item_simple_grid_field33} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryTime" data-fieldname="entryTime">
 	{$label mediaInfo entryTime }	{$arrow_icon_entryTime}
 	</SPAN>
 	{END entryTime_fieldheader}
@@ -1229,7 +1272,7 @@
 
 	
 	</th>
-	{END cellblock_grid_headcell_field15}
+	{END cellblock_grid_headcell_field16}
 							</tr>
 					 
 					 
@@ -1579,20 +1622,20 @@
 	{$cell_grid_cell_field13}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$fileDuration_class}
+		 r-ori-vert				{$producerName_class}
 			"
 
-			data-field="fileDuration"
+			data-field="producerName"
 	
 	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN fileDuration_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileDuration" data-fieldname="fileDuration" data-default-width >
-{$fileDuration_value}
+		{BEGIN producerName_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="producerName" data-fieldname="producerName" data-default-width >
+{$producerName_value}
 </span>
-{END fileDuration_fieldcolumn}	
+{END producerName_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field13}
 				 
@@ -1602,20 +1645,20 @@
 	{$cell_grid_cell_field14}
 	{$recordattrs}
 	class="
-		 r-ori-vert				{$entryUserName_class}
+		 r-ori-vert				{$fileDuration_class}
 			"
 
-			data-field="entryUserName"
+			data-field="fileDuration"
 	
 	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
-		{BEGIN entryUserName_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryUserName" data-fieldname="entryUserName" data-default-width >
-{$entryUserName_value}
+		{BEGIN fileDuration_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field9" {$item_simple_grid_field9} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileDuration" data-fieldname="fileDuration" data-default-width >
+{$fileDuration_value}
 </span>
-{END entryUserName_fieldcolumn}	
+{END fileDuration_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field14}
 				 
@@ -1625,12 +1668,35 @@
 	{$cell_grid_cell_field15}
 	{$recordattrs}
 	class="
+		 r-ori-vert				{$entryUserName_class}
+			"
+
+			data-field="entryUserName"
+	
+	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	>
+
+	 
+		{BEGIN entryUserName_fieldcolumn}
+<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryUserName" data-fieldname="entryUserName" data-default-width >
+{$entryUserName_value}
+</span>
+{END entryUserName_fieldcolumn}	
+	</td>
+	{END cellblock_grid_cell_field15}
+				 
+					{BEGIN cellblock_grid_cell_field16}
+	<td
+	
+	{$cell_grid_cell_field16}
+	{$recordattrs}
+	class="
 		 r-ori-vert				{$entryTime_class}
 			"
 
 			data-field="entryTime"
 	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
+	data-cellId="grid_cell_field16" data-pageid="{$pageid}" data-record-id="{$recId}"	
 	>
 
 	 
@@ -1640,7 +1706,7 @@
 </span>
 {END entryTime_fieldcolumn}	
 	</td>
-	{END cellblock_grid_cell_field15}
+	{END cellblock_grid_cell_field16}
 							</tr>
 					 
 					
@@ -1928,6 +1994,22 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field15}
+				 
+					{BEGIN cellblock_grid_footcell_field16}
+	<td
+	
+	{$cell_grid_footcell_field16}
+	{$recordattrs}
+	class="
+		 r-ori-vert			"
+
+	
+	data-cellId="grid_footcell_field16" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="mediainfo_MediaInfo"	
+	>
+
+	
+	</td>
+	{END cellblock_grid_footcell_field16}
 							</tr>
 					
 					</tfoot>

@@ -1,4 +1,12 @@
 <?php
+/*****************************************************************
+File:                   mc_function.inc.php
+Description:			Function and Library
+Created:                13-01-2022
+Author:                 CHANAPHON LAMUNSUP
+E-mail :                CHANAPHON.L@GMAIL.COM
+Website :               nutss.wordpress.com
+*****************************************************************/
 
 $hostname_mc = "192.168.200.1";
 $path_www_mc = "/website/mc/";
@@ -10,37 +18,73 @@ $user_db = "mc.classicscan.co.th";
 $pass_db = "qapmoc";
 $database_db = "mc";
 
-function GetPathYDM($CensorStatus) {
+
+
+function GetDateFromID($mediaInfoID,$playlistID,$playlistSubID,$CensorStatus) {
+	global $host_db, $user_db, $pass_db, $database_db;
 	
-	if ($CensorStatus == "PASS") {
-		
-		$upload_path = "files/share";
-	}
-	elseif (($CensorStatus == "UNCENSOR") OR ($CensorStatus == "REJECT")) {
-		
-		$upload_path = "files/ingest";
-	}
-	elseif (($CensorStatus == "PLAYLIST")) {
-		
-		$upload_path = "files/onair";
-	}
+
+	$DB = mysqli_connect($host_db, $user_db, $pass_db, $database_db) or die("Could not connect to host."); 
+
+
+	if (($CensorStatus == "UNCENSOR") OR ($CensorStatus == "REJECT") OR ($CensorStatus == "PASS")) {
+
+		$SQLCommand = "SELECT * FROM mediaInfo WHERE (id=".$mediaInfoID.")";
+			$RS1 = mysqli_query($DB,$SQLCommand) or die("");
 	
-		$current_year = date("Y");
-		$current_month = date("m");
-		$current_day = date("d");
+		if ($RS1->num_rows > 0) {
+			if ($RS1_ROW = mysqli_fetch_array($RS1)){
+					
+				$FileDate = $RS1_ROW["filedate"];
+			}
+		}
+
+	}
+	elseif ($CensorStatus == "PLAYLIST") {
 		
-		$year_path = $upload_path."/".$current_year."/";
-		$month_path = $upload_path."/".$current_year."/".$current_month."/";
-		$day_path = $upload_path."/".$current_year."/".$current_month."/".$current_day."/";
+		if ($playlistID !=  ""){
+			
+			$SQLCommand = "SELECT * FROM playlistMain WHERE (id=".$playlistID.")";
+			$RS1 = mysqli_query($DB,$SQLCommand) or die("");
+	
+					if ($RS1->num_rows > 0) {
+						if ($RS1_ROW = mysqli_fetch_array($RS1)){
+							
+							$FileDate = $RS1_ROW["playlistOnairDate"];
+						}
+					}
+		}
+	
 
+		elseif ($playlistSubID != ""){
 
-	return ($day_path);
+			$SQLCommand = "SELECT * FROM playlistSub WHERE ((mediaInfoID=".$mediaInfoID.") AND (id =".$playlistSubID."))";
+				$RS1 = mysqli_query($DB,$SQLCommand) or die("");
+					
+					if ($RS1->num_rows > 0) {
+						if ($RS1_ROW = mysqli_fetch_array($RS1)){
 
+							$SQLCommand = "SELECT * FROM playlistMain WHERE (id=".$RS1_ROW["playlistID"].")";
+							
+								$RS2 = mysqli_query($DB,$SQLCommand) or die("");
+								if ($RS2->num_rows > 0) {
+									if ($RS2_ROW = mysqli_fetch_array($RS2)){
+											$FileDate = $RS2_ROW["playlistOnairDate"];
+											
+									}
+
+								}
+						}
+					}
+		}			
+
+	}
+	return ($FileDate);
 }
 
 
-function GetPathDatePlaylistYDM($DatePlaylist,$CensorStatus) {
-	
+function CreatePathDateFromID($mediaInfoID,$playlistID,$playlistSubID,$CensorStatus) {
+
 	global $path_www_mc;
 
 	if ($CensorStatus == "PASS") {
@@ -55,7 +99,7 @@ function GetPathDatePlaylistYDM($DatePlaylist,$CensorStatus) {
 		
 		$upload_path = "files/onair";
 	}
-		$DateCurrent=date_create($DatePlaylist);
+		$DateCurrent=date_create(GetDateFromID($mediaInfoID,$playlistID,$playlistSubID,$CensorStatus));
 		
 	
 		$current_year = date_format($DateCurrent,"Y");
@@ -85,104 +129,49 @@ function GetPathDatePlaylistYDM($DatePlaylist,$CensorStatus) {
 
 }
 
-function GetPathFileNoYDM($FileNo,$CensorStatus) {
-	
-
-	if ($CensorStatus == "PASS") {
-		
-		$upload_path = "files/share";
-	}
-	elseif (($CensorStatus == "UNCENSOR") OR ($CensorStatus == "REJECT")) {
-		
-		$upload_path = "files/ingest";
-	}
-	elseif (($CensorStatus == "PLAYLIST")) {
-		
-		$upload_path = "files/onair";
-	}
-	
-	
-		$current_year = ("25".substr($FileNo,2,2))-543;
-		$current_month = substr($FileNo,5,2);
-		$current_day = substr($FileNo,8,2);
-		
-		$year_path = $upload_path."/".$current_year."/";
-		$month_path = $upload_path."/".$current_year."/".$current_month."/";
-		$day_path = $upload_path."/".$current_year."/".$current_month."/".$current_day."/";
-
-	return ($day_path);
-
-}
-
-function CreatePathFileNoYDM($FileNo,$CensorStatus) {
-	
-	global $path_www_mc;
-
-	if ($CensorStatus == "PASS") {
-		
-		$upload_path ="files/share";
-	}
-	elseif (($CensorStatus == "UNCENSOR") OR ($CensorStatus == "REJECT")) {
-		
-		$upload_path = "files/ingest";
-	}
-	elseif (($CensorStatus == "PLAYLIST")) {
-		
-		$upload_path = "files/onair";
-	}
-	
-		
-	
-	
-		$current_year = ("25".substr($FileNo,2,2))-543;
-		$current_month = substr($FileNo,5,2);
-		$current_day = substr($FileNo,8,2);
-		
-		$year_path = $upload_path."/".$current_year."/";
-		$month_path = $upload_path."/".$current_year."/".$current_month."/";
-		$day_path = $upload_path."/".$current_year."/".$current_month."/".$current_day."/";
-
-		if (!file_exists($year_path)) {
-			mkdir($path_www_mc."".$year_path, 0777, true);
-		}
-		
-		
-		if (!file_exists($month_path)) {
-			mkdir($path_www_mc."".$month_path, 0777, true);
-		}
-		
-		if (!file_exists($day_path)) {
-			mkdir($path_www_mc."".$day_path, 0777, true);
-		}
-
-	return ($day_path);
-
-}
-
 
 function GenFileNo() {
 
-	$current_year = substr(date("Y")+543,2);
-	$current_month = date("m");
-	$current_day = date("d");
-	
-	//$SQLCommand = "SELECT fileNo FROM mediaInfo where (fileNo LIKE 'F-".$current_year."-".$current_month."-".$current_day."-%') ORDER BY fileNo DESC LIMIT 1";
+
 	$SQLCommand = "SELECT fileNo FROM mediaInfo ORDER BY fileNo DESC LIMIT 1";
 	
 	$RS = CustomQuery($SQLCommand);
 	if ($data = db_fetch_array($RS)) {
-	
-		$fileNo =  "F-".$current_year."-".$current_month."-".$current_day."-".sprintf("%06d",substr($data["fileNo"],-6)+1);
+
+		$fileNo = $data["fileNo"] + 1;
+		
 	}
 	else {
 	
-		$fileNo =  "F-".$current_year."-".$current_month."-".$current_day."-000001";
+		$fileNo =  "1";
 	}
 	
 	return ($fileNo);
 
 }
 
+/*
+function GetDateFromFileNo($FileNo) {
+
+	global $host_db, $user_db, $pass_db, $database_db;
+	
+	$DB = mysqli_connect($host_db, $user_db, $pass_db, $database_db) or die("Could not connect to host."); 
+	
+
+		$SQLCommand = "SELECT * FROM mediaInfo WHERE (FileNo = '".$FileNo."')";
+
+		$RS1 = mysqli_query($DB,$SQLCommand) or die("");
+		
+
+			if ($RS1->num_rows >= 0) {
+				
+				$filedate = $RS1_ROW["filedate"];
+			}
+
+
+	return ($filedate);
+}
+*/
 
 function GetDurationClip($file_info) {
 	
@@ -224,29 +213,15 @@ function FileCreate_MD5($id,$fileName) {
 
 	
 	
-function FileMoveFolder($mediaInfoID,$playlistSubID) {
-/*	
-	
-	$curl_cmd = curl_init();
-	
-	
-	$Url = "http://".$hostname_mc."/file2MoveFloder.php?";
-	
-	$Url.= "id=".$mediaInfoID."";
-	
-	curl_setopt($curl_cmd, CURLOPT_URL, $Url);
-	curl_setopt($curl_cmd, CURLOPT_SSL_VERIFYHOST, 2);
-	curl_setopt($curl_cmd, CURLOPT_SSL_VERIFYPEER, true);
-	
-	$output = curl_exec($curl_cmd);
-	curl_close($curl_cmd);
-*/
+function FileMoveFolder($mediaInfoID,$playlistID,$playlistSubID) {
 
 	global $hostname_mc,$wget_command;
 
 	$Url = "http://".$hostname_mc."/scripts/file2MoveFolder.php";
 	$UrlOption.= "id=".$mediaInfoID."&";
+	$UrlOption.= "playlistID=".$playlistID."&";
 	$UrlOption.= "playlistSubID=".$playlistSubID;
+
 
 	
 	$command_sh = $wget_command." ".$Url." --post-data \"".$UrlOption."\"";
@@ -325,7 +300,6 @@ function PlaylistStatusProcess($mediaInfoID,$censorStatus) {
 		
 		}
 
-		//echo $SQLCommand;
 
 }	
 

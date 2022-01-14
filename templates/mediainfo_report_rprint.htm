@@ -72,117 +72,116 @@
 	}
 	td.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary.globalsummary {background-color: #ffe0b0;
 	}
-</style>
+	.rnr-report {
+		width: 100%;
+	}
+	td {
+		padding: 2px; 4px;
+	}
+		td.blackshade {
+		font-size: 120%;
+	}
+	.summaryrow > * {
+		border:solid #808080 1px; 
+		border-left: none; 
+		border-right: none;
+	}
+		.grouptotalsrow + :not(.grouptotalsrow) > * {
+		border-top:solid #808080 1px; 
+	}
+	</style>
 <div id="grid_block{$id}" class="rnr-report-gridblock">
-			<!-- 0 group fields -->
+						
 
- <!-- add to settings ? -->
-<table class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" data-location="grid" id="form_grid_{$pageid}" data-makeup="small" {$form_grid} data-pageid="{$pageid}" >
-	<thead>
-		{BEGIN grid_header}
-		<tr class="rnr-toprow table-header style1">
-					<th class="{$fieldclass_fileType}"> {$label MediaInfo_Report fileType }</th>
-					<th class="{$fieldclass_fileDuration}"> {$label MediaInfo_Report fileDuration }</th>
-					<th class="{$fieldclass_fileSubject}"> {$label MediaInfo_Report fileSubject }</th>
-					<th class="{$fieldclass_fileTitle}"> {$label MediaInfo_Report fileTitle }</th>
-					<th class="{$fieldclass_fileClassLevel}"> {$label MediaInfo_Report fileClassLevel }</th>
-					<th class="{$fieldclass_fileTeacherName}"> {$label MediaInfo_Report fileTeacherName }</th>
-					<th class="{$fieldclass_fileTeacherInfo}"> {$label MediaInfo_Report fileTeacherInfo }</th>
-					<th class="{$fieldclass_fileRaw}"> {$label MediaInfo_Report fileRaw }</th>
-					<th class="{$fieldclass_fileMD5}"> {$label MediaInfo_Report fileMD5 }</th>
-					<th class="{$fieldclass_censorApproveTime}"> {$label MediaInfo_Report censorApproveTime }</th>
-					<th class="{$fieldclass_censorUsername}"> {$label MediaInfo_Report censorUsername }</th>
-					<th class="{$fieldclass_censorStatus}"> {$label MediaInfo_Report censorStatus }</th>
-					<th class="{$fieldclass_filePath}"> {$label MediaInfo_Report filePath }</th>
-					<th class="{$fieldclass_fileName}"> {$label MediaInfo_Report fileName }</th>
-					<th class="{$fieldclass_fileNo}"> {$label MediaInfo_Report fileNo }</th>
-				</tr>
-		{END grid_header}
-	</thead>
+
+<table class="table table-striped table-bordered rnr-b-grid rnr-gridtable" cellpadding="0" >
 	<tbody>
-{BEGIN grid_row}
-	{BEGIN row_data}
-		<tr class="rnr-row style1" {$rowattrs}>
-			
-			<td {$recordattrs} class="{$fieldclass_fileType}">
-						<span data-itemtype="grid_field" data-field="fileType" data-itemid="grid_field2" data-pageid={$pageid} data-record-id="{$recId}">
+	{BEGIN grid_row}
+	
+		<!--  data-->
+		{BEGIN row_data}
+		<tr>
+										<td class="data {$fieldclass_fileType}">
+				{$xfileType_value}
+								<span data-itemtype="grid_field" data-field="fileType" data-itemid="grid_field2" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileType_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileDuration}">
-						<span data-itemtype="grid_field" data-field="fileDuration" data-itemid="grid_field3" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileDuration}">
+				{$xfileDuration_value}
+								<span data-itemtype="grid_field" data-field="fileDuration" data-itemid="grid_field3" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileDuration_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileSubject}">
-						<span data-itemtype="grid_field" data-field="fileSubject" data-itemid="grid_field4" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileSubject}">
+				{$xfileSubject_value}
+								<span data-itemtype="grid_field" data-field="fileSubject" data-itemid="grid_field4" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileSubject_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileTitle}">
-						<span data-itemtype="grid_field" data-field="fileTitle" data-itemid="grid_field5" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileTitle}">
+				{$xfileTitle_value}
+								<span data-itemtype="grid_field" data-field="fileTitle" data-itemid="grid_field5" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileTitle_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileClassLevel}">
-						<span data-itemtype="grid_field" data-field="fileClassLevel" data-itemid="grid_field6" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileClassLevel}">
+				{$xfileClassLevel_value}
+								<span data-itemtype="grid_field" data-field="fileClassLevel" data-itemid="grid_field6" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileClassLevel_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileTeacherName}">
-						<span data-itemtype="grid_field" data-field="fileTeacherName" data-itemid="grid_field7" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileTeacherName}">
+				{$xfileTeacherName_value}
+								<span data-itemtype="grid_field" data-field="fileTeacherName" data-itemid="grid_field7" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileTeacherName_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileTeacherInfo}">
-						<span data-itemtype="grid_field" data-field="fileTeacherInfo" data-itemid="grid_field8" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileTeacherInfo}">
+				{$xfileTeacherInfo_value}
+								<span data-itemtype="grid_field" data-field="fileTeacherInfo" data-itemid="grid_field8" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileTeacherInfo_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileRaw}">
-						<span data-itemtype="grid_field" data-field="fileRaw" data-itemid="grid_field9" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileRaw}">
+				{$xfileRaw_value}
+								<span data-itemtype="grid_field" data-field="fileRaw" data-itemid="grid_field9" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileRaw_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileMD5}">
-						<span data-itemtype="grid_field" data-field="fileMD5" data-itemid="grid_field10" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileMD5}">
+				{$xfileMD5_value}
+								<span data-itemtype="grid_field" data-field="fileMD5" data-itemid="grid_field10" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileMD5_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_censorApproveTime}">
-						<span data-itemtype="grid_field" data-field="censorApproveTime" data-itemid="grid_field11" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_censorApproveTime}">
+				{$xcensorApproveTime_value}
+								<span data-itemtype="grid_field" data-field="censorApproveTime" data-itemid="grid_field11" data-pageid={$pageid} data-record-id="{$recId}">
 {$censorApproveTime_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_censorUsername}">
-						<span data-itemtype="grid_field" data-field="censorUsername" data-itemid="grid_field12" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_censorUsername}">
+				{$xcensorUsername_value}
+								<span data-itemtype="grid_field" data-field="censorUsername" data-itemid="grid_field12" data-pageid={$pageid} data-record-id="{$recId}">
 {$censorUsername_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_censorStatus}">
-						<span data-itemtype="grid_field" data-field="censorStatus" data-itemid="grid_field13" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_censorStatus}">
+				{$xcensorStatus_value}
+								<span data-itemtype="grid_field" data-field="censorStatus" data-itemid="grid_field13" data-pageid={$pageid} data-record-id="{$recId}">
 {$censorStatus_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_filePath}">
-						<span data-itemtype="grid_field" data-field="filePath" data-itemid="grid_field14" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_filePath}">
+				{$xfilePath_value}
+								<span data-itemtype="grid_field" data-field="filePath" data-itemid="grid_field14" data-pageid={$pageid} data-record-id="{$recId}">
 {$filePath_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileName}">
-						<span data-itemtype="grid_field" data-field="fileName" data-itemid="grid_field15" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileName}">
+				{$xfileName_value}
+								<span data-itemtype="grid_field" data-field="fileName" data-itemid="grid_field15" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileName_value}
 </span>			</td>
-			
-			<td {$recordattrs} class="{$fieldclass_fileNo}">
-						<span data-itemtype="grid_field" data-field="fileNo" data-itemid="grid_field16" data-pageid={$pageid} data-record-id="{$recId}">
+											<td class="data {$fieldclass_fileNo}">
+				{$xfileNo_value}
+								<span data-itemtype="grid_field" data-field="fileNo" data-itemid="grid_field16" data-pageid={$pageid} data-record-id="{$recId}">
 {$fileNo_value}
 </span>			</td>
-				</tr>
-	{END row_data}
-{END grid_row}
-
+							</tr>
+		{END row_data}
 	
+	
+	{END grid_row}
+
 
 	
 
@@ -192,7 +191,10 @@
 
 
 	</tbody>
-</table>	</div>
+</table>
+
+
+			</div>
 {END grid_block}									{BEGIN below-grid_block}
 <div class="r-form" data-location="below-grid" id="form_below-grid_{$pageid}" data-makeup="small" {$form_below-grid} data-pageid="{$pageid}" >		
 	</div>		

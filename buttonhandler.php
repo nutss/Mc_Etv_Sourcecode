@@ -116,7 +116,7 @@ function buttonHandler_SendToOnair($params)
 
 $record = $button->getCurrentRecord();
 
-FileMoveFolder($record["id"]);;
+FileMoveFolder($record["id"],"","");;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

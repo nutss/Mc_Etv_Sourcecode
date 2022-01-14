@@ -96,6 +96,13 @@ function InitLookupLinks()
 			$lookupTableLinks["teacher"]["mediainfo.fileTeacherName"] = array();
 		}
 		$lookupTableLinks["teacher"]["mediainfo.fileTeacherName"]["edit"] = array("table" => "mediaInfo", "field" => "fileTeacherName", "page" => "edit");
+		if( !isset( $lookupTableLinks["producer"] ) ) {
+			$lookupTableLinks["producer"] = array();
+		}
+		if( !isset( $lookupTableLinks["producer"]["mediainfo.producerName"] )) {
+			$lookupTableLinks["producer"]["mediainfo.producerName"] = array();
+		}
+		$lookupTableLinks["producer"]["mediainfo.producerName"]["edit"] = array("table" => "mediaInfo", "field" => "producerName", "page" => "edit");
 		if( !isset( $lookupTableLinks["staffUsers"] ) ) {
 			$lookupTableLinks["staffUsers"] = array();
 		}
@@ -201,6 +208,13 @@ function InitLookupLinks()
 			$lookupTableLinks["teacher"]["ingestinfo.fileTeacherName"] = array();
 		}
 		$lookupTableLinks["teacher"]["ingestinfo.fileTeacherName"]["edit"] = array("table" => "IngestInfo", "field" => "fileTeacherName", "page" => "edit");
+		if( !isset( $lookupTableLinks["producer"] ) ) {
+			$lookupTableLinks["producer"] = array();
+		}
+		if( !isset( $lookupTableLinks["producer"]["ingestinfo.producerName"] )) {
+			$lookupTableLinks["producer"]["ingestinfo.producerName"] = array();
+		}
+		$lookupTableLinks["producer"]["ingestinfo.producerName"]["edit"] = array("table" => "IngestInfo", "field" => "producerName", "page" => "edit");
 		if( !isset( $lookupTableLinks["subject"] ) ) {
 			$lookupTableLinks["subject"] = array();
 		}

@@ -420,6 +420,8 @@ class Chart
 			return true;
 		if("mediaInfo" == $this->chrt_array['tables'][0])
 			return true;
+		if("producer" == $this->chrt_array['tables'][0])
+			return true;
 		return false;
 	}
 

@@ -143,6 +143,9 @@ pdfDocument = {
 			{"text":[{"text":"{$jslabel mediaInfo fileTeacherInfo }","bold":true}," ",{$fileTeacherInfo_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field13}"},
 				
 				
+			{"text":[{"text":"{$jslabel mediaInfo producerName }","bold":true}," ",{$producerName_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field12}"},
+				
+				
 			{"text":[{"text":"{$jslabel mediaInfo fileRaw }","bold":true}," ",{$fileRaw_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field14}"},
 				
 				

@@ -11,7 +11,7 @@ $dalTablemediaInfo["filedate"] = array("type"=>7,"varname"=>"filedate", "name" =
 $dalTablemediaInfo["fileDuration"] = array("type"=>200,"varname"=>"fileDuration", "name" => "fileDuration");
 $dalTablemediaInfo["fileMD5"] = array("type"=>200,"varname"=>"fileMD5", "name" => "fileMD5");
 $dalTablemediaInfo["fileName"] = array("type"=>200,"varname"=>"fileName", "name" => "fileName");
-$dalTablemediaInfo["fileNo"] = array("type"=>200,"varname"=>"fileNo", "name" => "fileNo");
+$dalTablemediaInfo["fileNo"] = array("type"=>3,"varname"=>"fileNo", "name" => "fileNo");
 $dalTablemediaInfo["filePath"] = array("type"=>200,"varname"=>"filePath", "name" => "filePath");
 $dalTablemediaInfo["fileRaw"] = array("type"=>201,"varname"=>"fileRaw", "name" => "fileRaw");
 $dalTablemediaInfo["fileStatus"] = array("type"=>200,"varname"=>"fileStatus", "name" => "fileStatus");
@@ -21,7 +21,7 @@ $dalTablemediaInfo["fileTeacherName"] = array("type"=>200,"varname"=>"fileTeache
 $dalTablemediaInfo["fileTitle"] = array("type"=>200,"varname"=>"fileTitle", "name" => "fileTitle");
 $dalTablemediaInfo["fileType"] = array("type"=>200,"varname"=>"fileType", "name" => "fileType");
 $dalTablemediaInfo["id"] = array("type"=>3,"varname"=>"id", "name" => "id");
-$dalTablemediaInfo["playlistID"] = array("type"=>13,"varname"=>"playlistID", "name" => "playlistID");
+$dalTablemediaInfo["producerName"] = array("type"=>200,"varname"=>"producerName", "name" => "producerName");
 	$dalTablemediaInfo["id"]["key"]=true;
 
 $dal_info["mc_at_192_168_1_111__mediaInfo"] = &$dalTablemediaInfo;

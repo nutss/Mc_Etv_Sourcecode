@@ -920,6 +920,17 @@ function CustomExpression($value, $data, $field, $ptype, $table="")
 	global $strTableName;
 	if(!$table)
 		$table = $strTableName;
+				if($table=="playlistSub" && $field=="fileStatus")
+	{
+		if ($value == "PROCESS") {  
+    $color="red";  
+} elseif ($value == "READY") {  
+  
+		$color="green";  
+}  
+$value="<span style='color: " . $color . "'>" .$value . "</span>";;
+		return $value;
+	}
 				if($table=="mediaInfo" && $field=="fileStatus")
 	{
 		if ($value == "PROCESS") {  
@@ -1315,6 +1326,14 @@ function GetDefaultValue($field, $ptype, $table="")
 		return $_SESSION["UserName"];
 	}
 				if($table=="deleteInfo" && $field=="entryTime")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
+	}
+				if($table=="producer" && $field=="entryUserName")
+	{
+		return $_SESSION["UserName"];
+	}
+				if($table=="producer" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}

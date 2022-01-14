@@ -158,6 +158,9 @@ pdfDocument = {
 			{"text":{$fileTeacherInfo_pdfvalue},"hidden":"{$item_hide_integrated_search_field17}"},
 				
 				
+			{"text":{$producerName_pdfvalue},"hidden":"{$item_hide_integrated_search_field20}"},
+				
+				
 			{"text":{$censorApproveTime_pdfvalue},"hidden":"{$item_hide_integrated_search_field9}"},
 				
 				

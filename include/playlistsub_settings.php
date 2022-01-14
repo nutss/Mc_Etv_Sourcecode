@@ -846,7 +846,7 @@ $tdataplaylistsub[".hideMobileList"] = array();
 	$fdata["GoodName"] = "fileNo";
 	$fdata["ownerTable"] = "mediaInfo";
 	$fdata["Label"] = GetFieldLabel("playlistSub","fileNo");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 3;
 
 
 	
@@ -905,7 +905,8 @@ $tdataplaylistsub[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -929,7 +930,9 @@ $tdataplaylistsub[".hideMobileList"] = array();
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -3112,7 +3115,7 @@ $tdataplaylistsub[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "Custom");
 
 	
 	
@@ -3127,8 +3130,7 @@ $tdataplaylistsub[".hideMobileList"] = array();
 	
 		
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -3139,7 +3141,7 @@ $tdataplaylistsub[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3164,10 +3166,8 @@ $tdataplaylistsub[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -4113,7 +4113,7 @@ $proto57["m_columns"][] = "fileTeacherName";
 $proto57["m_columns"][] = "fileTitle";
 $proto57["m_columns"][] = "fileType";
 $proto57["m_columns"][] = "id";
-$proto57["m_columns"][] = "playlistID";
+$proto57["m_columns"][] = "producerName";
 $obj = new SQLTable($proto57);
 
 $proto56["m_table"] = $obj;

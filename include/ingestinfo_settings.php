@@ -88,6 +88,9 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsingestinfo["English"]["filePath"] = "File Path";
 	$fieldToolTipsingestinfo["English"]["filePath"] = "";
 	$placeHoldersingestinfo["English"]["filePath"] = "";
+	$fieldLabelsingestinfo["English"]["producerName"] = "Producer Name";
+	$fieldToolTipsingestinfo["English"]["producerName"] = "";
+	$placeHoldersingestinfo["English"]["producerName"] = "";
 	if (count($fieldToolTipsingestinfo["English"]))
 		$tdataingestinfo[".isUseToolTips"] = true;
 }
@@ -160,6 +163,9 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsingestinfo["Thai"]["filePath"] = "ที่อยู่ไฟล์";
 	$fieldToolTipsingestinfo["Thai"]["filePath"] = "";
 	$placeHoldersingestinfo["Thai"]["filePath"] = "";
+	$fieldLabelsingestinfo["Thai"]["producerName"] = "ผู้ผลิต";
+	$fieldToolTipsingestinfo["Thai"]["producerName"] = "";
+	$placeHoldersingestinfo["Thai"]["producerName"] = "";
 	if (count($fieldToolTipsingestinfo["Thai"]))
 		$tdataingestinfo[".isUseToolTips"] = true;
 }
@@ -299,6 +305,7 @@ $tdataingestinfo[".googleLikeFields"][] = "fileStatus";
 $tdataingestinfo[".googleLikeFields"][] = "filePath";
 $tdataingestinfo[".googleLikeFields"][] = "entryUserName";
 $tdataingestinfo[".googleLikeFields"][] = "entryTime";
+$tdataingestinfo[".googleLikeFields"][] = "producerName";
 
 
 
@@ -334,7 +341,7 @@ $tdataingestinfo[".orderindexes"] = array();
 
 
 
-$tdataingestinfo[".sqlHead"] = "SELECT id, fileNo, filedate, fileName, fileType, fileDuration, fileSubject, fileTitle, fileClassLevel, fileTeacherName, fileTeacherInfo, fileRaw, fileMD5, censorApproveTime, censorUsername, censoReson, censorStatus, fileStatus, filePath, entryUserName, entryTime";
+$tdataingestinfo[".sqlHead"] = "SELECT id,  fileNo,  filedate,  fileName,  fileType,  fileDuration,  fileSubject,  fileTitle,  fileClassLevel,  fileTeacherName,  fileTeacherInfo,  fileRaw,  fileMD5,  censorApproveTime,  censorUsername,  censoReson,  censorStatus,  fileStatus,  filePath,  entryUserName,  entryTime,  producerName";
 $tdataingestinfo[".sqlFrom"] = "FROM mediaInfo";
 $tdataingestinfo[".sqlWhereExpr"] = "";
 $tdataingestinfo[".sqlTail"] = "";
@@ -530,7 +537,7 @@ $tdataingestinfo[".hideMobileList"] = array();
 	$fdata["GoodName"] = "fileNo";
 	$fdata["ownerTable"] = "mediaInfo";
 	$fdata["Label"] = GetFieldLabel("IngestInfo","fileNo");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 3;
 
 
 	
@@ -3355,6 +3362,169 @@ $tdataingestinfo[".hideMobileList"] = array();
 
 	$tdataingestinfo["entryTime"] = $fdata;
 		$tdataingestinfo[".searchableFields"][] = "entryTime";
+//	producerName
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 22;
+	$fdata["strName"] = "producerName";
+	$fdata["GoodName"] = "producerName";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("IngestInfo","producerName");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "producerName";
+
+		$fdata["sourceSingle"] = "producerName";
+
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "producerName";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "producer";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+		
+	$edata["LinkField"] = "producerName";
+	$edata["LinkFieldType"] = 200;
+	$edata["DisplayField"] = "producerName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "producerName";
+
+	
+	
+	
+	
+
+	
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdataingestinfo["producerName"] = $fdata;
+		$tdataingestinfo[".searchableFields"][] = "producerName";
 
 
 $tables_data["IngestInfo"]=&$tdataingestinfo;
@@ -3396,7 +3566,7 @@ function createSqlQuery_ingestinfo()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id, fileNo, filedate, fileName, fileType, fileDuration, fileSubject, fileTitle, fileClassLevel, fileTeacherName, fileTeacherInfo, fileRaw, fileMD5, censorApproveTime, censorUsername, censoReson, censorStatus, fileStatus, filePath, entryUserName, entryTime";
+$proto0["m_strFieldList"] = "id,  fileNo,  filedate,  fileName,  fileType,  fileDuration,  fileSubject,  fileTitle,  fileClassLevel,  fileTeacherName,  fileTeacherInfo,  fileRaw,  fileMD5,  censorApproveTime,  censorUsername,  censoReson,  censorStatus,  fileStatus,  filePath,  entryUserName,  entryTime,  producerName";
 $proto0["m_strFrom"] = "FROM mediaInfo";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "ORDER BY fileNo DESC";
@@ -3730,73 +3900,87 @@ $proto46["m_alias"] = "";
 $obj = new SQLFieldListItem($proto46);
 
 $proto0["m_fieldlist"][]=$obj;
-$proto0["m_fromlist"] = array();
-												$proto48=array();
-$proto48["m_link"] = "SQLL_MAIN";
-			$proto49=array();
-$proto49["m_strName"] = "mediaInfo";
-$proto49["m_srcTableName"] = "IngestInfo";
-$proto49["m_columns"] = array();
-$proto49["m_columns"][] = "censorApproveTime";
-$proto49["m_columns"][] = "censoReson";
-$proto49["m_columns"][] = "censorStatus";
-$proto49["m_columns"][] = "censorUsername";
-$proto49["m_columns"][] = "entryTime";
-$proto49["m_columns"][] = "entryUserName";
-$proto49["m_columns"][] = "fileClassLevel";
-$proto49["m_columns"][] = "filedate";
-$proto49["m_columns"][] = "fileDuration";
-$proto49["m_columns"][] = "fileMD5";
-$proto49["m_columns"][] = "fileName";
-$proto49["m_columns"][] = "fileNo";
-$proto49["m_columns"][] = "filePath";
-$proto49["m_columns"][] = "fileRaw";
-$proto49["m_columns"][] = "fileStatus";
-$proto49["m_columns"][] = "fileSubject";
-$proto49["m_columns"][] = "fileTeacherInfo";
-$proto49["m_columns"][] = "fileTeacherName";
-$proto49["m_columns"][] = "fileTitle";
-$proto49["m_columns"][] = "fileType";
-$proto49["m_columns"][] = "id";
-$proto49["m_columns"][] = "playlistID";
-$obj = new SQLTable($proto49);
+						$proto48=array();
+			$obj = new SQLField(array(
+	"m_strName" => "producerName",
+	"m_strTable" => "mediaInfo",
+	"m_srcTableName" => "IngestInfo"
+));
 
-$proto48["m_table"] = $obj;
-$proto48["m_sql"] = "mediaInfo";
-$proto48["m_alias"] = "";
+$proto48["m_sql"] = "producerName";
 $proto48["m_srcTableName"] = "IngestInfo";
-$proto50=array();
-$proto50["m_sql"] = "";
-$proto50["m_uniontype"] = "SQLL_UNKNOWN";
+$proto48["m_expr"]=$obj;
+$proto48["m_alias"] = "";
+$obj = new SQLFieldListItem($proto48);
+
+$proto0["m_fieldlist"][]=$obj;
+$proto0["m_fromlist"] = array();
+												$proto50=array();
+$proto50["m_link"] = "SQLL_MAIN";
+			$proto51=array();
+$proto51["m_strName"] = "mediaInfo";
+$proto51["m_srcTableName"] = "IngestInfo";
+$proto51["m_columns"] = array();
+$proto51["m_columns"][] = "censorApproveTime";
+$proto51["m_columns"][] = "censoReson";
+$proto51["m_columns"][] = "censorStatus";
+$proto51["m_columns"][] = "censorUsername";
+$proto51["m_columns"][] = "entryTime";
+$proto51["m_columns"][] = "entryUserName";
+$proto51["m_columns"][] = "fileClassLevel";
+$proto51["m_columns"][] = "filedate";
+$proto51["m_columns"][] = "fileDuration";
+$proto51["m_columns"][] = "fileMD5";
+$proto51["m_columns"][] = "fileName";
+$proto51["m_columns"][] = "fileNo";
+$proto51["m_columns"][] = "filePath";
+$proto51["m_columns"][] = "fileRaw";
+$proto51["m_columns"][] = "fileStatus";
+$proto51["m_columns"][] = "fileSubject";
+$proto51["m_columns"][] = "fileTeacherInfo";
+$proto51["m_columns"][] = "fileTeacherName";
+$proto51["m_columns"][] = "fileTitle";
+$proto51["m_columns"][] = "fileType";
+$proto51["m_columns"][] = "id";
+$proto51["m_columns"][] = "producerName";
+$obj = new SQLTable($proto51);
+
+$proto50["m_table"] = $obj;
+$proto50["m_sql"] = "mediaInfo";
+$proto50["m_alias"] = "";
+$proto50["m_srcTableName"] = "IngestInfo";
+$proto52=array();
+$proto52["m_sql"] = "";
+$proto52["m_uniontype"] = "SQLL_UNKNOWN";
 	$obj = new SQLNonParsed(array(
 	"m_sql" => ""
 ));
 
-$proto50["m_column"]=$obj;
-$proto50["m_contained"] = array();
-$proto50["m_strCase"] = "";
-$proto50["m_havingmode"] = false;
-$proto50["m_inBrackets"] = false;
-$proto50["m_useAlias"] = false;
-$obj = new SQLLogicalExpr($proto50);
+$proto52["m_column"]=$obj;
+$proto52["m_contained"] = array();
+$proto52["m_strCase"] = "";
+$proto52["m_havingmode"] = false;
+$proto52["m_inBrackets"] = false;
+$proto52["m_useAlias"] = false;
+$obj = new SQLLogicalExpr($proto52);
 
-$proto48["m_joinon"] = $obj;
-$obj = new SQLFromListItem($proto48);
+$proto50["m_joinon"] = $obj;
+$obj = new SQLFromListItem($proto50);
 
 $proto0["m_fromlist"][]=$obj;
 $proto0["m_groupby"] = array();
 $proto0["m_orderby"] = array();
-												$proto52=array();
+												$proto54=array();
 						$obj = new SQLField(array(
 	"m_strName" => "fileNo",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "IngestInfo"
 ));
 
-$proto52["m_column"]=$obj;
-$proto52["m_bAsc"] = 0;
-$proto52["m_nColumn"] = 0;
-$obj = new SQLOrderByItem($proto52);
+$proto54["m_column"]=$obj;
+$proto54["m_bAsc"] = 0;
+$proto54["m_nColumn"] = 0;
+$obj = new SQLOrderByItem($proto54);
 
 $proto0["m_orderby"][]=$obj;					
 $proto0["m_srcTableName"]="IngestInfo";		
@@ -3810,7 +3994,7 @@ $queryData_ingestinfo = createSqlQuery_ingestinfo();
 	
 		;
 
-																					
+																						
 
 $tdataingestinfo[".sqlquery"] = $queryData_ingestinfo;
 

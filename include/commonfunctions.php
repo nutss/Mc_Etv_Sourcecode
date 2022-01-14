@@ -239,6 +239,8 @@ function checkTableName($shortTName )
 		return true;
 	if ("deleteinfo" == $shortTName )
 		return true;
+	if ("producer" == $shortTName )
+		return true;
 	return false;
 }
 
@@ -478,6 +480,15 @@ function GetTablesList($pdfMode = false)
 	if( $tableAvailable ) {
 		$arr[]="deleteInfo";
 	}
+	$tableAvailable = true;
+	if( $checkPermissions ) {
+		$strPerm = GetUserPermissions("producer");
+		$tableAvailable = ( strpos($strPerm, "P") !== false
+			|| $pdfMode && strpos($strPerm, "S") !== false );
+	}
+	if( $tableAvailable ) {
+		$arr[]="producer";
+	}
 	return $arr;
 }
 
@@ -508,6 +519,7 @@ function GetTablesListWithoutSecurity()
 	$arr[]="IngestInfo";
 	$arr[]="downloadInfo";
 	$arr[]="deleteInfo";
+	$arr[]="producer";
 	return $arr;
 }
 
@@ -1235,6 +1247,11 @@ function GetUserPermissionsStatic( $table )
 		return "ADESPI".$extraPerm;
 	}
 	if( $table=="deleteInfo" )
+	{
+//	default permissions
+		return "ADESPI".$extraPerm;
+	}
+	if( $table=="producer" )
 	{
 //	default permissions
 		return "ADESPI".$extraPerm;

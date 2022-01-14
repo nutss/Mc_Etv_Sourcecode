@@ -530,7 +530,7 @@ $tdatadownloadinfo[".hideMobileList"] = array();
 	$fdata["GoodName"] = "fileNo";
 	$fdata["ownerTable"] = "mediaInfo";
 	$fdata["Label"] = GetFieldLabel("downloadInfo","fileNo");
-	$fdata["FieldType"] = 200;
+	$fdata["FieldType"] = 3;
 
 
 	
@@ -3761,7 +3761,7 @@ $proto49["m_columns"][] = "fileTeacherName";
 $proto49["m_columns"][] = "fileTitle";
 $proto49["m_columns"][] = "fileType";
 $proto49["m_columns"][] = "id";
-$proto49["m_columns"][] = "playlistID";
+$proto49["m_columns"][] = "producerName";
 $obj = new SQLTable($proto49);
 
 $proto48["m_table"] = $obj;

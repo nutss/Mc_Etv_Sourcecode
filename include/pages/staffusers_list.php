@@ -2,6 +2,7 @@
 			$optionsArray = array( 'list' => array( 'inlineAdd' => false,
 'detailsAdd' => false,
 'inlineEdit' => false,
+'spreadsheetMode' => false,
 'addToBottom' => false,
 'delete' => true,
 'updateSelected' => false,
@@ -722,6 +723,7 @@ array( 'cell' => 'footcell_field5' ) ) ) ),
 'grid_checkbox' => array( 'type' => 'grid_checkbox' ),
 'grid_checkbox_head' => array( 'type' => 'grid_checkbox_head' ) ),
 'dbProps' => array(  ),
+'spreadsheetGrid' => false,
 'version' => 7,
 'pageWidth' => 'full' );
 		?>

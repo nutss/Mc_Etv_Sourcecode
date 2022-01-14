@@ -50,14 +50,12 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 			$SQLCommand = "SELECT * FROM playlistSub WHERE (playlistID=".$values['id'].") ";
 	
 				$RS = CustomQuery($SQLCommand);
-				if ($data = db_fetch_array($RS)) {
+				while ($data = db_fetch_array($RS)) {
 
-					FileMoveFolder($values['mediaInfoID'],$data["id"]);
+					FileMoveFolder($data['mediaInfoID'],"",$data["id"]);
 
 				}
 			
-
-
 	}
 
 

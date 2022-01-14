@@ -70,8 +70,7 @@
 function ProcessValuesAdd(&$values, $pageObject)
 {
 
-			
-		$values["fileNo"] = GenFileNo();
+					$values["fileNo"] = GenFileNo();
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.	
@@ -204,7 +203,7 @@ function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
 			$values["fileNo"] = GenFileNo();
-	//$values["fileDuration"] = GetDurationClip($values["fileRaw"]);
+
 	$values["censorStatus"] = "UNCENSOR";
 	$values["fileStatus"] = "PROCESS";
 // Place event code here.
@@ -291,7 +290,7 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 {
 
 		
-		FileMoveFolder($values['id'],"0");
+		FileMoveFolder($values['id'],"","");
 
 
 // Place event code here.
@@ -362,8 +361,9 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
 		
+			
 
-		FileMoveFolder($values['id'],"0");
+		FileMoveFolder($values['id'],"","");
 
 
 // Place event code here.
@@ -526,11 +526,7 @@ function BeforeDelete($where, &$deleted_values, &$message, $pageObject)
 {
 
 		
-
 			FileDeleteMD5($deleted_values["id"]);
-
-
-
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.

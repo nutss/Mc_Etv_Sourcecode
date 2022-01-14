@@ -226,7 +226,7 @@ function AfterEdit(&$values, $where, &$oldvalues, &$keys, $inline, $pageObject)
 
 
 		if (($oldvalues['censorStatus']  <> "PLAYLIST") OR ($values['censorStatus'] <> "PLAYLIST")) {
-			FileMoveFolder($values['id'],"0");
+			FileMoveFolder($values['id'],"","");
 		}
 
 		AlertEmailCensorStatus($values[id]);
