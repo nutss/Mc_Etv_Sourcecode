@@ -259,7 +259,7 @@ $tdatadeleteinfo[".rowHighlite"] = true;
 
 
 
-			
+						
 
 $tdatadeleteinfo[".ajaxCodeSnippetAdded"] = false;
 

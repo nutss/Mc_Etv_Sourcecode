@@ -169,7 +169,7 @@ $tdatateacher[".rowHighlite"] = true;
 
 
 
-			
+						
 
 $tdatateacher[".ajaxCodeSnippetAdded"] = false;
 

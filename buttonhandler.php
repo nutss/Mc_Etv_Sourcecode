@@ -112,11 +112,14 @@ function buttonHandler_SendToOnair($params)
 
 	RunnerContext::push( new RunnerContextItem( $params["location"], $contextParams));
 	// Put your code here.
+
+echo('aa');
+
 //$result["txt"] = $params["txt"]." world!";
 
-$record = $button->getCurrentRecord();
+//$record = $button->getCurrentRecord();
 
-FileMoveFolder($record["id"],"","");;
+//FileMoveFolder($record["id"],"","");;
 	RunnerContext::pop();
 	echo my_json_encode($result);
 	$button->deleteTempFiles();

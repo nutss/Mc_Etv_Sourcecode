@@ -247,7 +247,7 @@ $tdatafileadmin[".rowHighlite"] = true;
 
 
 
-			
+						
 
 $tdatafileadmin[".ajaxCodeSnippetAdded"] = false;
 

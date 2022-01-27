@@ -264,7 +264,7 @@ $tdatacensor_report[".isUseAjaxSuggest"] = true;
 
 
 
-			
+						
 
 $tdatacensor_report[".ajaxCodeSnippetAdded"] = false;
 

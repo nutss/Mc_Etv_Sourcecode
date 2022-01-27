@@ -163,7 +163,7 @@ $tdataeducationlevel[".rowHighlite"] = true;
 
 
 
-			
+						
 
 $tdataeducationlevel[".ajaxCodeSnippetAdded"] = false;
 
