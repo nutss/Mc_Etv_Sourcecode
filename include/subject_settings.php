@@ -55,10 +55,10 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelssubject["Thai"]["id"] = "Id";
 	$fieldToolTipssubject["Thai"]["id"] = "";
 	$placeHolderssubject["Thai"]["id"] = "";
-	$fieldLabelssubject["Thai"]["subjectCode"] = "รหัสวิชา";
+	$fieldLabelssubject["Thai"]["subjectCode"] = "รหัสรายการ";
 	$fieldToolTipssubject["Thai"]["subjectCode"] = "";
 	$placeHolderssubject["Thai"]["subjectCode"] = "";
-	$fieldLabelssubject["Thai"]["subjectName"] = "ชื่อวิชา";
+	$fieldLabelssubject["Thai"]["subjectName"] = "ชื่อรายการ";
 	$fieldToolTipssubject["Thai"]["subjectName"] = "";
 	$placeHolderssubject["Thai"]["subjectName"] = "";
 	$fieldLabelssubject["Thai"]["subjectDesc"] = "รายละเอียด";

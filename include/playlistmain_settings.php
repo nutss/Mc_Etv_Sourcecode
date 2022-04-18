@@ -70,10 +70,10 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsplaylistmain["Thai"]["playlistDescription"] = "รายละเอียด";
 	$fieldToolTipsplaylistmain["Thai"]["playlistDescription"] = "";
 	$placeHoldersplaylistmain["Thai"]["playlistDescription"] = "";
-	$fieldLabelsplaylistmain["Thai"]["playlistSubject"] = "ชื่อวิชา";
+	$fieldLabelsplaylistmain["Thai"]["playlistSubject"] = "ชื่อรายการ";
 	$fieldToolTipsplaylistmain["Thai"]["playlistSubject"] = "";
 	$placeHoldersplaylistmain["Thai"]["playlistSubject"] = "";
-	$fieldLabelsplaylistmain["Thai"]["playlistClassLevel"] = "ระดับการศึกษา";
+	$fieldLabelsplaylistmain["Thai"]["playlistClassLevel"] = "อัธยาศัย/หลักสูตร";
 	$fieldToolTipsplaylistmain["Thai"]["playlistClassLevel"] = "";
 	$placeHoldersplaylistmain["Thai"]["playlistClassLevel"] = "";
 	$fieldLabelsplaylistmain["Thai"]["entryUserName"] = "ผู้บันทึกรายการ";

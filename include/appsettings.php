@@ -71,6 +71,7 @@ $custom_labels["English"] = array();
 		$custom_labels["English"]['______________5'] = "Playlist Sub";
 		$custom_labels["English"]['___________'] = "Administrator";
 		$custom_labels["English"]['SEND_TO_ONAIR'] = "Send To Onair";
+		$custom_labels["English"]['_____________________________________'] = "ระบบบริหาารจัดการข้อมูลรายการโทรทัศน์";
 	$custom_labels["Thai"] = array();
 		$custom_labels["Thai"]['______________'] = "รายละเอียดไฟล์";
 		$custom_labels["Thai"]['__________'] = "การตั้งค่าข้อมูล";
@@ -94,6 +95,7 @@ $custom_labels["English"] = array();
 		$custom_labels["Thai"]['______________5'] = "เพลย์ลิสต์ย่อย";
 		$custom_labels["Thai"]['___________'] = "ผู้ดูแลระบบ";
 		$custom_labels["Thai"]['SEND_TO_ONAIR'] = "ส่งไฟล์ออกอากาศ";
+		$custom_labels["Thai"]['_____________________________________'] = "ระบบบริหารจัดการขัอมูลรายการโทรทัศน์ (Video Aset Management)";
 
 define('GLOBAL_PAGES_SHORT', ".global");
 define('GLOBAL_PAGES', "<global>");
@@ -743,9 +745,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "512_1642074531";
+$projectBuildKey = "532_1646624690";
 $wizardBuildKey = "37251";
-$projectBuildNumber = "512";
+$projectBuildNumber = "532";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -799,9 +801,9 @@ $tableCaptions["Thai"]["staffUsers"] = "ผู้ใช้งาน";
 $tableCaptions["Thai"]["FileAdmin"] = "การจัดการไฟล์ (ผู้ดูแลระบบ)";
 $tableCaptions["Thai"]["censorPass"] = "เซ็นเซอร์ (ผ่าน)";
 $tableCaptions["Thai"]["censorReject"] = "เซ็นเซอร์ (ไม่ผ่าน)";
-$tableCaptions["Thai"]["teacher"] = "อาจารย์ผู้สอน";
-$tableCaptions["Thai"]["subject"] = "วิชา";
-$tableCaptions["Thai"]["educationLevel"] = "ระดับการศึกษา";
+$tableCaptions["Thai"]["teacher"] = "วิทยากร";
+$tableCaptions["Thai"]["subject"] = "รายการ";
+$tableCaptions["Thai"]["educationLevel"] = "อัธยาศัย/หลักสูตร";
 $tableCaptions["Thai"]["admin_rights"] = "Admin Rights";
 $tableCaptions["Thai"]["admin_members"] = "Admin Members";
 $tableCaptions["Thai"]["admin_users"] = "Add/Edit users";
@@ -933,11 +935,11 @@ Security::updateCSRFCookie();
 
 $isGroupSecurity = true;
 
-$isUseRTEBasic = true;
+$isUseRTEBasic = false;
 
 $isUseRTECK = false;
 
-$isUseRTEInnova = false;
+$isUseRTEInnova = true;
 
 $caseInsensitiveUsername = 0;
 

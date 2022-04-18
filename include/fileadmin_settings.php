@@ -94,7 +94,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsfileadmin["Thai"]["id"] = "ID";
 	$fieldToolTipsfileadmin["Thai"]["id"] = "";
 	$placeHoldersfileadmin["Thai"]["id"] = "";
-	$fieldLabelsfileadmin["Thai"]["fileNo"] = "หมายเลขไฟล์";
+	$fieldLabelsfileadmin["Thai"]["fileNo"] = "ID (หมายเลขไฟล์)";
 	$fieldToolTipsfileadmin["Thai"]["fileNo"] = "";
 	$placeHoldersfileadmin["Thai"]["fileNo"] = "";
 	$fieldLabelsfileadmin["Thai"]["fileName"] = "ชื่อไพล์";
@@ -103,16 +103,16 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsfileadmin["Thai"]["fileType"] = "ประเภทไฟล์";
 	$fieldToolTipsfileadmin["Thai"]["fileType"] = "";
 	$placeHoldersfileadmin["Thai"]["fileType"] = "";
-	$fieldLabelsfileadmin["Thai"]["fileSubject"] = "ชื่อวิชา";
+	$fieldLabelsfileadmin["Thai"]["fileSubject"] = "ชื่อรายการ";
 	$fieldToolTipsfileadmin["Thai"]["fileSubject"] = "";
 	$placeHoldersfileadmin["Thai"]["fileSubject"] = "";
-	$fieldLabelsfileadmin["Thai"]["fileTitle"] = "หัวข้อวิชา";
+	$fieldLabelsfileadmin["Thai"]["fileTitle"] = "ประเภทรายการ";
 	$fieldToolTipsfileadmin["Thai"]["fileTitle"] = "";
 	$placeHoldersfileadmin["Thai"]["fileTitle"] = "";
-	$fieldLabelsfileadmin["Thai"]["fileClassLevel"] = "ระดับการศึกษา";
+	$fieldLabelsfileadmin["Thai"]["fileClassLevel"] = "อัธยาศัย/หลักสูตร";
 	$fieldToolTipsfileadmin["Thai"]["fileClassLevel"] = "";
 	$placeHoldersfileadmin["Thai"]["fileClassLevel"] = "";
-	$fieldLabelsfileadmin["Thai"]["fileTeacherName"] = "อาจารย์ผู้สอน";
+	$fieldLabelsfileadmin["Thai"]["fileTeacherName"] = "วิทยากร";
 	$fieldToolTipsfileadmin["Thai"]["fileTeacherName"] = "";
 	$placeHoldersfileadmin["Thai"]["fileTeacherName"] = "";
 	$fieldLabelsfileadmin["Thai"]["censorApproveTime"] = "วันที่/เวลาแก้ไขอนุมัติเซ็นเซอร์";
@@ -124,7 +124,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsfileadmin["Thai"]["censoReson"] = "เหตุผลเซ็นเซอร์";
 	$fieldToolTipsfileadmin["Thai"]["censoReson"] = "";
 	$placeHoldersfileadmin["Thai"]["censoReson"] = "";
-	$fieldLabelsfileadmin["Thai"]["censorStatus"] = "สถานะเซ็นเซอร์";
+	$fieldLabelsfileadmin["Thai"]["censorStatus"] = "CODE";
 	$fieldToolTipsfileadmin["Thai"]["censorStatus"] = "";
 	$placeHoldersfileadmin["Thai"]["censorStatus"] = "";
 	$fieldLabelsfileadmin["Thai"]["entryUserName"] = "ผู้บันทึกรายการ";
@@ -136,7 +136,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsfileadmin["Thai"]["fileRaw"] = "ไฟล์";
 	$fieldToolTipsfileadmin["Thai"]["fileRaw"] = "";
 	$placeHoldersfileadmin["Thai"]["fileRaw"] = "";
-	$fieldLabelsfileadmin["Thai"]["fileDuration"] = "ระยะเวลาไฟล์";
+	$fieldLabelsfileadmin["Thai"]["fileDuration"] = "DURATION";
 	$fieldToolTipsfileadmin["Thai"]["fileDuration"] = "";
 	$placeHoldersfileadmin["Thai"]["fileDuration"] = "";
 	$fieldLabelsfileadmin["Thai"]["fileMD5"] = "MD5";

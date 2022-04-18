@@ -170,15 +170,6 @@ pdfDocument = {
 			{"text":[{"text":"{$jslabel IngestInfo fileName }","bold":true}," ",{$fileName_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field1}"},
 				
 				
-			{"text":[{"text":"{$jslabel IngestInfo fileType }","bold":true}," ",{$fileType_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field2}"},
-				
-				
-			{"text":[{"text":"{$jslabel IngestInfo fileTitle }","bold":true}," ",{$fileTitle_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field4}"},
-				
-				
-			{"text":[{"text":"{$jslabel IngestInfo fileSubject }","bold":true}," ",{$fileSubject_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field3}"},
-				
-				
 			{"text":[{"text":"{$jslabel IngestInfo fileTeacherName }","bold":true}," ",{$fileTeacherName_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field6}"},
 				
 				
@@ -186,9 +177,6 @@ pdfDocument = {
 				
 				
 			{"text":[{"text":"{$jslabel IngestInfo producerName }","bold":true}," ",{$producerName_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field11}"},
-				
-				
-			{"text":[{"text":"{$jslabel IngestInfo fileClassLevel }","bold":true}," ",{$fileClassLevel_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field5}"},
 				
 				
 			{"text":[{"text":"{$jslabel IngestInfo fileRaw }","bold":true}," ",{$fileRaw_pdfvalue}],"hidden":"{$item_hide_integrated_edit_field7}"},

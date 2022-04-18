@@ -323,19 +323,6 @@ switch ($requestAction) {
 				}
 			}
     	}
-	
-	
-	// MR.NUTSS EDIT
-
-	$data = array();
-	$data["datetime"] = date("Y-m-d H:i:s");
-	$data["ip"]  = $_SERVER['REMOTE_ADDR'];
-	$data["user"] = $_SESSION["UserID"];
-	$data["table"] = "mediaInfo";
-	$data["action"] = "download";
-	$data["description"] = $fileName;
-
-	DB::Insert("mc_audit", $data );
 }
 exit();
 ?>

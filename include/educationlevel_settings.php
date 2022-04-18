@@ -52,7 +52,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelseducationlevel["Thai"]["id"] = "ID";
 	$fieldToolTipseducationlevel["Thai"]["id"] = "";
 	$placeHolderseducationlevel["Thai"]["id"] = "";
-	$fieldLabelseducationlevel["Thai"]["levelName"] = "ระดับการศึกษา";
+	$fieldLabelseducationlevel["Thai"]["levelName"] = "อัธยาศัย/หลักสูตร";
 	$fieldToolTipseducationlevel["Thai"]["levelName"] = "";
 	$placeHolderseducationlevel["Thai"]["levelName"] = "";
 	$fieldLabelseducationlevel["Thai"]["levelDesc"] = "รายละเอียด";

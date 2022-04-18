@@ -94,7 +94,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensoruncensor["Thai"]["id"] = "ID";
 	$fieldToolTipscensoruncensor["Thai"]["id"] = "";
 	$placeHolderscensoruncensor["Thai"]["id"] = "";
-	$fieldLabelscensoruncensor["Thai"]["fileNo"] = "หมายเลขไฟล์";
+	$fieldLabelscensoruncensor["Thai"]["fileNo"] = "ID (หมายเลขไฟล์)";
 	$fieldToolTipscensoruncensor["Thai"]["fileNo"] = "";
 	$placeHolderscensoruncensor["Thai"]["fileNo"] = "";
 	$fieldLabelscensoruncensor["Thai"]["fileName"] = "ชื่อไพล์";
@@ -103,16 +103,16 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensoruncensor["Thai"]["fileType"] = "ประเภทไฟล์";
 	$fieldToolTipscensoruncensor["Thai"]["fileType"] = "";
 	$placeHolderscensoruncensor["Thai"]["fileType"] = "";
-	$fieldLabelscensoruncensor["Thai"]["fileSubject"] = "ชื่อวิชา";
+	$fieldLabelscensoruncensor["Thai"]["fileSubject"] = "ชื่อรายการ";
 	$fieldToolTipscensoruncensor["Thai"]["fileSubject"] = "";
 	$placeHolderscensoruncensor["Thai"]["fileSubject"] = "";
-	$fieldLabelscensoruncensor["Thai"]["fileTitle"] = "หัวข้อวิชา";
+	$fieldLabelscensoruncensor["Thai"]["fileTitle"] = "ประเภทรายการ";
 	$fieldToolTipscensoruncensor["Thai"]["fileTitle"] = "";
 	$placeHolderscensoruncensor["Thai"]["fileTitle"] = "";
-	$fieldLabelscensoruncensor["Thai"]["fileClassLevel"] = "ระดับการศึกษา";
+	$fieldLabelscensoruncensor["Thai"]["fileClassLevel"] = "อัธยาศัย/หลักสูตร";
 	$fieldToolTipscensoruncensor["Thai"]["fileClassLevel"] = "";
 	$placeHolderscensoruncensor["Thai"]["fileClassLevel"] = "";
-	$fieldLabelscensoruncensor["Thai"]["fileTeacherName"] = "อาจารย์ผู้สอน";
+	$fieldLabelscensoruncensor["Thai"]["fileTeacherName"] = "วิทยากร";
 	$fieldToolTipscensoruncensor["Thai"]["fileTeacherName"] = "";
 	$placeHolderscensoruncensor["Thai"]["fileTeacherName"] = "";
 	$fieldLabelscensoruncensor["Thai"]["censorApproveTime"] = "วันที่/เวลาแก้ไขอนุมัติเซ็นเซอร์";
@@ -124,7 +124,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensoruncensor["Thai"]["censoReson"] = "เหตุผลเซ็นเซอร์";
 	$fieldToolTipscensoruncensor["Thai"]["censoReson"] = "";
 	$placeHolderscensoruncensor["Thai"]["censoReson"] = "";
-	$fieldLabelscensoruncensor["Thai"]["censorStatus"] = "สถานะเซ็นเซอร์";
+	$fieldLabelscensoruncensor["Thai"]["censorStatus"] = "CODE";
 	$fieldToolTipscensoruncensor["Thai"]["censorStatus"] = "";
 	$placeHolderscensoruncensor["Thai"]["censorStatus"] = "";
 	$fieldLabelscensoruncensor["Thai"]["entryUserName"] = "ผู้บันทึกรายการ";
@@ -136,7 +136,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensoruncensor["Thai"]["fileRaw"] = "ไฟล์";
 	$fieldToolTipscensoruncensor["Thai"]["fileRaw"] = "";
 	$placeHolderscensoruncensor["Thai"]["fileRaw"] = "";
-	$fieldLabelscensoruncensor["Thai"]["fileDuration"] = "ระยะเวลาไฟล์";
+	$fieldLabelscensoruncensor["Thai"]["fileDuration"] = "DURATION";
 	$fieldToolTipscensoruncensor["Thai"]["fileDuration"] = "";
 	$placeHolderscensoruncensor["Thai"]["fileDuration"] = "";
 	$fieldLabelscensoruncensor["Thai"]["fileMD5"] = "MD5";
@@ -2491,7 +2491,7 @@ $tdatacensoruncensor[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -2506,8 +2506,7 @@ $tdatacensoruncensor[".hideMobileList"] = array();
 	
 		
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -2518,7 +2517,7 @@ $tdatacensoruncensor[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2533,7 +2532,8 @@ $tdatacensoruncensor[".hideMobileList"] = array();
 		$edata["IsRequired"] = true;
 
 	
-	
+		$edata["UseRTE"] = true;
+
 	
 			$edata["acceptFileTypes"] = ".+$";
 		$edata["acceptFileTypesHtml"] = "";
@@ -2543,12 +2543,11 @@ $tdatacensoruncensor[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 600;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation

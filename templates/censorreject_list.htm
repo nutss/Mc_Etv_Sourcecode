@@ -716,13 +716,7 @@
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileRaw"]:before {
 		content: "{$label censorReject fileRaw}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileMD5"]:before {
-		content: "{$label censorReject fileMD5}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="fileStatus"]:before {
-		content: "{$label censorReject fileStatus}";
-	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="censorApproveTime"]:before {
+						[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="censorApproveTime"]:before {
 		content: "{$label censorReject censorApproveTime}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="censorUsername"]:before {
@@ -731,13 +725,7 @@
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="censorStatus"]:before {
 		content: "{$label censorReject censorStatus}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryUserName"]:before {
-		content: "{$label censorReject entryUserName}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
-		content: "{$label censorReject entryTime}";
-	}
-	}
+			}
 </style>
 <table data-location="grid" id="form_grid_{$pageid}" data-makeup="topbar" {$form_grid} data-pageid="{$pageid}" class=" table {$grid_classes} r-horizontal-grid  r-flexgrid rnr-b-grid rnr-gridtable" 
 	cellpadding="0" 
@@ -810,7 +798,7 @@
 	 
 		{BEGIN censorApproveTime_fieldheadercolumn}
 	{BEGIN censorApproveTime_fieldheader}
-	<SPAN {$censorApproveTime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorApproveTime" data-fieldname="censorApproveTime">
+	<SPAN {$censorApproveTime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorApproveTime" data-fieldname="censorApproveTime">
 	{$label censorReject censorApproveTime }	{$arrow_icon_censorApproveTime}
 	</SPAN>
 	{END censorApproveTime_fieldheader}
@@ -837,7 +825,7 @@
 	 
 		{BEGIN censorUsername_fieldheadercolumn}
 	{BEGIN censorUsername_fieldheader}
-	<SPAN {$censorUsername_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorUsername" data-fieldname="censorUsername">
+	<SPAN {$censorUsername_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorUsername" data-fieldname="censorUsername">
 	{$label censorReject censorUsername }	{$arrow_icon_censorUsername}
 	</SPAN>
 	{END censorUsername_fieldheader}
@@ -864,7 +852,7 @@
 	 
 		{BEGIN censorStatus_fieldheadercolumn}
 	{BEGIN censorStatus_fieldheader}
-	<SPAN {$censorStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorStatus" data-fieldname="censorStatus">
+	<SPAN {$censorStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field14" {$item_simple_grid_field14} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="censorStatus" data-fieldname="censorStatus">
 	{$label censorReject censorStatus }	{$arrow_icon_censorStatus}
 	</SPAN>
 	{END censorStatus_fieldheader}
@@ -891,7 +879,7 @@
 	 
 		{BEGIN fileNo_fieldheadercolumn}
 	{BEGIN fileNo_fieldheader}
-	<SPAN {$fileNo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileNo" data-fieldname="fileNo">
+	<SPAN {$fileNo_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileNo" data-fieldname="fileNo">
 	{$label censorReject fileNo }	{$arrow_icon_fileNo}
 	</SPAN>
 	{END fileNo_fieldheader}
@@ -918,7 +906,7 @@
 	 
 		{BEGIN fileName_fieldheadercolumn}
 	{BEGIN fileName_fieldheader}
-	<SPAN {$fileName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileName" data-fieldname="fileName">
+	<SPAN {$fileName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileName" data-fieldname="fileName">
 	{$label censorReject fileName }	{$arrow_icon_fileName}
 	</SPAN>
 	{END fileName_fieldheader}
@@ -945,7 +933,7 @@
 	 
 		{BEGIN fileType_fieldheadercolumn}
 	{BEGIN fileType_fieldheader}
-	<SPAN {$fileType_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileType" data-fieldname="fileType">
+	<SPAN {$fileType_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field17" {$item_simple_grid_field17} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileType" data-fieldname="fileType">
 	{$label censorReject fileType }	{$arrow_icon_fileType}
 	</SPAN>
 	{END fileType_fieldheader}
@@ -972,7 +960,7 @@
 	 
 		{BEGIN fileDuration_fieldheadercolumn}
 	{BEGIN fileDuration_fieldheader}
-	<SPAN {$fileDuration_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileDuration" data-fieldname="fileDuration">
+	<SPAN {$fileDuration_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field18" {$item_simple_grid_field18} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileDuration" data-fieldname="fileDuration">
 	{$label censorReject fileDuration }	{$arrow_icon_fileDuration}
 	</SPAN>
 	{END fileDuration_fieldheader}
@@ -999,7 +987,7 @@
 	 
 		{BEGIN fileSubject_fieldheadercolumn}
 	{BEGIN fileSubject_fieldheader}
-	<SPAN {$fileSubject_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileSubject" data-fieldname="fileSubject">
+	<SPAN {$fileSubject_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field19" {$item_simple_grid_field19} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileSubject" data-fieldname="fileSubject">
 	{$label censorReject fileSubject }	{$arrow_icon_fileSubject}
 	</SPAN>
 	{END fileSubject_fieldheader}
@@ -1026,7 +1014,7 @@
 	 
 		{BEGIN fileTitle_fieldheadercolumn}
 	{BEGIN fileTitle_fieldheader}
-	<SPAN {$fileTitle_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field24" {$item_simple_grid_field24} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTitle" data-fieldname="fileTitle">
+	<SPAN {$fileTitle_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field20" {$item_simple_grid_field20} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTitle" data-fieldname="fileTitle">
 	{$label censorReject fileTitle }	{$arrow_icon_fileTitle}
 	</SPAN>
 	{END fileTitle_fieldheader}
@@ -1053,7 +1041,7 @@
 	 
 		{BEGIN fileClassLevel_fieldheadercolumn}
 	{BEGIN fileClassLevel_fieldheader}
-	<SPAN {$fileClassLevel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field25" {$item_simple_grid_field25} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileClassLevel" data-fieldname="fileClassLevel">
+	<SPAN {$fileClassLevel_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field21" {$item_simple_grid_field21} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileClassLevel" data-fieldname="fileClassLevel">
 	{$label censorReject fileClassLevel }	{$arrow_icon_fileClassLevel}
 	</SPAN>
 	{END fileClassLevel_fieldheader}
@@ -1080,7 +1068,7 @@
 	 
 		{BEGIN fileTeacherName_fieldheadercolumn}
 	{BEGIN fileTeacherName_fieldheader}
-	<SPAN {$fileTeacherName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field26" {$item_simple_grid_field26} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTeacherName" data-fieldname="fileTeacherName">
+	<SPAN {$fileTeacherName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field22" {$item_simple_grid_field22} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileTeacherName" data-fieldname="fileTeacherName">
 	{$label censorReject fileTeacherName }	{$arrow_icon_fileTeacherName}
 	</SPAN>
 	{END fileTeacherName_fieldheader}
@@ -1107,7 +1095,7 @@
 	 
 		{BEGIN fileRaw_fieldheadercolumn}
 	{BEGIN fileRaw_fieldheader}
-	<SPAN {$fileRaw_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field27" {$item_simple_grid_field27} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileRaw" data-fieldname="fileRaw">
+	<SPAN {$fileRaw_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field23" {$item_simple_grid_field23} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileRaw" data-fieldname="fileRaw">
 	{$label censorReject fileRaw }	{$arrow_icon_fileRaw}
 	</SPAN>
 	{END fileRaw_fieldheader}
@@ -1116,114 +1104,6 @@
 	
 	</th>
 	{END cellblock_grid_headcell_field11}
-				 
-					{BEGIN cellblock_grid_headcell_field12}
-	<th
-	
-	{$cell_grid_headcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$fileStatus_class}
-			"
-
-			data-field="fileStatus"
-	
-	data-cellId="grid_headcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN fileStatus_fieldheadercolumn}
-	{BEGIN fileStatus_fieldheader}
-	<SPAN {$fileStatus_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field28" {$item_simple_grid_field28} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileStatus" data-fieldname="fileStatus">
-	{$label censorReject fileStatus }	{$arrow_icon_fileStatus}
-	</SPAN>
-	{END fileStatus_fieldheader}
-{END fileStatus_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field12}
-				 
-					{BEGIN cellblock_grid_headcell_field13}
-	<th
-	
-	{$cell_grid_headcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$fileMD5_class}
-			"
-
-			data-field="fileMD5"
-	
-	data-cellId="grid_headcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN fileMD5_fieldheadercolumn}
-	{BEGIN fileMD5_fieldheader}
-	<SPAN {$fileMD5_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field29" {$item_simple_grid_field29} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileMD5" data-fieldname="fileMD5">
-	{$label censorReject fileMD5 }	{$arrow_icon_fileMD5}
-	</SPAN>
-	{END fileMD5_fieldheader}
-{END fileMD5_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field13}
-				 
-					{BEGIN cellblock_grid_headcell_field14}
-	<th
-	
-	{$cell_grid_headcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$entryUserName_class}
-			"
-
-			data-field="entryUserName"
-	
-	data-cellId="grid_headcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN entryUserName_fieldheadercolumn}
-	{BEGIN entryUserName_fieldheader}
-	<SPAN {$entryUserName_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field30" {$item_simple_grid_field30} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryUserName" data-fieldname="entryUserName">
-	{$label censorReject entryUserName }	{$arrow_icon_entryUserName}
-	</SPAN>
-	{END entryUserName_fieldheader}
-{END entryUserName_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field14}
-				 
-					{BEGIN cellblock_grid_headcell_field15}
-	<th
-	
-	{$cell_grid_headcell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$entryTime_class}
-			"
-
-			data-field="entryTime"
-	
-	data-cellId="grid_headcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN entryTime_fieldheadercolumn}
-	{BEGIN entryTime_fieldheader}
-	<SPAN {$entryTime_orderlinkattrs} data-itemtype="grid_field_label" data-itemid="simple_grid_field31" {$item_simple_grid_field31} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryTime" data-fieldname="entryTime">
-	{$label censorReject entryTime }	{$arrow_icon_entryTime}
-	</SPAN>
-	{END entryTime_fieldheader}
-{END entryTime_fieldheadercolumn}
-
-	
-	</th>
-	{END cellblock_grid_headcell_field15}
 							</tr>
 					 
 					 
@@ -1579,98 +1459,6 @@
 {END fileRaw_fieldcolumn}	
 	</td>
 	{END cellblock_grid_cell_field11}
-				 
-					{BEGIN cellblock_grid_cell_field12}
-	<td
-	
-	{$cell_grid_cell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$fileStatus_class}
-			"
-
-			data-field="fileStatus"
-	
-	data-cellId="grid_cell_field12" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN fileStatus_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field11" {$item_simple_grid_field11} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileStatus" data-fieldname="fileStatus" data-default-width >
-{$fileStatus_value}
-</span>
-{END fileStatus_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field12}
-				 
-					{BEGIN cellblock_grid_cell_field13}
-	<td
-	
-	{$cell_grid_cell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$fileMD5_class}
-			"
-
-			data-field="fileMD5"
-	
-	data-cellId="grid_cell_field13" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN fileMD5_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field13" {$item_simple_grid_field13} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="fileMD5" data-fieldname="fileMD5" data-default-width >
-{$fileMD5_value}
-</span>
-{END fileMD5_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field13}
-				 
-					{BEGIN cellblock_grid_cell_field14}
-	<td
-	
-	{$cell_grid_cell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$entryUserName_class}
-			"
-
-			data-field="entryUserName"
-	
-	data-cellId="grid_cell_field14" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN entryUserName_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field15" {$item_simple_grid_field15} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryUserName" data-fieldname="entryUserName" data-default-width >
-{$entryUserName_value}
-</span>
-{END entryUserName_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field14}
-				 
-					{BEGIN cellblock_grid_cell_field15}
-	<td
-	
-	{$cell_grid_cell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert				{$entryTime_class}
-			"
-
-			data-field="entryTime"
-	
-	data-cellId="grid_cell_field15" data-pageid="{$pageid}" data-record-id="{$recId}"	
-	>
-
-	 
-		{BEGIN entryTime_fieldcolumn}
-<span data-itemtype="grid_field" data-itemid="simple_grid_field16" {$item_simple_grid_field16} data-pageid="{$pageid}" data-record-id="{$recId}" data-field="entryTime" data-fieldname="entryTime" data-default-width >
-{$entryTime_value}
-</span>
-{END entryTime_fieldcolumn}	
-	</td>
-	{END cellblock_grid_cell_field15}
 							</tr>
 					 
 					
@@ -1910,70 +1698,6 @@
 	
 	</td>
 	{END cellblock_grid_footcell_field11}
-				 
-					{BEGIN cellblock_grid_footcell_field12}
-	<td
-	
-	{$cell_grid_footcell_field12}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field12" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorreject_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field12}
-				 
-					{BEGIN cellblock_grid_footcell_field13}
-	<td
-	
-	{$cell_grid_footcell_field13}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field13" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorreject_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field13}
-				 
-					{BEGIN cellblock_grid_footcell_field14}
-	<td
-	
-	{$cell_grid_footcell_field14}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field14" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorreject_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field14}
-				 
-					{BEGIN cellblock_grid_footcell_field15}
-	<td
-	
-	{$cell_grid_footcell_field15}
-	{$recordattrs}
-	class="
-		 r-ori-vert			"
-
-	
-	data-cellId="grid_footcell_field15" data-pageid="{$pageid}" data-record-id="{$recId}" data-page="censorreject_list"	
-	>
-
-	
-	</td>
-	{END cellblock_grid_footcell_field15}
 							</tr>
 					
 					</tfoot>

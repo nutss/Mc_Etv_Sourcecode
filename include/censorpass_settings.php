@@ -94,7 +94,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensorpass["Thai"]["id"] = "ID";
 	$fieldToolTipscensorpass["Thai"]["id"] = "";
 	$placeHolderscensorpass["Thai"]["id"] = "";
-	$fieldLabelscensorpass["Thai"]["fileNo"] = "หมายเลขไฟล์";
+	$fieldLabelscensorpass["Thai"]["fileNo"] = "ID (หมายเลขไฟล์)";
 	$fieldToolTipscensorpass["Thai"]["fileNo"] = "";
 	$placeHolderscensorpass["Thai"]["fileNo"] = "";
 	$fieldLabelscensorpass["Thai"]["fileName"] = "ชื่อไพล์";
@@ -103,16 +103,16 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensorpass["Thai"]["fileType"] = "ประเภทไฟล์";
 	$fieldToolTipscensorpass["Thai"]["fileType"] = "";
 	$placeHolderscensorpass["Thai"]["fileType"] = "";
-	$fieldLabelscensorpass["Thai"]["fileSubject"] = "ชื่อวิชา";
+	$fieldLabelscensorpass["Thai"]["fileSubject"] = "ชื่อรายการ";
 	$fieldToolTipscensorpass["Thai"]["fileSubject"] = "";
 	$placeHolderscensorpass["Thai"]["fileSubject"] = "";
-	$fieldLabelscensorpass["Thai"]["fileTitle"] = "หัวข้อวิชา";
+	$fieldLabelscensorpass["Thai"]["fileTitle"] = "ประเภทรายการ";
 	$fieldToolTipscensorpass["Thai"]["fileTitle"] = "";
 	$placeHolderscensorpass["Thai"]["fileTitle"] = "";
-	$fieldLabelscensorpass["Thai"]["fileClassLevel"] = "ระดับการศึกษา";
+	$fieldLabelscensorpass["Thai"]["fileClassLevel"] = "อัธยาศัย/หลักสูตร";
 	$fieldToolTipscensorpass["Thai"]["fileClassLevel"] = "";
 	$placeHolderscensorpass["Thai"]["fileClassLevel"] = "";
-	$fieldLabelscensorpass["Thai"]["fileTeacherName"] = "อาจารย์ผู้สอน";
+	$fieldLabelscensorpass["Thai"]["fileTeacherName"] = "วิทยากร";
 	$fieldToolTipscensorpass["Thai"]["fileTeacherName"] = "";
 	$placeHolderscensorpass["Thai"]["fileTeacherName"] = "";
 	$fieldLabelscensorpass["Thai"]["censorApproveTime"] = "วันที่/เวลาแก้ไขอนุมัติเซ็นเซอร์";
@@ -124,7 +124,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensorpass["Thai"]["censoReson"] = "เหตุผลเซ็นเซอร์";
 	$fieldToolTipscensorpass["Thai"]["censoReson"] = "";
 	$placeHolderscensorpass["Thai"]["censoReson"] = "";
-	$fieldLabelscensorpass["Thai"]["censorStatus"] = "สถานะเซ็นเซอร์";
+	$fieldLabelscensorpass["Thai"]["censorStatus"] = "CODE";
 	$fieldToolTipscensorpass["Thai"]["censorStatus"] = "";
 	$placeHolderscensorpass["Thai"]["censorStatus"] = "";
 	$fieldLabelscensorpass["Thai"]["entryUserName"] = "ผู้บันทึกรายการ";
@@ -136,7 +136,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensorpass["Thai"]["fileRaw"] = "ไฟล์";
 	$fieldToolTipscensorpass["Thai"]["fileRaw"] = "";
 	$placeHolderscensorpass["Thai"]["fileRaw"] = "";
-	$fieldLabelscensorpass["Thai"]["fileDuration"] = "ระยะเวลาไฟล์";
+	$fieldLabelscensorpass["Thai"]["fileDuration"] = "DURATION";
 	$fieldToolTipscensorpass["Thai"]["fileDuration"] = "";
 	$placeHolderscensorpass["Thai"]["fileDuration"] = "";
 	$fieldLabelscensorpass["Thai"]["fileMD5"] = "MD5";
@@ -321,7 +321,7 @@ $tdatacensorpass[".orderindexes"] = array();
 
 
 
-$tdatacensorpass[".sqlHead"] = "SELECT id, fileNo, fileName, fileType, fileDuration, fileSubject, fileTitle, fileClassLevel, fileTeacherName, fileRaw, fileMD5, fileStatus, filePath, censorApproveTime, censorUsername, censoReson, censorStatus, entryUserName, entryTime";
+$tdatacensorpass[".sqlHead"] = "SELECT id,  fileNo,  fileName,  fileType,  fileDuration,  fileSubject,  fileTitle,  fileClassLevel,  fileTeacherName,  fileRaw,  fileMD5,  fileStatus,  filePath,  censorApproveTime,  censorUsername,  censoReson,  censorStatus,  entryUserName,  entryTime";
 $tdatacensorpass[".sqlFrom"] = "FROM mediaInfo";
 $tdatacensorpass[".sqlWhereExpr"] = "(censorStatus =\"PASS\")";
 $tdatacensorpass[".sqlTail"] = "";
@@ -2490,7 +2490,7 @@ $tdatacensorpass[".hideMobileList"] = array();
 //  Begin View Formats
 	$fdata["ViewFormats"] = array();
 
-	$vdata = array("ViewFormat" => "");
+	$vdata = array("ViewFormat" => "HTML");
 
 	
 	
@@ -2505,8 +2505,7 @@ $tdatacensorpass[".hideMobileList"] = array();
 	
 		
 	
-		$vdata["NeedEncode"] = true;
-
+	
 	
 		$vdata["truncateText"] = true;
 	$vdata["NumberOfChars"] = 80;
@@ -2517,7 +2516,7 @@ $tdatacensorpass[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Text area");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -2532,7 +2531,8 @@ $tdatacensorpass[".hideMobileList"] = array();
 		$edata["IsRequired"] = true;
 
 	
-	
+		$edata["UseRTE"] = true;
+
 	
 			$edata["acceptFileTypes"] = ".+$";
 		$edata["acceptFileTypesHtml"] = "";
@@ -2542,12 +2542,11 @@ $tdatacensorpass[".hideMobileList"] = array();
 	
 	
 	
+				$edata["nRows"] = 600;
+			$edata["nCols"] = 200;
+
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -3064,7 +3063,7 @@ function createSqlQuery_censorpass()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id, fileNo, fileName, fileType, fileDuration, fileSubject, fileTitle, fileClassLevel, fileTeacherName, fileRaw, fileMD5, fileStatus, filePath, censorApproveTime, censorUsername, censoReson, censorStatus, entryUserName, entryTime";
+$proto0["m_strFieldList"] = "id,  fileNo,  fileName,  fileType,  fileDuration,  fileSubject,  fileTitle,  fileClassLevel,  fileTeacherName,  fileRaw,  fileMD5,  fileStatus,  filePath,  censorApproveTime,  censorUsername,  censoReson,  censorStatus,  entryUserName,  entryTime";
 $proto0["m_strFrom"] = "FROM mediaInfo";
 $proto0["m_strWhere"] = "(censorStatus =\"PASS\")";
 $proto0["m_strOrderBy"] = "ORDER BY fileNo DESC";

@@ -57,6 +57,9 @@ pdfDocument = {
 				
 			{"text":"{$jspagetitlelabel  login}","hidden":"{$item_hide_login_header}","fontSize":30},
 				
+				
+			{"text":"{$custom _____________________________________}","hidden":"{$item_hide_text}","isHtml":true},
+				
 		  ],
   "border": [ false, false, false, false ],
               "alignment": 'left',
