@@ -730,9 +730,9 @@ $cEmailFieldType = 200;
 
 $arrCustomPages = array();
 
-																																																												$cPasswordFieldType	= 200;
-															$cUserNameFieldType	= 200;
-						
+																					$cUserNameFieldType	= 200;
+												$cPasswordFieldType	= 200;
+																																																
 $gPermissionsRefreshTime = 1;
 $gPermissionsRead = false;
 
@@ -745,9 +745,9 @@ $suggestAllContent = true;
 $strLastSQL = "";
 $showCustomMarkerOnPrint = false;
 
-$projectBuildKey = "532_1646624690";
+$projectBuildKey = "542_1652683508";
 $wizardBuildKey = "37251";
-$projectBuildNumber = "532";
+$projectBuildNumber = "542";
 
 $mlang_messages = array();
 $mlang_charsets = array();
@@ -935,11 +935,11 @@ Security::updateCSRFCookie();
 
 $isGroupSecurity = true;
 
-$isUseRTEBasic = false;
+$isUseRTEBasic = true;
 
 $isUseRTECK = false;
 
-$isUseRTEInnova = true;
+$isUseRTEInnova = false;
 
 $caseInsensitiveUsername = 0;
 

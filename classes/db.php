@@ -405,12 +405,14 @@ class DB
 		$dalTables[ $conn->connId ] = array();
 		if( "mc_at_192_168_1_111" == $conn->connId )
 		{
+			$dalTables[$conn->connId][] = array("name" => "confPref", "varname" => "mc_at_192_168_1_111__confPref", "altvarname" => "confPref", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "educationLevel", "varname" => "mc_at_192_168_1_111__educationLevel", "altvarname" => "educationLevel", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "mc_audit", "varname" => "mc_at_192_168_1_111__mc_audit", "altvarname" => "mc_audit", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "mc_uggroups", "varname" => "mc_at_192_168_1_111__mc_uggroups", "altvarname" => "mc_uggroups", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "mc_ugmembers", "varname" => "mc_at_192_168_1_111__mc_ugmembers", "altvarname" => "mc_ugmembers", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "mc_ugrights", "varname" => "mc_at_192_168_1_111__mc_ugrights", "altvarname" => "mc_ugrights", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "mediaInfo", "varname" => "mc_at_192_168_1_111__mediaInfo", "altvarname" => "mediaInfo", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
+			$dalTables[$conn->connId][] = array("name" => "mediaInfo_copy1", "varname" => "mc_at_192_168_1_111__mediaInfo_copy1", "altvarname" => "mediaInfo_copy1", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "playlistMain", "varname" => "mc_at_192_168_1_111__playlistMain", "altvarname" => "playlistMain", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "playlistSub", "varname" => "mc_at_192_168_1_111__playlistSub", "altvarname" => "playlistSub", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 			$dalTables[$conn->connId][] = array("name" => "producer", "varname" => "mc_at_192_168_1_111__producer", "altvarname" => "producer", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");

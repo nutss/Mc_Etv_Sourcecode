@@ -91,6 +91,8 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsingestinfo["English"]["producerName"] = "Producer Name";
 	$fieldToolTipsingestinfo["English"]["producerName"] = "";
 	$placeHoldersingestinfo["English"]["producerName"] = "";
+	$pageTitlesingestinfo["English"]["edit"] = "Ingest Info, Edit [{%fileNo}]";
+	$pageTitlesingestinfo["English"]["view"] = "Ingest Info [{%fileNo}]";
 	if (count($fieldToolTipsingestinfo["English"]))
 		$tdataingestinfo[".isUseToolTips"] = true;
 }
@@ -166,6 +168,8 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsingestinfo["Thai"]["producerName"] = "ผู้ผลิต/กำกับ";
 	$fieldToolTipsingestinfo["Thai"]["producerName"] = "";
 	$placeHoldersingestinfo["Thai"]["producerName"] = "";
+	$pageTitlesingestinfo["Thai"]["edit"] = "นำเข้าไฟล์, แก้ไข [{%fileNo}]";
+	$pageTitlesingestinfo["Thai"]["view"] = "นำเข้าไฟล์ [{%fileNo}]";
 	if (count($fieldToolTipsingestinfo["Thai"]))
 		$tdataingestinfo[".isUseToolTips"] = true;
 }
@@ -584,7 +588,7 @@ $tdataingestinfo[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Readonly");
+	$edata = array("EditFormat" => "Text field");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -609,15 +613,19 @@ $tdataingestinfo[".hideMobileList"] = array();
 	
 	
 	
-	
-	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+							
 	
 	//	End validation
 
@@ -3921,28 +3929,28 @@ $proto50["m_link"] = "SQLL_MAIN";
 $proto51["m_strName"] = "mediaInfo";
 $proto51["m_srcTableName"] = "IngestInfo";
 $proto51["m_columns"] = array();
+$proto51["m_columns"][] = "id";
+$proto51["m_columns"][] = "fileNo";
+$proto51["m_columns"][] = "filedate";
+$proto51["m_columns"][] = "fileName";
+$proto51["m_columns"][] = "fileType";
+$proto51["m_columns"][] = "fileDuration";
+$proto51["m_columns"][] = "fileSubject";
+$proto51["m_columns"][] = "fileTitle";
+$proto51["m_columns"][] = "fileClassLevel";
+$proto51["m_columns"][] = "fileTeacherName";
+$proto51["m_columns"][] = "fileTeacherInfo";
+$proto51["m_columns"][] = "fileRaw";
+$proto51["m_columns"][] = "fileMD5";
+$proto51["m_columns"][] = "producerName";
 $proto51["m_columns"][] = "censorApproveTime";
+$proto51["m_columns"][] = "censorUsername";
 $proto51["m_columns"][] = "censoReson";
 $proto51["m_columns"][] = "censorStatus";
-$proto51["m_columns"][] = "censorUsername";
-$proto51["m_columns"][] = "entryTime";
-$proto51["m_columns"][] = "entryUserName";
-$proto51["m_columns"][] = "fileClassLevel";
-$proto51["m_columns"][] = "filedate";
-$proto51["m_columns"][] = "fileDuration";
-$proto51["m_columns"][] = "fileMD5";
-$proto51["m_columns"][] = "fileName";
-$proto51["m_columns"][] = "fileNo";
-$proto51["m_columns"][] = "filePath";
-$proto51["m_columns"][] = "fileRaw";
 $proto51["m_columns"][] = "fileStatus";
-$proto51["m_columns"][] = "fileSubject";
-$proto51["m_columns"][] = "fileTeacherInfo";
-$proto51["m_columns"][] = "fileTeacherName";
-$proto51["m_columns"][] = "fileTitle";
-$proto51["m_columns"][] = "fileType";
-$proto51["m_columns"][] = "id";
-$proto51["m_columns"][] = "producerName";
+$proto51["m_columns"][] = "filePath";
+$proto51["m_columns"][] = "entryUserName";
+$proto51["m_columns"][] = "entryTime";
 $obj = new SQLTable($proto51);
 
 $proto50["m_table"] = $obj;

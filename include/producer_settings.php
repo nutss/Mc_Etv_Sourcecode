@@ -956,10 +956,10 @@ $proto14["m_link"] = "SQLL_MAIN";
 $proto15["m_strName"] = "producer";
 $proto15["m_srcTableName"] = "producer";
 $proto15["m_columns"] = array();
-$proto15["m_columns"][] = "entryTime";
-$proto15["m_columns"][] = "entryUserName";
 $proto15["m_columns"][] = "id";
 $proto15["m_columns"][] = "producerName";
+$proto15["m_columns"][] = "entryUserName";
+$proto15["m_columns"][] = "entryTime";
 $obj = new SQLTable($proto15);
 
 $proto14["m_table"] = $obj;

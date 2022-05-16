@@ -1149,17 +1149,17 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
-				if($table=="staffUsers" && $field=="entryTime")
+				if($table=="staffUsers" && $field=="staffEmailNotify")
 	{
-		return strftime("%Y-%m-%d %H:%M:%S");
+		return 0;
 	}
 				if($table=="staffUsers" && $field=="entryUserName")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="staffUsers" && $field=="staffEmailNotify")
+				if($table=="staffUsers" && $field=="entryTime")
 	{
-		return 0;
+		return strftime("%Y-%m-%d %H:%M:%S");
 	}
 				if($table=="FileAdmin" && $field=="censorApproveTime")
 	{
@@ -1209,15 +1209,11 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
-				if($table=="teacher" && $field=="entryTime")
-	{
-		return strftime("%Y-%m-%d %H:%M:%S");
-	}
 				if($table=="teacher" && $field=="entryUserName")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="subject" && $field=="entryTime")
+				if($table=="teacher" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
@@ -1225,7 +1221,7 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="educationLevel" && $field=="entryTime")
+				if($table=="subject" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
@@ -1233,7 +1229,7 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="admin_members" && $field=="entryTime")
+				if($table=="educationLevel" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
@@ -1241,13 +1237,17 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="admin_users" && $field=="entryTime")
+				if($table=="admin_members" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
 				if($table=="admin_users" && $field=="entryUserName")
 	{
 		return $_SESSION["UserName"];
+	}
+				if($table=="admin_users" && $field=="entryTime")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
 	}
 				if($table=="MediaInfo Report" && $field=="entryUserName")
 	{
@@ -1257,13 +1257,13 @@ function GetDefaultValue($field, $ptype, $table="")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
-				if($table=="Censor Report" && $field=="entryTime")
-	{
-		return strftime("%Y-%m-%d %H:%M:%S");
-	}
 				if($table=="Censor Report" && $field=="entryUserName")
 	{
 		return $_SESSION["UserName"];
+	}
+				if($table=="Censor Report" && $field=="entryTime")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
 	}
 				if($table=="censorUncensor" && $field=="censorApproveTime")
 	{
@@ -1372,13 +1372,13 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
-				if($table=="staffUsers" && $field=="entryTime")
-	{
-		return strftime("%Y-%m-%d %H:%M:%S");
-	}
 				if($table=="staffUsers" && $field=="entryUserName")
 	{
 		return $_SESSION["UserName"];
+	}
+				if($table=="staffUsers" && $field=="entryTime")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
 	}
 				if($table=="FileAdmin" && $field=="censorApproveTime")
 	{
@@ -1428,15 +1428,11 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
-				if($table=="teacher" && $field=="entryTime")
-	{
-		return strftime("%Y-%m-%d %H:%M:%S");
-	}
 				if($table=="teacher" && $field=="entryUserName")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="subject" && $field=="entryTime")
+				if($table=="teacher" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
@@ -1444,7 +1440,7 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="educationLevel" && $field=="entryTime")
+				if($table=="subject" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
@@ -1452,7 +1448,7 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="admin_members" && $field=="entryTime")
+				if($table=="educationLevel" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
@@ -1460,13 +1456,17 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	{
 		return $_SESSION["UserName"];
 	}
-				if($table=="admin_users" && $field=="entryTime")
+				if($table=="admin_members" && $field=="entryTime")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
 				if($table=="admin_users" && $field=="entryUserName")
 	{
 		return $_SESSION["UserName"];
+	}
+				if($table=="admin_users" && $field=="entryTime")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
 	}
 				if($table=="MediaInfo Report" && $field=="entryUserName")
 	{
@@ -1476,13 +1476,13 @@ function GetAutoUpdateValue($field, $ptype, $table="")
 	{
 		return strftime("%Y-%m-%d %H:%M:%S");
 	}
-				if($table=="Censor Report" && $field=="entryTime")
-	{
-		return strftime("%Y-%m-%d %H:%M:%S");
-	}
 				if($table=="Censor Report" && $field=="entryUserName")
 	{
 		return $_SESSION["UserName"];
+	}
+				if($table=="Censor Report" && $field=="entryTime")
+	{
+		return strftime("%Y-%m-%d %H:%M:%S");
 	}
 				if($table=="censorUncensor" && $field=="censorApproveTime")
 	{

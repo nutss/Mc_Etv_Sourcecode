@@ -150,6 +150,27 @@ function GenFileNo() {
 
 }
 
+
+function CheckFileNo($FileNo) {
+
+
+	$SQLCommand = "SELECT * FROM mediaInfo WHERE (FileNo = '".$FileNo."')";
+	
+	$RS = CustomQuery($SQLCommand);
+	if ($data = db_fetch_array($RS)) {
+
+		return (true);
+		
+	}
+	else {
+	
+		return (false);
+	}
+	
+	
+
+}
+
 /*
 function GetDateFromFileNo($FileNo) {
 

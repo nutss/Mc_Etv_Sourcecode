@@ -195,13 +195,13 @@ $tdatamc_audit[".filterFields"] = array();
 $tdatamc_audit[".requiredSearchFields"] = array();
 
 $tdatamc_audit[".googleLikeFields"] = array();
-$tdatamc_audit[".googleLikeFields"][] = "action";
-$tdatamc_audit[".googleLikeFields"][] = "datetime";
-$tdatamc_audit[".googleLikeFields"][] = "description";
 $tdatamc_audit[".googleLikeFields"][] = "id";
+$tdatamc_audit[".googleLikeFields"][] = "datetime";
 $tdatamc_audit[".googleLikeFields"][] = "ip";
-$tdatamc_audit[".googleLikeFields"][] = "table";
 $tdatamc_audit[".googleLikeFields"][] = "user";
+$tdatamc_audit[".googleLikeFields"][] = "table";
+$tdatamc_audit[".googleLikeFields"][] = "action";
+$tdatamc_audit[".googleLikeFields"][] = "description";
 
 
 
@@ -235,7 +235,7 @@ $tdatamc_audit[".strOrderBy"] = $tstrOrderBy;
 $tdatamc_audit[".orderindexes"] = array();
 
 
-$tdatamc_audit[".sqlHead"] = "SELECT `action`,  	`datetime`,  	description,  	id,  	ip,  	`table`,  	`user`";
+$tdatamc_audit[".sqlHead"] = "SELECT id,  	`datetime`,  	ip,  	`user`,  	`table`,  	`action`,  	description";
 $tdatamc_audit[".sqlFrom"] = "FROM mc_audit";
 $tdatamc_audit[".sqlWhereExpr"] = "";
 $tdatamc_audit[".sqlTail"] = "";
@@ -283,26 +283,27 @@ $tdatamc_audit[".hideMobileList"] = array();
 
 
 
-//	action
+//	id
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "action";
-	$fdata["GoodName"] = "action";
+	$fdata["strName"] = "id";
+	$fdata["GoodName"] = "id";
 	$fdata["ownerTable"] = "mc_audit";
-	$fdata["Label"] = GetFieldLabel("mc_audit","action");
-	$fdata["FieldType"] = 200;
+	$fdata["Label"] = GetFieldLabel("mc_audit","id");
+	$fdata["FieldType"] = 3;
 
 
-	
+		$fdata["AutoInc"] = true;
+
 	
 			
 
-		$fdata["strField"] = "action";
+		$fdata["strField"] = "id";
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`action`";
+	$fdata["FullName"] = "id";
 
 	
 	
@@ -350,7 +351,8 @@ $tdatamc_audit[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -366,15 +368,16 @@ $tdatamc_audit[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=250";
-
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -418,8 +421,8 @@ $tdatamc_audit[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatamc_audit["action"] = $fdata;
-		$tdatamc_audit[".searchableFields"][] = "action";
+	$tdatamc_audit["id"] = $fdata;
+		$tdatamc_audit[".searchableFields"][] = "id";
 //	datetime
 //	Custom field settings
 	$fdata = array();
@@ -559,10 +562,558 @@ $tdatamc_audit[".hideMobileList"] = array();
 
 	$tdatamc_audit["datetime"] = $fdata;
 		$tdatamc_audit[".searchableFields"][] = "datetime";
-//	description
+//	ip
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 3;
+	$fdata["strName"] = "ip";
+	$fdata["GoodName"] = "ip";
+	$fdata["ownerTable"] = "mc_audit";
+	$fdata["Label"] = GetFieldLabel("mc_audit","ip");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "ip";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "ip";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=40";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamc_audit["ip"] = $fdata;
+		$tdatamc_audit[".searchableFields"][] = "ip";
+//	user
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "user";
+	$fdata["GoodName"] = "user";
+	$fdata["ownerTable"] = "mc_audit";
+	$fdata["Label"] = GetFieldLabel("mc_audit","user");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "user";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`user`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=300";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamc_audit["user"] = $fdata;
+		$tdatamc_audit[".searchableFields"][] = "user";
+//	table
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 5;
+	$fdata["strName"] = "table";
+	$fdata["GoodName"] = "table";
+	$fdata["ownerTable"] = "mc_audit";
+	$fdata["Label"] = GetFieldLabel("mc_audit","table");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "table";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`table`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=300";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamc_audit["table"] = $fdata;
+		$tdatamc_audit[".searchableFields"][] = "table";
+//	action
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 6;
+	$fdata["strName"] = "action";
+	$fdata["GoodName"] = "action";
+	$fdata["ownerTable"] = "mc_audit";
+	$fdata["Label"] = GetFieldLabel("mc_audit","action");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "action";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "`action`";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=250";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatamc_audit["action"] = $fdata;
+		$tdatamc_audit[".searchableFields"][] = "action";
+//	description
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "description";
 	$fdata["GoodName"] = "description";
 	$fdata["ownerTable"] = "mc_audit";
@@ -698,557 +1249,6 @@ $tdatamc_audit[".hideMobileList"] = array();
 
 	$tdatamc_audit["description"] = $fdata;
 		$tdatamc_audit[".searchableFields"][] = "description";
-//	id
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 4;
-	$fdata["strName"] = "id";
-	$fdata["GoodName"] = "id";
-	$fdata["ownerTable"] = "mc_audit";
-	$fdata["Label"] = GetFieldLabel("mc_audit","id");
-	$fdata["FieldType"] = 3;
-
-
-		$fdata["AutoInc"] = true;
-
-	
-			
-
-		$fdata["strField"] = "id";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "id";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-	//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatamc_audit["id"] = $fdata;
-		$tdatamc_audit[".searchableFields"][] = "id";
-//	ip
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 5;
-	$fdata["strName"] = "ip";
-	$fdata["GoodName"] = "ip";
-	$fdata["ownerTable"] = "mc_audit";
-	$fdata["Label"] = GetFieldLabel("mc_audit","ip");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "ip";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "ip";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=40";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatamc_audit["ip"] = $fdata;
-		$tdatamc_audit[".searchableFields"][] = "ip";
-//	table
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 6;
-	$fdata["strName"] = "table";
-	$fdata["GoodName"] = "table";
-	$fdata["ownerTable"] = "mc_audit";
-	$fdata["Label"] = GetFieldLabel("mc_audit","table");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "table";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`table`";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=300";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatamc_audit["table"] = $fdata;
-		$tdatamc_audit[".searchableFields"][] = "table";
-//	user
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 7;
-	$fdata["strName"] = "user";
-	$fdata["GoodName"] = "user";
-	$fdata["ownerTable"] = "mc_audit";
-	$fdata["Label"] = GetFieldLabel("mc_audit","user");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "user";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "`user`";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=300";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatamc_audit["user"] = $fdata;
-		$tdatamc_audit[".searchableFields"][] = "user";
 
 
 $tables_data["mc_audit"]=&$tdatamc_audit;
@@ -1290,7 +1290,7 @@ function createSqlQuery_mc_audit()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "`action`,  	`datetime`,  	description,  	id,  	ip,  	`table`,  	`user`";
+$proto0["m_strFieldList"] = "id,  	`datetime`,  	ip,  	`user`,  	`table`,  	`action`,  	description";
 $proto0["m_strFrom"] = "FROM mc_audit";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1332,12 +1332,12 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "action",
+	"m_strName" => "id",
 	"m_strTable" => "mc_audit",
 	"m_srcTableName" => "mc_audit"
 ));
 
-$proto6["m_sql"] = "`action`";
+$proto6["m_sql"] = "id";
 $proto6["m_srcTableName"] = "mc_audit";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -1360,12 +1360,12 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "description",
+	"m_strName" => "ip",
 	"m_strTable" => "mc_audit",
 	"m_srcTableName" => "mc_audit"
 ));
 
-$proto10["m_sql"] = "description";
+$proto10["m_sql"] = "ip";
 $proto10["m_srcTableName"] = "mc_audit";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -1374,12 +1374,12 @@ $obj = new SQLFieldListItem($proto10);
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
-	"m_strName" => "id",
+	"m_strName" => "user",
 	"m_strTable" => "mc_audit",
 	"m_srcTableName" => "mc_audit"
 ));
 
-$proto12["m_sql"] = "id";
+$proto12["m_sql"] = "`user`";
 $proto12["m_srcTableName"] = "mc_audit";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1388,12 +1388,12 @@ $obj = new SQLFieldListItem($proto12);
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
-	"m_strName" => "ip",
+	"m_strName" => "table",
 	"m_strTable" => "mc_audit",
 	"m_srcTableName" => "mc_audit"
 ));
 
-$proto14["m_sql"] = "ip";
+$proto14["m_sql"] = "`table`";
 $proto14["m_srcTableName"] = "mc_audit";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -1402,12 +1402,12 @@ $obj = new SQLFieldListItem($proto14);
 $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
-	"m_strName" => "table",
+	"m_strName" => "action",
 	"m_strTable" => "mc_audit",
 	"m_srcTableName" => "mc_audit"
 ));
 
-$proto16["m_sql"] = "`table`";
+$proto16["m_sql"] = "`action`";
 $proto16["m_srcTableName"] = "mc_audit";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -1416,12 +1416,12 @@ $obj = new SQLFieldListItem($proto16);
 $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
 			$obj = new SQLField(array(
-	"m_strName" => "user",
+	"m_strName" => "description",
 	"m_strTable" => "mc_audit",
 	"m_srcTableName" => "mc_audit"
 ));
 
-$proto18["m_sql"] = "`user`";
+$proto18["m_sql"] = "description";
 $proto18["m_srcTableName"] = "mc_audit";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -1435,13 +1435,13 @@ $proto20["m_link"] = "SQLL_MAIN";
 $proto21["m_strName"] = "mc_audit";
 $proto21["m_srcTableName"] = "mc_audit";
 $proto21["m_columns"] = array();
-$proto21["m_columns"][] = "action";
-$proto21["m_columns"][] = "datetime";
-$proto21["m_columns"][] = "description";
 $proto21["m_columns"][] = "id";
+$proto21["m_columns"][] = "datetime";
 $proto21["m_columns"][] = "ip";
-$proto21["m_columns"][] = "table";
 $proto21["m_columns"][] = "user";
+$proto21["m_columns"][] = "table";
+$proto21["m_columns"][] = "action";
+$proto21["m_columns"][] = "description";
 $obj = new SQLTable($proto21);
 
 $proto20["m_table"] = $obj;

@@ -3262,7 +3262,6 @@ function GetBaseScriptsForPage($isDisplayLoading, $additionalScripts = "", $cust
 	$result .= $additionalScripts;
 	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("include/lang/".getLangFileName(mlang_getcurrentlang()).".js?37251")."\"></script>";
 
-	$result .= "<script type=\"text/javascript\" src=\"".GetRootPathForResources("plugins/innovaeditor/scripts/innovaeditor.js")."\"></script>";
 
 
 	if( getMapProvider() == BING_MAPS )

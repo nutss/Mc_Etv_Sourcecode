@@ -509,20 +509,20 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
-		content: "{$label teacher entryTime}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="teacherName"]:before {
+		content: "{$label teacher teacherName}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="teacherAddress"]:before {
+		content: "{$label teacher teacherAddress}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="teacherTelephone"]:before {
+		content: "{$label teacher teacherTelephone}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryUserName"]:before {
 		content: "{$label teacher entryUserName}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="teacherAddress"]:before {
-		content: "{$label teacher teacherAddress}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="teacherName"]:before {
-		content: "{$label teacher teacherName}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="teacherTelephone"]:before {
-		content: "{$label teacher teacherTelephone}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
+		content: "{$label teacher entryTime}";
 	}
 	}
 </style>

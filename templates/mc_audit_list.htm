@@ -503,26 +503,26 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="action"]:before {
-		content: "{$label mc_audit action}";
+		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id"]:before {
+		content: "{$label mc_audit id}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="datetime"]:before {
 		content: "{$label mc_audit datetime}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="description"]:before {
-		content: "{$label mc_audit description}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="id"]:before {
-		content: "{$label mc_audit id}";
-	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="ip"]:before {
 		content: "{$label mc_audit ip}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="user"]:before {
+		content: "{$label mc_audit user}";
 	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="table"]:before {
 		content: "{$label mc_audit table}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="user"]:before {
-		content: "{$label mc_audit user}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="action"]:before {
+		content: "{$label mc_audit action}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="description"]:before {
+		content: "{$label mc_audit description}";
 	}
 	}
 </style>

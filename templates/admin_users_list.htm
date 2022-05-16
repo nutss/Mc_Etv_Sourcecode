@@ -530,26 +530,26 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
-		content: "{$label admin_users entryTime}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffFullName"]:before {
+		content: "{$label admin_users staffFullName}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryUserName"]:before {
-		content: "{$label admin_users entryUserName}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffUsername"]:before {
+		content: "{$label admin_users staffUsername}";
 	}
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffEmail"]:before {
 		content: "{$label admin_users staffEmail}";
 	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffStatus"]:before {
+		content: "{$label admin_users staffStatus}";
+	}
 			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffEmailNotify"]:before {
 		content: "{$label admin_users staffEmailNotify}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffFullName"]:before {
-		content: "{$label admin_users staffFullName}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryUserName"]:before {
+		content: "{$label admin_users entryUserName}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffStatus"]:before {
-		content: "{$label admin_users staffStatus}";
-	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffUsername"]:before {
-		content: "{$label admin_users staffUsername}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
+		content: "{$label admin_users entryTime}";
 	}
 	}
 </style>

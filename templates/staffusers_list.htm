@@ -564,23 +564,23 @@
 <div data-grid-message data-pageid="{$pageid}" class="alert {$message_class}" role="alert" {$grid_message_attrs}>{$message}</div>
 {END message_block}	<style>
 @media screen and (max-width: 767px) {
-		[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
-		content: "{$label staffUsers entryTime}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffFullName"]:before {
+		content: "{$label staffUsers staffFullName}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryUserName"]:before {
-		content: "{$label staffUsers entryUserName}";
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffUsername"]:before {
+		content: "{$label staffUsers staffUsername}";
 	}
 				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffEmail"]:before {
 		content: "{$label staffUsers staffEmail}";
 	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffFullName"]:before {
-		content: "{$label staffUsers staffFullName}";
-	}
-				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffStatus"]:before {
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffStatus"]:before {
 		content: "{$label staffUsers staffStatus}";
 	}
-			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="staffUsername"]:before {
-		content: "{$label staffUsers staffUsername}";
+				[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryUserName"]:before {
+		content: "{$label staffUsers entryUserName}";
+	}
+			[data-pageid="{$pageid}"][data-itemtype="grid_field"][data-field="entryTime"]:before {
+		content: "{$label staffUsers entryTime}";
 	}
 	}
 </style>

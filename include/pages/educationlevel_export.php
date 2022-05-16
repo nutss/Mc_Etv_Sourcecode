@@ -1,9 +1,9 @@
 <?php
-			$optionsArray = array( 'totals' => array( 'entryTime' => array( 'totalsType' => '' ),
-'entryUserName' => array( 'totalsType' => '' ),
-'id' => array( 'totalsType' => '' ),
+			$optionsArray = array( 'totals' => array( 'id' => array( 'totalsType' => '' ),
+'levelName' => array( 'totalsType' => '' ),
 'levelDesc' => array( 'totalsType' => '' ),
-'levelName' => array( 'totalsType' => '' ) ),
+'entryUserName' => array( 'totalsType' => '' ),
+'entryTime' => array( 'totalsType' => '' ) ),
 'fields' => array( 'gridFields' => array( 'levelName',
 'levelDesc',
 'entryUserName',

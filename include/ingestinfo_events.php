@@ -26,6 +26,8 @@
 
 		$this->events["BeforeDelete"]=true;
 
+		$this->events["BeforeProcessAdd"]=true;
+
 
 	}
 
@@ -70,7 +72,9 @@
 function ProcessValuesAdd(&$values, $pageObject)
 {
 
-					$values["fileNo"] = GenFileNo();
+		
+				$values["fileNo"] = GenFileNo();
+
 
 // Place event code here.
 // Use "Add Action" button to add code snippets.	
@@ -202,14 +206,31 @@ return true;
 function BeforeAdd(&$values, &$message, $inline, $pageObject)
 {
 
-			$values["fileNo"] = GenFileNo();
-
+			
 	$values["censorStatus"] = "UNCENSOR";
 	$values["fileStatus"] = "PROCESS";
+
+
+
+		if ($values["fileNo"] == ""){
+				$values["fileNo"] = GenFileNo();	
+		}
+		elseif ($values["fileNo"] > "50000"){
+				$values["fileNo"] = GenFileNo();
+		}
+
+
+
+		if (CheckFileNo($values["fileNo"])){
+			return false;
+		}
+		else {
+			return true;
+		}
+
 // Place event code here.
 // Use "Add Action" button to add code snippets.
 
-return true;
 ;		
 } // function BeforeAdd
 
@@ -361,7 +382,6 @@ function AfterAdd(&$values, &$keys, $inline, $pageObject)
 {
 
 		
-			
 
 		FileMoveFolder($values['id'],"","");
 
@@ -535,6 +555,80 @@ return true;
 ;		
 } // function BeforeDelete
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+		
+		
+				// Add page: Before process
+function BeforeProcessAdd($pageObject)
+{
+
+		
+// Place event code here.
+// Use "Add Action" button to add code snippets.
+;		
+} // function BeforeProcessAdd
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		

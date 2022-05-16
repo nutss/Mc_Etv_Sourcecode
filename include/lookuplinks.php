@@ -145,13 +145,6 @@ function InitLookupLinks()
 			$lookupTableLinks["teacher"]["mediainfo_report.fileTeacherName"] = array();
 		}
 		$lookupTableLinks["teacher"]["mediainfo_report.fileTeacherName"]["search"] = array("table" => "MediaInfo Report", "field" => "fileTeacherName", "page" => "search");
-		if( !isset( $lookupTableLinks["educationLevel"] ) ) {
-			$lookupTableLinks["educationLevel"] = array();
-		}
-		if( !isset( $lookupTableLinks["educationLevel"]["censor_report.fileClassLevel"] )) {
-			$lookupTableLinks["educationLevel"]["censor_report.fileClassLevel"] = array();
-		}
-		$lookupTableLinks["educationLevel"]["censor_report.fileClassLevel"]["search"] = array("table" => "Censor Report", "field" => "fileClassLevel", "page" => "search");
 		if( !isset( $lookupTableLinks["subject"] ) ) {
 			$lookupTableLinks["subject"] = array();
 		}
@@ -159,6 +152,13 @@ function InitLookupLinks()
 			$lookupTableLinks["subject"]["censor_report.fileSubject"] = array();
 		}
 		$lookupTableLinks["subject"]["censor_report.fileSubject"]["search"] = array("table" => "Censor Report", "field" => "fileSubject", "page" => "search");
+		if( !isset( $lookupTableLinks["educationLevel"] ) ) {
+			$lookupTableLinks["educationLevel"] = array();
+		}
+		if( !isset( $lookupTableLinks["educationLevel"]["censor_report.fileClassLevel"] )) {
+			$lookupTableLinks["educationLevel"]["censor_report.fileClassLevel"] = array();
+		}
+		$lookupTableLinks["educationLevel"]["censor_report.fileClassLevel"]["search"] = array("table" => "Censor Report", "field" => "fileClassLevel", "page" => "search");
 		if( !isset( $lookupTableLinks["teacher"] ) ) {
 			$lookupTableLinks["teacher"] = array();
 		}

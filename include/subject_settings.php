@@ -189,12 +189,12 @@ $tdatasubject[".filterFields"] = array();
 $tdatasubject[".requiredSearchFields"] = array();
 
 $tdatasubject[".googleLikeFields"] = array();
-$tdatasubject[".googleLikeFields"][] = "entryTime";
-$tdatasubject[".googleLikeFields"][] = "entryUserName";
 $tdatasubject[".googleLikeFields"][] = "id";
 $tdatasubject[".googleLikeFields"][] = "subjectCode";
-$tdatasubject[".googleLikeFields"][] = "subjectDesc";
 $tdatasubject[".googleLikeFields"][] = "subjectName";
+$tdatasubject[".googleLikeFields"][] = "subjectDesc";
+$tdatasubject[".googleLikeFields"][] = "entryUserName";
+$tdatasubject[".googleLikeFields"][] = "entryTime";
 
 
 
@@ -228,7 +228,7 @@ $tdatasubject[".strOrderBy"] = $tstrOrderBy;
 $tdatasubject[".orderindexes"] = array();
 
 
-$tdatasubject[".sqlHead"] = "SELECT entryTime,  	entryUserName,  	id,  	subjectCode,  	subjectDesc,  	subjectName";
+$tdatasubject[".sqlHead"] = "SELECT id,  	subjectCode,  	subjectName,  	subjectDesc,  	entryUserName,  	entryTime";
 $tdatasubject[".sqlFrom"] = "FROM subject";
 $tdatasubject[".sqlWhereExpr"] = "";
 $tdatasubject[".sqlTail"] = "";
@@ -276,280 +276,10 @@ $tdatasubject[".hideMobileList"] = array();
 
 
 
-//	entryTime
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 1;
-	$fdata["strName"] = "entryTime";
-	$fdata["GoodName"] = "entryTime";
-	$fdata["ownerTable"] = "subject";
-	$fdata["Label"] = GetFieldLabel("subject","entryTime");
-	$fdata["FieldType"] = 135;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "entryTime";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "entryTime";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Datetime");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Readonly");
-
-	
-		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-		$edata["autoUpdatable"] = true;
-
-	//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatasubject["entryTime"] = $fdata;
-		$tdatasubject[".searchableFields"][] = "entryTime";
-//	entryUserName
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 2;
-	$fdata["strName"] = "entryUserName";
-	$fdata["GoodName"] = "entryUserName";
-	$fdata["ownerTable"] = "subject";
-	$fdata["Label"] = GetFieldLabel("subject","entryUserName");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "entryUserName";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "entryUserName";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Readonly");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-		$edata["autoUpdatable"] = true;
-
-	//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatasubject["entryUserName"] = $fdata;
-		$tdatasubject[".searchableFields"][] = "entryUserName";
 //	id
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 3;
+	$fdata["Index"] = 1;
 	$fdata["strName"] = "id";
 	$fdata["GoodName"] = "id";
 	$fdata["ownerTable"] = "subject";
@@ -689,7 +419,7 @@ $tdatasubject[".hideMobileList"] = array();
 //	subjectCode
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 4;
+	$fdata["Index"] = 2;
 	$fdata["strName"] = "subjectCode";
 	$fdata["GoodName"] = "subjectCode";
 	$fdata["ownerTable"] = "subject";
@@ -823,147 +553,10 @@ $tdatasubject[".hideMobileList"] = array();
 
 	$tdatasubject["subjectCode"] = $fdata;
 		$tdatasubject[".searchableFields"][] = "subjectCode";
-//	subjectDesc
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 5;
-	$fdata["strName"] = "subjectDesc";
-	$fdata["GoodName"] = "subjectDesc";
-	$fdata["ownerTable"] = "subject";
-	$fdata["Label"] = GetFieldLabel("subject","subjectDesc");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "subjectDesc";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "subjectDesc";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["view"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-			
-	
-	
-	
-	$fdata["EditFormats"]["edit"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatasubject["subjectDesc"] = $fdata;
-		$tdatasubject[".searchableFields"][] = "subjectDesc";
 //	subjectName
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 6;
+	$fdata["Index"] = 3;
 	$fdata["strName"] = "subjectName";
 	$fdata["GoodName"] = "subjectName";
 	$fdata["ownerTable"] = "subject";
@@ -1097,6 +690,413 @@ $tdatasubject[".hideMobileList"] = array();
 
 	$tdatasubject["subjectName"] = $fdata;
 		$tdatasubject[".searchableFields"][] = "subjectName";
+//	subjectDesc
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 4;
+	$fdata["strName"] = "subjectDesc";
+	$fdata["GoodName"] = "subjectDesc";
+	$fdata["ownerTable"] = "subject";
+	$fdata["Label"] = GetFieldLabel("subject","subjectDesc");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "subjectDesc";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "subjectDesc";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatasubject["subjectDesc"] = $fdata;
+		$tdatasubject[".searchableFields"][] = "subjectDesc";
+//	entryUserName
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 5;
+	$fdata["strName"] = "entryUserName";
+	$fdata["GoodName"] = "entryUserName";
+	$fdata["ownerTable"] = "subject";
+	$fdata["Label"] = GetFieldLabel("subject","entryUserName");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "entryUserName";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "entryUserName";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Readonly");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+		$edata["autoUpdatable"] = true;
+
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatasubject["entryUserName"] = $fdata;
+		$tdatasubject[".searchableFields"][] = "entryUserName";
+//	entryTime
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 6;
+	$fdata["strName"] = "entryTime";
+	$fdata["GoodName"] = "entryTime";
+	$fdata["ownerTable"] = "subject";
+	$fdata["Label"] = GetFieldLabel("subject","entryTime");
+	$fdata["FieldType"] = 135;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "entryTime";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "entryTime";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Datetime");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["view"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Readonly");
+
+	
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+		$edata["autoUpdatable"] = true;
+
+	//	End validation
+
+	
+			
+	
+	
+	
+	$fdata["EditFormats"]["edit"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatasubject["entryTime"] = $fdata;
+		$tdatasubject[".searchableFields"][] = "entryTime";
 
 
 $tables_data["subject"]=&$tdatasubject;
@@ -1138,7 +1138,7 @@ function createSqlQuery_subject()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "entryTime,  	entryUserName,  	id,  	subjectCode,  	subjectDesc,  	subjectName";
+$proto0["m_strFieldList"] = "id,  	subjectCode,  	subjectName,  	subjectDesc,  	entryUserName,  	entryTime";
 $proto0["m_strFrom"] = "FROM subject";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -1180,12 +1180,12 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "entryTime",
+	"m_strName" => "id",
 	"m_strTable" => "subject",
 	"m_srcTableName" => "subject"
 ));
 
-$proto6["m_sql"] = "entryTime";
+$proto6["m_sql"] = "id";
 $proto6["m_srcTableName"] = "subject";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -1194,12 +1194,12 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "entryUserName",
+	"m_strName" => "subjectCode",
 	"m_strTable" => "subject",
 	"m_srcTableName" => "subject"
 ));
 
-$proto8["m_sql"] = "entryUserName";
+$proto8["m_sql"] = "subjectCode";
 $proto8["m_srcTableName"] = "subject";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -1208,12 +1208,12 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "id",
+	"m_strName" => "subjectName",
 	"m_strTable" => "subject",
 	"m_srcTableName" => "subject"
 ));
 
-$proto10["m_sql"] = "id";
+$proto10["m_sql"] = "subjectName";
 $proto10["m_srcTableName"] = "subject";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -1222,12 +1222,12 @@ $obj = new SQLFieldListItem($proto10);
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
-	"m_strName" => "subjectCode",
+	"m_strName" => "subjectDesc",
 	"m_strTable" => "subject",
 	"m_srcTableName" => "subject"
 ));
 
-$proto12["m_sql"] = "subjectCode";
+$proto12["m_sql"] = "subjectDesc";
 $proto12["m_srcTableName"] = "subject";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -1236,12 +1236,12 @@ $obj = new SQLFieldListItem($proto12);
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
-	"m_strName" => "subjectDesc",
+	"m_strName" => "entryUserName",
 	"m_strTable" => "subject",
 	"m_srcTableName" => "subject"
 ));
 
-$proto14["m_sql"] = "subjectDesc";
+$proto14["m_sql"] = "entryUserName";
 $proto14["m_srcTableName"] = "subject";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -1250,12 +1250,12 @@ $obj = new SQLFieldListItem($proto14);
 $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
-	"m_strName" => "subjectName",
+	"m_strName" => "entryTime",
 	"m_strTable" => "subject",
 	"m_srcTableName" => "subject"
 ));
 
-$proto16["m_sql"] = "subjectName";
+$proto16["m_sql"] = "entryTime";
 $proto16["m_srcTableName"] = "subject";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -1269,12 +1269,12 @@ $proto18["m_link"] = "SQLL_MAIN";
 $proto19["m_strName"] = "subject";
 $proto19["m_srcTableName"] = "subject";
 $proto19["m_columns"] = array();
-$proto19["m_columns"][] = "entryTime";
-$proto19["m_columns"][] = "entryUserName";
 $proto19["m_columns"][] = "id";
 $proto19["m_columns"][] = "subjectCode";
-$proto19["m_columns"][] = "subjectDesc";
 $proto19["m_columns"][] = "subjectName";
+$proto19["m_columns"][] = "subjectDesc";
+$proto19["m_columns"][] = "entryUserName";
+$proto19["m_columns"][] = "entryTime";
 $obj = new SQLTable($proto19);
 
 $proto18["m_table"] = $obj;

@@ -88,6 +88,7 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelsdownloadinfo["English"]["filePath"] = "File Path";
 	$fieldToolTipsdownloadinfo["English"]["filePath"] = "";
 	$placeHoldersdownloadinfo["English"]["filePath"] = "";
+	$pageTitlesdownloadinfo["English"]["view"] = "Download Info [{%fileNo}]";
 	if (count($fieldToolTipsdownloadinfo["English"]))
 		$tdatadownloadinfo[".isUseToolTips"] = true;
 }
@@ -160,6 +161,7 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelsdownloadinfo["Thai"]["filePath"] = "ที่อยู่ไฟล์";
 	$fieldToolTipsdownloadinfo["Thai"]["filePath"] = "";
 	$placeHoldersdownloadinfo["Thai"]["filePath"] = "";
+	$pageTitlesdownloadinfo["Thai"]["view"] = "ดาวน์โหลด [{%fileNo}]";
 	if (count($fieldToolTipsdownloadinfo["Thai"]))
 		$tdatadownloadinfo[".isUseToolTips"] = true;
 }
@@ -3741,28 +3743,28 @@ $proto48["m_link"] = "SQLL_MAIN";
 $proto49["m_strName"] = "mediaInfo";
 $proto49["m_srcTableName"] = "downloadInfo";
 $proto49["m_columns"] = array();
+$proto49["m_columns"][] = "id";
+$proto49["m_columns"][] = "fileNo";
+$proto49["m_columns"][] = "filedate";
+$proto49["m_columns"][] = "fileName";
+$proto49["m_columns"][] = "fileType";
+$proto49["m_columns"][] = "fileDuration";
+$proto49["m_columns"][] = "fileSubject";
+$proto49["m_columns"][] = "fileTitle";
+$proto49["m_columns"][] = "fileClassLevel";
+$proto49["m_columns"][] = "fileTeacherName";
+$proto49["m_columns"][] = "fileTeacherInfo";
+$proto49["m_columns"][] = "fileRaw";
+$proto49["m_columns"][] = "fileMD5";
+$proto49["m_columns"][] = "producerName";
 $proto49["m_columns"][] = "censorApproveTime";
+$proto49["m_columns"][] = "censorUsername";
 $proto49["m_columns"][] = "censoReson";
 $proto49["m_columns"][] = "censorStatus";
-$proto49["m_columns"][] = "censorUsername";
-$proto49["m_columns"][] = "entryTime";
-$proto49["m_columns"][] = "entryUserName";
-$proto49["m_columns"][] = "fileClassLevel";
-$proto49["m_columns"][] = "filedate";
-$proto49["m_columns"][] = "fileDuration";
-$proto49["m_columns"][] = "fileMD5";
-$proto49["m_columns"][] = "fileName";
-$proto49["m_columns"][] = "fileNo";
-$proto49["m_columns"][] = "filePath";
-$proto49["m_columns"][] = "fileRaw";
 $proto49["m_columns"][] = "fileStatus";
-$proto49["m_columns"][] = "fileSubject";
-$proto49["m_columns"][] = "fileTeacherInfo";
-$proto49["m_columns"][] = "fileTeacherName";
-$proto49["m_columns"][] = "fileTitle";
-$proto49["m_columns"][] = "fileType";
-$proto49["m_columns"][] = "id";
-$proto49["m_columns"][] = "producerName";
+$proto49["m_columns"][] = "filePath";
+$proto49["m_columns"][] = "entryUserName";
+$proto49["m_columns"][] = "entryTime";
 $obj = new SQLTable($proto49);
 
 $proto48["m_table"] = $obj;

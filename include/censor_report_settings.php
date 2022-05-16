@@ -284,28 +284,28 @@ $tdatacensor_report[".filterFields"] = array();
 $tdatacensor_report[".requiredSearchFields"] = array();
 
 $tdatacensor_report[".googleLikeFields"] = array();
+$tdatacensor_report[".googleLikeFields"][] = "id";
+$tdatacensor_report[".googleLikeFields"][] = "fileNo";
+$tdatacensor_report[".googleLikeFields"][] = "filedate";
+$tdatacensor_report[".googleLikeFields"][] = "fileName";
+$tdatacensor_report[".googleLikeFields"][] = "fileType";
+$tdatacensor_report[".googleLikeFields"][] = "fileDuration";
+$tdatacensor_report[".googleLikeFields"][] = "fileSubject";
+$tdatacensor_report[".googleLikeFields"][] = "fileTitle";
+$tdatacensor_report[".googleLikeFields"][] = "fileClassLevel";
+$tdatacensor_report[".googleLikeFields"][] = "fileTeacherName";
+$tdatacensor_report[".googleLikeFields"][] = "fileTeacherInfo";
+$tdatacensor_report[".googleLikeFields"][] = "fileRaw";
+$tdatacensor_report[".googleLikeFields"][] = "fileMD5";
+$tdatacensor_report[".googleLikeFields"][] = "producerName";
 $tdatacensor_report[".googleLikeFields"][] = "censorApproveTime";
+$tdatacensor_report[".googleLikeFields"][] = "censorUsername";
 $tdatacensor_report[".googleLikeFields"][] = "censoReson";
 $tdatacensor_report[".googleLikeFields"][] = "censorStatus";
-$tdatacensor_report[".googleLikeFields"][] = "censorUsername";
-$tdatacensor_report[".googleLikeFields"][] = "entryTime";
-$tdatacensor_report[".googleLikeFields"][] = "entryUserName";
-$tdatacensor_report[".googleLikeFields"][] = "fileClassLevel";
-$tdatacensor_report[".googleLikeFields"][] = "filedate";
-$tdatacensor_report[".googleLikeFields"][] = "fileDuration";
-$tdatacensor_report[".googleLikeFields"][] = "fileMD5";
-$tdatacensor_report[".googleLikeFields"][] = "fileName";
-$tdatacensor_report[".googleLikeFields"][] = "fileNo";
-$tdatacensor_report[".googleLikeFields"][] = "filePath";
-$tdatacensor_report[".googleLikeFields"][] = "fileRaw";
 $tdatacensor_report[".googleLikeFields"][] = "fileStatus";
-$tdatacensor_report[".googleLikeFields"][] = "fileSubject";
-$tdatacensor_report[".googleLikeFields"][] = "fileTeacherInfo";
-$tdatacensor_report[".googleLikeFields"][] = "fileTeacherName";
-$tdatacensor_report[".googleLikeFields"][] = "fileTitle";
-$tdatacensor_report[".googleLikeFields"][] = "fileType";
-$tdatacensor_report[".googleLikeFields"][] = "id";
-$tdatacensor_report[".googleLikeFields"][] = "producerName";
+$tdatacensor_report[".googleLikeFields"][] = "filePath";
+$tdatacensor_report[".googleLikeFields"][] = "entryUserName";
+$tdatacensor_report[".googleLikeFields"][] = "entryTime";
 
 
 
@@ -344,7 +344,7 @@ $tdatacensor_report[".strOrderBy"] = $tstrOrderBy;
 $tdatacensor_report[".orderindexes"] = array();
 
 
-$tdatacensor_report[".sqlHead"] = "SELECT censorApproveTime,  	censoReson,  	censorStatus,  	censorUsername,  	entryTime,  	entryUserName,  	fileClassLevel,  	filedate,  	fileDuration,  	fileMD5,  	fileName,  	fileNo,  	filePath,  	fileRaw,  	fileStatus,  	fileSubject,  	fileTeacherInfo,  	fileTeacherName,  	fileTitle,  	fileType,  	id,  	producerName";
+$tdatacensor_report[".sqlHead"] = "SELECT id,  	fileNo,  	filedate,  	fileName,  	fileType,  	fileDuration,  	fileSubject,  	fileTitle,  	fileClassLevel,  	fileTeacherName,  	fileTeacherInfo,  	fileRaw,  	fileMD5,  	producerName,  	censorApproveTime,  	censorUsername,  	censoReson,  	censorStatus,  	fileStatus,  	filePath,  	entryUserName,  	entryTime";
 $tdatacensor_report[".sqlFrom"] = "FROM mediaInfo";
 $tdatacensor_report[".sqlWhereExpr"] = "";
 $tdatacensor_report[".sqlTail"] = "";
@@ -392,451 +392,27 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 
 
-//	censorApproveTime
+//	id
 //	Custom field settings
 	$fdata = array();
 	$fdata["Index"] = 1;
-	$fdata["strName"] = "censorApproveTime";
-	$fdata["GoodName"] = "censorApproveTime";
+	$fdata["strName"] = "id";
+	$fdata["GoodName"] = "id";
 	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","censorApproveTime");
-	$fdata["FieldType"] = 135;
+	$fdata["Label"] = GetFieldLabel("Censor_Report","id");
+	$fdata["FieldType"] = 3;
 
 
-	
+		$fdata["AutoInc"] = true;
+
 	
 			
 
-		$fdata["strField"] = "censorApproveTime";
+		$fdata["strField"] = "id";
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "censorApproveTime";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Short Date");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Date");
-
-		$edata["ShowTime"] = true;
-
-		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-		$edata["DateEditType"] = 2;
-	$edata["InitialYearFactor"] = 100;
-	$edata["LastYearFactor"] = 100;
-
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["censorApproveTime"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "censorApproveTime";
-//	censoReson
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 2;
-	$fdata["strName"] = "censoReson";
-	$fdata["GoodName"] = "censoReson";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","censoReson");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "censoReson";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "censoReson";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text area");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-				$edata["nRows"] = 100;
-			$edata["nCols"] = 200;
-
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["censoReson"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "censoReson";
-//	censorStatus
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 3;
-	$fdata["strName"] = "censorStatus";
-	$fdata["GoodName"] = "censorStatus";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","censorStatus");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "censorStatus";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "censorStatus";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-		$edata["LookupType"] = 0;
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 0;
-
-	
-	
-		$edata["LookupValues"] = array();
-	$edata["LookupValues"][] = "PASS";
-	$edata["LookupValues"][] = "REJECT";
-	$edata["LookupValues"][] = "UNCENSOR";
-
-	
-		$edata["SelectSize"] = 1;
-
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["censorStatus"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "censorStatus";
-//	censorUsername
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 4;
-	$fdata["strName"] = "censorUsername";
-	$fdata["GoodName"] = "censorUsername";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","censorUsername");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "censorUsername";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "censorUsername";
+	$fdata["FullName"] = "id";
 
 	
 	
@@ -884,7 +460,8 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 
 
-	
+		$edata["IsRequired"] = true;
+
 	
 	
 	
@@ -900,15 +477,16 @@ $tdatacensor_report[".hideMobileList"] = array();
 			$edata["HTML5InuptType"] = "text";
 
 		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+		
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
 	$edata["validateAs"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
-	
+				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
+						$edata["validateAs"]["basicValidate"][] = "IsRequired";
+		
 	
 	//	End validation
 
@@ -952,163 +530,28 @@ $tdatacensor_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacensor_report["censorUsername"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "censorUsername";
-//	entryTime
+	$tdatacensor_report["id"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "id";
+//	fileNo
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 5;
-	$fdata["strName"] = "entryTime";
-	$fdata["GoodName"] = "entryTime";
+	$fdata["Index"] = 2;
+	$fdata["strName"] = "fileNo";
+	$fdata["GoodName"] = "fileNo";
 	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","entryTime");
-	$fdata["FieldType"] = 135;
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileNo");
+	$fdata["FieldType"] = 3;
 
 
 	
 	
 			
 
-		$fdata["strField"] = "entryTime";
+		$fdata["strField"] = "fileNo";
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "entryTime";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Datetime");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Readonly");
-
-	
-		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-		$edata["autoUpdatable"] = true;
-
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["entryTime"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "entryTime";
-//	entryUserName
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 6;
-	$fdata["strName"] = "entryUserName";
-	$fdata["GoodName"] = "entryUserName";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","entryUserName");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "entryUserName";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "entryUserName";
+	$fdata["FullName"] = "fileNo";
 
 	
 	
@@ -1178,8 +621,7 @@ $tdatacensor_report[".hideMobileList"] = array();
 	$edata["validateAs"]["basicValidate"] = array();
 	$edata["validateAs"]["customMessages"] = array();
 	
-		$edata["autoUpdatable"] = true;
-
+	
 	//	End validation
 
 	
@@ -1222,174 +664,12 @@ $tdatacensor_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacensor_report["entryUserName"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "entryUserName";
-//	fileClassLevel
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 7;
-	$fdata["strName"] = "fileClassLevel";
-	$fdata["GoodName"] = "fileClassLevel";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileClassLevel");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "fileClassLevel";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileClassLevel";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Lookup wizard");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-// Begin Lookup settings
-				$edata["LookupType"] = 2;
-	$edata["LookupTable"] = "educationLevel";
-			$edata["autoCompleteFieldsOnEdit"] = 0;
-	$edata["autoCompleteFields"] = array();
-		$edata["LCType"] = 2;
-
-	
-		
-	$edata["LinkField"] = "levelName";
-	$edata["LinkFieldType"] = 0;
-	$edata["DisplayField"] = "levelName";
-
-	
-
-	
-	$edata["LookupOrderBy"] = "levelName";
-
-		$edata["LookupDesc"] = true;
-
-	
-	
-	
-
-	
-	
-	
-// End Lookup Settings
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Equals";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["fileClassLevel"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileClassLevel";
+	$tdatacensor_report["fileNo"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileNo";
 //	filedate
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 8;
+	$fdata["Index"] = 3;
 	$fdata["strName"] = "filedate";
 	$fdata["GoodName"] = "filedate";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -1525,281 +805,10 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 	$tdatacensor_report["filedate"] = $fdata;
 		$tdatacensor_report[".searchableFields"][] = "filedate";
-//	fileDuration
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 9;
-	$fdata["strName"] = "fileDuration";
-	$fdata["GoodName"] = "fileDuration";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileDuration");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "fileDuration";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileDuration";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["fileDuration"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileDuration";
-//	fileMD5
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 10;
-	$fdata["strName"] = "fileMD5";
-	$fdata["GoodName"] = "fileMD5";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileMD5");
-	$fdata["FieldType"] = 200;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "fileMD5";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileMD5";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Readonly");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["fileMD5"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileMD5";
 //	fileName
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 11;
+	$fdata["Index"] = 4;
 	$fdata["strName"] = "fileName";
 	$fdata["GoodName"] = "fileName";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -1933,148 +942,14 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 	$tdatacensor_report["fileName"] = $fdata;
 		$tdatacensor_report[".searchableFields"][] = "fileName";
-//	fileNo
+//	fileType
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 12;
-	$fdata["strName"] = "fileNo";
-	$fdata["GoodName"] = "fileNo";
+	$fdata["Index"] = 5;
+	$fdata["strName"] = "fileType";
+	$fdata["GoodName"] = "fileType";
 	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileNo");
-	$fdata["FieldType"] = 3;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "fileNo";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileNo";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Readonly");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["fileNo"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileNo";
-//	filePath
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 13;
-	$fdata["strName"] = "filePath";
-	$fdata["GoodName"] = "filePath";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","filePath");
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileType");
 	$fdata["FieldType"] = 200;
 
 
@@ -2082,11 +957,11 @@ $tdatacensor_report[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "filePath";
+		$fdata["strField"] = "fileType";
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "filePath";
+	$fdata["FullName"] = "fileType";
 
 	
 	
@@ -2202,151 +1077,16 @@ $tdatacensor_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacensor_report["filePath"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "filePath";
-//	fileRaw
+	$tdatacensor_report["fileType"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileType";
+//	fileDuration
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 14;
-	$fdata["strName"] = "fileRaw";
-	$fdata["GoodName"] = "fileRaw";
+	$fdata["Index"] = 6;
+	$fdata["strName"] = "fileDuration";
+	$fdata["GoodName"] = "fileDuration";
 	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileRaw");
-	$fdata["FieldType"] = 201;
-
-
-	
-	
-			
-
-		$fdata["strField"] = "fileRaw";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileRaw";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "Document Download");
-
-	
-	
-	
-						$vdata["ShowFileSize"] = true;
-			$vdata["ShowIcon"] = true;
-		
-	
-	
-	
-	
-	
-	
-	
-		
-	
-	
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Document upload");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-	
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-	
-	
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-	
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["fileRaw"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileRaw";
-//	fileStatus
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 15;
-	$fdata["strName"] = "fileStatus";
-	$fdata["GoodName"] = "fileStatus";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileStatus");
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileDuration");
 	$fdata["FieldType"] = 200;
 
 
@@ -2354,11 +1094,11 @@ $tdatacensor_report[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "fileStatus";
+		$fdata["strField"] = "fileDuration";
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileStatus";
+	$fdata["FullName"] = "fileDuration";
 
 	
 	
@@ -2474,12 +1214,12 @@ $tdatacensor_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacensor_report["fileStatus"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileStatus";
+	$tdatacensor_report["fileDuration"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileDuration";
 //	fileSubject
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 16;
+	$fdata["Index"] = 7;
 	$fdata["strName"] = "fileSubject";
 	$fdata["GoodName"] = "fileSubject";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -2638,14 +1378,14 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 	$tdatacensor_report["fileSubject"] = $fdata;
 		$tdatacensor_report[".searchableFields"][] = "fileSubject";
-//	fileTeacherInfo
+//	fileTitle
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 17;
-	$fdata["strName"] = "fileTeacherInfo";
-	$fdata["GoodName"] = "fileTeacherInfo";
+	$fdata["Index"] = 8;
+	$fdata["strName"] = "fileTitle";
+	$fdata["GoodName"] = "fileTitle";
 	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileTeacherInfo");
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileTitle");
 	$fdata["FieldType"] = 200;
 
 
@@ -2653,11 +1393,11 @@ $tdatacensor_report[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "fileTeacherInfo";
+		$fdata["strField"] = "fileTitle";
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileTeacherInfo";
+	$fdata["FullName"] = "fileTitle";
 
 	
 	
@@ -2773,12 +1513,174 @@ $tdatacensor_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacensor_report["fileTeacherInfo"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileTeacherInfo";
+	$tdatacensor_report["fileTitle"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileTitle";
+//	fileClassLevel
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 9;
+	$fdata["strName"] = "fileClassLevel";
+	$fdata["GoodName"] = "fileClassLevel";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileClassLevel");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "fileClassLevel";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "fileClassLevel";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+				$edata["LookupType"] = 2;
+	$edata["LookupTable"] = "educationLevel";
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 2;
+
+	
+		
+	$edata["LinkField"] = "levelName";
+	$edata["LinkFieldType"] = 0;
+	$edata["DisplayField"] = "levelName";
+
+	
+
+	
+	$edata["LookupOrderBy"] = "levelName";
+
+		$edata["LookupDesc"] = true;
+
+	
+	
+	
+
+	
+	
+	
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["fileClassLevel"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileClassLevel";
 //	fileTeacherName
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 18;
+	$fdata["Index"] = 10;
 	$fdata["strName"] = "fileTeacherName";
 	$fdata["GoodName"] = "fileTeacherName";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -2937,14 +1839,14 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 	$tdatacensor_report["fileTeacherName"] = $fdata;
 		$tdatacensor_report[".searchableFields"][] = "fileTeacherName";
-//	fileTitle
+//	fileTeacherInfo
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 19;
-	$fdata["strName"] = "fileTitle";
-	$fdata["GoodName"] = "fileTitle";
+	$fdata["Index"] = 11;
+	$fdata["strName"] = "fileTeacherInfo";
+	$fdata["GoodName"] = "fileTeacherInfo";
 	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileTitle");
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileTeacherInfo");
 	$fdata["FieldType"] = 200;
 
 
@@ -2952,11 +1854,11 @@ $tdatacensor_report[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "fileTitle";
+		$fdata["strField"] = "fileTeacherInfo";
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileTitle";
+	$fdata["FullName"] = "fileTeacherInfo";
 
 	
 	
@@ -3072,16 +1974,151 @@ $tdatacensor_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacensor_report["fileTitle"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileTitle";
-//	fileType
+	$tdatacensor_report["fileTeacherInfo"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileTeacherInfo";
+//	fileRaw
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 20;
-	$fdata["strName"] = "fileType";
-	$fdata["GoodName"] = "fileType";
+	$fdata["Index"] = 12;
+	$fdata["strName"] = "fileRaw";
+	$fdata["GoodName"] = "fileRaw";
 	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","fileType");
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileRaw");
+	$fdata["FieldType"] = 201;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "fileRaw";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "fileRaw";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Document Download");
+
+	
+	
+	
+						$vdata["ShowFileSize"] = true;
+			$vdata["ShowIcon"] = true;
+		
+	
+	
+	
+	
+	
+	
+	
+		
+	
+	
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Document upload");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["fileRaw"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileRaw";
+//	fileMD5
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 13;
+	$fdata["strName"] = "fileMD5";
+	$fdata["GoodName"] = "fileMD5";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileMD5");
 	$fdata["FieldType"] = 200;
 
 
@@ -3089,11 +2126,11 @@ $tdatacensor_report[".hideMobileList"] = array();
 	
 			
 
-		$fdata["strField"] = "fileType";
+		$fdata["strField"] = "fileMD5";
 
 	
 		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "fileType";
+	$fdata["FullName"] = "fileMD5";
 
 	
 	
@@ -3129,7 +2166,7 @@ $tdatacensor_report[".hideMobileList"] = array();
 //	Begin Edit Formats
 	$fdata["EditFormats"] = array();
 
-	$edata = array("EditFormat" => "Text field");
+	$edata = array("EditFormat" => "Readonly");
 
 	
 		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
@@ -3154,11 +2191,8 @@ $tdatacensor_report[".hideMobileList"] = array();
 	
 	
 	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-			$edata["EditParams"].= " maxlength=255";
-
+	
+	
 		$edata["controlWidth"] = 200;
 
 //	Begin validation
@@ -3209,152 +2243,12 @@ $tdatacensor_report[".hideMobileList"] = array();
 //end of Filters settings
 
 
-	$tdatacensor_report["fileType"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "fileType";
-//	id
-//	Custom field settings
-	$fdata = array();
-	$fdata["Index"] = 21;
-	$fdata["strName"] = "id";
-	$fdata["GoodName"] = "id";
-	$fdata["ownerTable"] = "mediaInfo";
-	$fdata["Label"] = GetFieldLabel("Censor_Report","id");
-	$fdata["FieldType"] = 3;
-
-
-		$fdata["AutoInc"] = true;
-
-	
-			
-
-		$fdata["strField"] = "id";
-
-	
-		$fdata["isSQLExpression"] = true;
-	$fdata["FullName"] = "id";
-
-	
-	
-				$fdata["UploadFolder"] = "files";
-
-//  Begin View Formats
-	$fdata["ViewFormats"] = array();
-
-	$vdata = array("ViewFormat" => "");
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-		
-	
-		$vdata["NeedEncode"] = true;
-
-	
-		$vdata["truncateText"] = true;
-	$vdata["NumberOfChars"] = 80;
-
-	$fdata["ViewFormats"]["report"] = $vdata;
-//  End View Formats
-
-//	Begin Edit Formats
-	$fdata["EditFormats"] = array();
-
-	$edata = array("EditFormat" => "Text field");
-
-	
-		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
-	$edata["weekdays"] = "[]";
-
-
-	
-	
-
-
-
-		$edata["IsRequired"] = true;
-
-	
-	
-	
-			$edata["acceptFileTypes"] = ".+$";
-		$edata["acceptFileTypesHtml"] = "";
-
-		$edata["maxNumberOfFiles"] = 1;
-
-	
-	
-	
-	
-			$edata["HTML5InuptType"] = "text";
-
-		$edata["EditParams"] = "";
-		
-		$edata["controlWidth"] = 200;
-
-//	Begin validation
-	$edata["validateAs"] = array();
-	$edata["validateAs"]["basicValidate"] = array();
-	$edata["validateAs"]["customMessages"] = array();
-				$edata["validateAs"]["basicValidate"][] = getJsValidatorName("Number");
-						$edata["validateAs"]["basicValidate"][] = "IsRequired";
-		
-	
-	//	End validation
-
-	
-	
-	
-	
-	
-	$fdata["EditFormats"]["search"] = $edata;
-//	End Edit Formats
-
-
-	$fdata["isSeparate"] = false;
-
-
-
-
-// the field's search options settings
-		$fdata["defaultSearchOption"] = "Contains";
-
-			// the default search options list
-				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
-// the end of search options settings
-
-
-//Filters settings
-	$fdata["filterTotals"] = 0;
-		$fdata["filterMultiSelect"] = 0;
-			$fdata["filterFormat"] = "Values list";
-		$fdata["showCollapsed"] = false;
-
-		$fdata["sortValueType"] = 0;
-		$fdata["numberOfVisibleItems"] = 10;
-
-		$fdata["filterBy"] = 0;
-
-	
-
-	
-	
-//end of Filters settings
-
-
-	$tdatacensor_report["id"] = $fdata;
-		$tdatacensor_report[".searchableFields"][] = "id";
+	$tdatacensor_report["fileMD5"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileMD5";
 //	producerName
 //	Custom field settings
 	$fdata = array();
-	$fdata["Index"] = 22;
+	$fdata["Index"] = 14;
 	$fdata["strName"] = "producerName";
 	$fdata["GoodName"] = "producerName";
 	$fdata["ownerTable"] = "mediaInfo";
@@ -3489,6 +2383,1112 @@ $tdatacensor_report[".hideMobileList"] = array();
 
 	$tdatacensor_report["producerName"] = $fdata;
 		$tdatacensor_report[".searchableFields"][] = "producerName";
+//	censorApproveTime
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 15;
+	$fdata["strName"] = "censorApproveTime";
+	$fdata["GoodName"] = "censorApproveTime";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","censorApproveTime");
+	$fdata["FieldType"] = 135;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "censorApproveTime";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "censorApproveTime";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Short Date");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Date");
+
+		$edata["ShowTime"] = true;
+
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+		$edata["DateEditType"] = 2;
+	$edata["InitialYearFactor"] = 100;
+	$edata["LastYearFactor"] = 100;
+
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["censorApproveTime"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "censorApproveTime";
+//	censorUsername
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 16;
+	$fdata["strName"] = "censorUsername";
+	$fdata["GoodName"] = "censorUsername";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","censorUsername");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "censorUsername";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "censorUsername";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["censorUsername"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "censorUsername";
+//	censoReson
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 17;
+	$fdata["strName"] = "censoReson";
+	$fdata["GoodName"] = "censoReson";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","censoReson");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "censoReson";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "censoReson";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text area");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+				$edata["nRows"] = 100;
+			$edata["nCols"] = 200;
+
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["censoReson"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "censoReson";
+//	censorStatus
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 18;
+	$fdata["strName"] = "censorStatus";
+	$fdata["GoodName"] = "censorStatus";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","censorStatus");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "censorStatus";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "censorStatus";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Lookup wizard");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+// Begin Lookup settings
+		$edata["LookupType"] = 0;
+			$edata["autoCompleteFieldsOnEdit"] = 0;
+	$edata["autoCompleteFields"] = array();
+		$edata["LCType"] = 0;
+
+	
+	
+		$edata["LookupValues"] = array();
+	$edata["LookupValues"][] = "PASS";
+	$edata["LookupValues"][] = "REJECT";
+	$edata["LookupValues"][] = "UNCENSOR";
+
+	
+		$edata["SelectSize"] = 1;
+
+// End Lookup Settings
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["censorStatus"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "censorStatus";
+//	fileStatus
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 19;
+	$fdata["strName"] = "fileStatus";
+	$fdata["GoodName"] = "fileStatus";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","fileStatus");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "fileStatus";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "fileStatus";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["fileStatus"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "fileStatus";
+//	filePath
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 20;
+	$fdata["strName"] = "filePath";
+	$fdata["GoodName"] = "filePath";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","filePath");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "filePath";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "filePath";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Text field");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+			$edata["HTML5InuptType"] = "text";
+
+		$edata["EditParams"] = "";
+			$edata["EditParams"].= " maxlength=255";
+
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+	
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["filePath"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "filePath";
+//	entryUserName
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 21;
+	$fdata["strName"] = "entryUserName";
+	$fdata["GoodName"] = "entryUserName";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","entryUserName");
+	$fdata["FieldType"] = 200;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "entryUserName";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "entryUserName";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Readonly");
+
+	
+		$edata["weekdayMessage"] = array("message" => "", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+		$edata["autoUpdatable"] = true;
+
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Contains";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Contains", "Equals", "Starts with", "More than", "Less than", "Between", "Empty", NOT_EMPTY);
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["entryUserName"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "entryUserName";
+//	entryTime
+//	Custom field settings
+	$fdata = array();
+	$fdata["Index"] = 22;
+	$fdata["strName"] = "entryTime";
+	$fdata["GoodName"] = "entryTime";
+	$fdata["ownerTable"] = "mediaInfo";
+	$fdata["Label"] = GetFieldLabel("Censor_Report","entryTime");
+	$fdata["FieldType"] = 135;
+
+
+	
+	
+			
+
+		$fdata["strField"] = "entryTime";
+
+	
+		$fdata["isSQLExpression"] = true;
+	$fdata["FullName"] = "entryTime";
+
+	
+	
+				$fdata["UploadFolder"] = "files";
+
+//  Begin View Formats
+	$fdata["ViewFormats"] = array();
+
+	$vdata = array("ViewFormat" => "Datetime");
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+	
+		$vdata["NeedEncode"] = true;
+
+	
+		$vdata["truncateText"] = true;
+	$vdata["NumberOfChars"] = 80;
+
+	$fdata["ViewFormats"]["report"] = $vdata;
+//  End View Formats
+
+//	Begin Edit Formats
+	$fdata["EditFormats"] = array();
+
+	$edata = array("EditFormat" => "Readonly");
+
+	
+		$edata["weekdayMessage"] = array("message" => "Invalid week day", "messageType" => "Text");
+	$edata["weekdays"] = "[]";
+
+
+	
+	
+
+
+
+	
+	
+	
+	
+			$edata["acceptFileTypes"] = ".+$";
+		$edata["acceptFileTypesHtml"] = "";
+
+		$edata["maxNumberOfFiles"] = 1;
+
+	
+	
+	
+	
+	
+	
+		$edata["controlWidth"] = 200;
+
+//	Begin validation
+	$edata["validateAs"] = array();
+	$edata["validateAs"]["basicValidate"] = array();
+	$edata["validateAs"]["customMessages"] = array();
+	
+		$edata["autoUpdatable"] = true;
+
+	//	End validation
+
+	
+	
+	
+	
+	
+	$fdata["EditFormats"]["search"] = $edata;
+//	End Edit Formats
+
+
+	$fdata["isSeparate"] = false;
+
+
+
+
+// the field's search options settings
+		$fdata["defaultSearchOption"] = "Equals";
+
+			// the default search options list
+				$fdata["searchOptionsList"] = array("Equals", "More than", "Less than", "Between", EMPTY_SEARCH, NOT_EMPTY );
+// the end of search options settings
+
+
+//Filters settings
+	$fdata["filterTotals"] = 0;
+		$fdata["filterMultiSelect"] = 0;
+			$fdata["filterFormat"] = "Values list";
+		$fdata["showCollapsed"] = false;
+
+		$fdata["sortValueType"] = 0;
+		$fdata["numberOfVisibleItems"] = 10;
+
+		$fdata["filterBy"] = 0;
+
+	
+
+	
+	
+//end of Filters settings
+
+
+	$tdatacensor_report["entryTime"] = $fdata;
+		$tdatacensor_report[".searchableFields"][] = "entryTime";
 
 
 $tables_data["Censor Report"]=&$tdatacensor_report;
@@ -3530,7 +3530,7 @@ function createSqlQuery_censor_report()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "censorApproveTime,  	censoReson,  	censorStatus,  	censorUsername,  	entryTime,  	entryUserName,  	fileClassLevel,  	filedate,  	fileDuration,  	fileMD5,  	fileName,  	fileNo,  	filePath,  	fileRaw,  	fileStatus,  	fileSubject,  	fileTeacherInfo,  	fileTeacherName,  	fileTitle,  	fileType,  	id,  	producerName";
+$proto0["m_strFieldList"] = "id,  	fileNo,  	filedate,  	fileName,  	fileType,  	fileDuration,  	fileSubject,  	fileTitle,  	fileClassLevel,  	fileTeacherName,  	fileTeacherInfo,  	fileRaw,  	fileMD5,  	producerName,  	censorApproveTime,  	censorUsername,  	censoReson,  	censorStatus,  	fileStatus,  	filePath,  	entryUserName,  	entryTime";
 $proto0["m_strFrom"] = "FROM mediaInfo";
 $proto0["m_strWhere"] = "";
 $proto0["m_strOrderBy"] = "";
@@ -3572,12 +3572,12 @@ $proto0["m_having"] = $obj;
 $proto0["m_fieldlist"] = array();
 						$proto6=array();
 			$obj = new SQLField(array(
-	"m_strName" => "censorApproveTime",
+	"m_strName" => "id",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto6["m_sql"] = "censorApproveTime";
+$proto6["m_sql"] = "id";
 $proto6["m_srcTableName"] = "Censor Report";
 $proto6["m_expr"]=$obj;
 $proto6["m_alias"] = "";
@@ -3586,12 +3586,12 @@ $obj = new SQLFieldListItem($proto6);
 $proto0["m_fieldlist"][]=$obj;
 						$proto8=array();
 			$obj = new SQLField(array(
-	"m_strName" => "censoReson",
+	"m_strName" => "fileNo",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto8["m_sql"] = "censoReson";
+$proto8["m_sql"] = "fileNo";
 $proto8["m_srcTableName"] = "Censor Report";
 $proto8["m_expr"]=$obj;
 $proto8["m_alias"] = "";
@@ -3600,12 +3600,12 @@ $obj = new SQLFieldListItem($proto8);
 $proto0["m_fieldlist"][]=$obj;
 						$proto10=array();
 			$obj = new SQLField(array(
-	"m_strName" => "censorStatus",
+	"m_strName" => "filedate",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto10["m_sql"] = "censorStatus";
+$proto10["m_sql"] = "filedate";
 $proto10["m_srcTableName"] = "Censor Report";
 $proto10["m_expr"]=$obj;
 $proto10["m_alias"] = "";
@@ -3614,12 +3614,12 @@ $obj = new SQLFieldListItem($proto10);
 $proto0["m_fieldlist"][]=$obj;
 						$proto12=array();
 			$obj = new SQLField(array(
-	"m_strName" => "censorUsername",
+	"m_strName" => "fileName",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto12["m_sql"] = "censorUsername";
+$proto12["m_sql"] = "fileName";
 $proto12["m_srcTableName"] = "Censor Report";
 $proto12["m_expr"]=$obj;
 $proto12["m_alias"] = "";
@@ -3628,12 +3628,12 @@ $obj = new SQLFieldListItem($proto12);
 $proto0["m_fieldlist"][]=$obj;
 						$proto14=array();
 			$obj = new SQLField(array(
-	"m_strName" => "entryTime",
+	"m_strName" => "fileType",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto14["m_sql"] = "entryTime";
+$proto14["m_sql"] = "fileType";
 $proto14["m_srcTableName"] = "Censor Report";
 $proto14["m_expr"]=$obj;
 $proto14["m_alias"] = "";
@@ -3642,12 +3642,12 @@ $obj = new SQLFieldListItem($proto14);
 $proto0["m_fieldlist"][]=$obj;
 						$proto16=array();
 			$obj = new SQLField(array(
-	"m_strName" => "entryUserName",
+	"m_strName" => "fileDuration",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto16["m_sql"] = "entryUserName";
+$proto16["m_sql"] = "fileDuration";
 $proto16["m_srcTableName"] = "Censor Report";
 $proto16["m_expr"]=$obj;
 $proto16["m_alias"] = "";
@@ -3656,12 +3656,12 @@ $obj = new SQLFieldListItem($proto16);
 $proto0["m_fieldlist"][]=$obj;
 						$proto18=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileClassLevel",
+	"m_strName" => "fileSubject",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto18["m_sql"] = "fileClassLevel";
+$proto18["m_sql"] = "fileSubject";
 $proto18["m_srcTableName"] = "Censor Report";
 $proto18["m_expr"]=$obj;
 $proto18["m_alias"] = "";
@@ -3670,12 +3670,12 @@ $obj = new SQLFieldListItem($proto18);
 $proto0["m_fieldlist"][]=$obj;
 						$proto20=array();
 			$obj = new SQLField(array(
-	"m_strName" => "filedate",
+	"m_strName" => "fileTitle",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto20["m_sql"] = "filedate";
+$proto20["m_sql"] = "fileTitle";
 $proto20["m_srcTableName"] = "Censor Report";
 $proto20["m_expr"]=$obj;
 $proto20["m_alias"] = "";
@@ -3684,12 +3684,12 @@ $obj = new SQLFieldListItem($proto20);
 $proto0["m_fieldlist"][]=$obj;
 						$proto22=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileDuration",
+	"m_strName" => "fileClassLevel",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto22["m_sql"] = "fileDuration";
+$proto22["m_sql"] = "fileClassLevel";
 $proto22["m_srcTableName"] = "Censor Report";
 $proto22["m_expr"]=$obj;
 $proto22["m_alias"] = "";
@@ -3698,12 +3698,12 @@ $obj = new SQLFieldListItem($proto22);
 $proto0["m_fieldlist"][]=$obj;
 						$proto24=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileMD5",
+	"m_strName" => "fileTeacherName",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto24["m_sql"] = "fileMD5";
+$proto24["m_sql"] = "fileTeacherName";
 $proto24["m_srcTableName"] = "Censor Report";
 $proto24["m_expr"]=$obj;
 $proto24["m_alias"] = "";
@@ -3712,12 +3712,12 @@ $obj = new SQLFieldListItem($proto24);
 $proto0["m_fieldlist"][]=$obj;
 						$proto26=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileName",
+	"m_strName" => "fileTeacherInfo",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto26["m_sql"] = "fileName";
+$proto26["m_sql"] = "fileTeacherInfo";
 $proto26["m_srcTableName"] = "Censor Report";
 $proto26["m_expr"]=$obj;
 $proto26["m_alias"] = "";
@@ -3726,12 +3726,12 @@ $obj = new SQLFieldListItem($proto26);
 $proto0["m_fieldlist"][]=$obj;
 						$proto28=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileNo",
+	"m_strName" => "fileRaw",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto28["m_sql"] = "fileNo";
+$proto28["m_sql"] = "fileRaw";
 $proto28["m_srcTableName"] = "Censor Report";
 $proto28["m_expr"]=$obj;
 $proto28["m_alias"] = "";
@@ -3740,12 +3740,12 @@ $obj = new SQLFieldListItem($proto28);
 $proto0["m_fieldlist"][]=$obj;
 						$proto30=array();
 			$obj = new SQLField(array(
-	"m_strName" => "filePath",
+	"m_strName" => "fileMD5",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto30["m_sql"] = "filePath";
+$proto30["m_sql"] = "fileMD5";
 $proto30["m_srcTableName"] = "Censor Report";
 $proto30["m_expr"]=$obj;
 $proto30["m_alias"] = "";
@@ -3754,12 +3754,12 @@ $obj = new SQLFieldListItem($proto30);
 $proto0["m_fieldlist"][]=$obj;
 						$proto32=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileRaw",
+	"m_strName" => "producerName",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto32["m_sql"] = "fileRaw";
+$proto32["m_sql"] = "producerName";
 $proto32["m_srcTableName"] = "Censor Report";
 $proto32["m_expr"]=$obj;
 $proto32["m_alias"] = "";
@@ -3768,12 +3768,12 @@ $obj = new SQLFieldListItem($proto32);
 $proto0["m_fieldlist"][]=$obj;
 						$proto34=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileStatus",
+	"m_strName" => "censorApproveTime",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto34["m_sql"] = "fileStatus";
+$proto34["m_sql"] = "censorApproveTime";
 $proto34["m_srcTableName"] = "Censor Report";
 $proto34["m_expr"]=$obj;
 $proto34["m_alias"] = "";
@@ -3782,12 +3782,12 @@ $obj = new SQLFieldListItem($proto34);
 $proto0["m_fieldlist"][]=$obj;
 						$proto36=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileSubject",
+	"m_strName" => "censorUsername",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto36["m_sql"] = "fileSubject";
+$proto36["m_sql"] = "censorUsername";
 $proto36["m_srcTableName"] = "Censor Report";
 $proto36["m_expr"]=$obj;
 $proto36["m_alias"] = "";
@@ -3796,12 +3796,12 @@ $obj = new SQLFieldListItem($proto36);
 $proto0["m_fieldlist"][]=$obj;
 						$proto38=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileTeacherInfo",
+	"m_strName" => "censoReson",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto38["m_sql"] = "fileTeacherInfo";
+$proto38["m_sql"] = "censoReson";
 $proto38["m_srcTableName"] = "Censor Report";
 $proto38["m_expr"]=$obj;
 $proto38["m_alias"] = "";
@@ -3810,12 +3810,12 @@ $obj = new SQLFieldListItem($proto38);
 $proto0["m_fieldlist"][]=$obj;
 						$proto40=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileTeacherName",
+	"m_strName" => "censorStatus",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto40["m_sql"] = "fileTeacherName";
+$proto40["m_sql"] = "censorStatus";
 $proto40["m_srcTableName"] = "Censor Report";
 $proto40["m_expr"]=$obj;
 $proto40["m_alias"] = "";
@@ -3824,12 +3824,12 @@ $obj = new SQLFieldListItem($proto40);
 $proto0["m_fieldlist"][]=$obj;
 						$proto42=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileTitle",
+	"m_strName" => "fileStatus",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto42["m_sql"] = "fileTitle";
+$proto42["m_sql"] = "fileStatus";
 $proto42["m_srcTableName"] = "Censor Report";
 $proto42["m_expr"]=$obj;
 $proto42["m_alias"] = "";
@@ -3838,12 +3838,12 @@ $obj = new SQLFieldListItem($proto42);
 $proto0["m_fieldlist"][]=$obj;
 						$proto44=array();
 			$obj = new SQLField(array(
-	"m_strName" => "fileType",
+	"m_strName" => "filePath",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto44["m_sql"] = "fileType";
+$proto44["m_sql"] = "filePath";
 $proto44["m_srcTableName"] = "Censor Report";
 $proto44["m_expr"]=$obj;
 $proto44["m_alias"] = "";
@@ -3852,12 +3852,12 @@ $obj = new SQLFieldListItem($proto44);
 $proto0["m_fieldlist"][]=$obj;
 						$proto46=array();
 			$obj = new SQLField(array(
-	"m_strName" => "id",
+	"m_strName" => "entryUserName",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto46["m_sql"] = "id";
+$proto46["m_sql"] = "entryUserName";
 $proto46["m_srcTableName"] = "Censor Report";
 $proto46["m_expr"]=$obj;
 $proto46["m_alias"] = "";
@@ -3866,12 +3866,12 @@ $obj = new SQLFieldListItem($proto46);
 $proto0["m_fieldlist"][]=$obj;
 						$proto48=array();
 			$obj = new SQLField(array(
-	"m_strName" => "producerName",
+	"m_strName" => "entryTime",
 	"m_strTable" => "mediaInfo",
 	"m_srcTableName" => "Censor Report"
 ));
 
-$proto48["m_sql"] = "producerName";
+$proto48["m_sql"] = "entryTime";
 $proto48["m_srcTableName"] = "Censor Report";
 $proto48["m_expr"]=$obj;
 $proto48["m_alias"] = "";
@@ -3885,28 +3885,28 @@ $proto50["m_link"] = "SQLL_MAIN";
 $proto51["m_strName"] = "mediaInfo";
 $proto51["m_srcTableName"] = "Censor Report";
 $proto51["m_columns"] = array();
+$proto51["m_columns"][] = "id";
+$proto51["m_columns"][] = "fileNo";
+$proto51["m_columns"][] = "filedate";
+$proto51["m_columns"][] = "fileName";
+$proto51["m_columns"][] = "fileType";
+$proto51["m_columns"][] = "fileDuration";
+$proto51["m_columns"][] = "fileSubject";
+$proto51["m_columns"][] = "fileTitle";
+$proto51["m_columns"][] = "fileClassLevel";
+$proto51["m_columns"][] = "fileTeacherName";
+$proto51["m_columns"][] = "fileTeacherInfo";
+$proto51["m_columns"][] = "fileRaw";
+$proto51["m_columns"][] = "fileMD5";
+$proto51["m_columns"][] = "producerName";
 $proto51["m_columns"][] = "censorApproveTime";
+$proto51["m_columns"][] = "censorUsername";
 $proto51["m_columns"][] = "censoReson";
 $proto51["m_columns"][] = "censorStatus";
-$proto51["m_columns"][] = "censorUsername";
-$proto51["m_columns"][] = "entryTime";
-$proto51["m_columns"][] = "entryUserName";
-$proto51["m_columns"][] = "fileClassLevel";
-$proto51["m_columns"][] = "filedate";
-$proto51["m_columns"][] = "fileDuration";
-$proto51["m_columns"][] = "fileMD5";
-$proto51["m_columns"][] = "fileName";
-$proto51["m_columns"][] = "fileNo";
-$proto51["m_columns"][] = "filePath";
-$proto51["m_columns"][] = "fileRaw";
 $proto51["m_columns"][] = "fileStatus";
-$proto51["m_columns"][] = "fileSubject";
-$proto51["m_columns"][] = "fileTeacherInfo";
-$proto51["m_columns"][] = "fileTeacherName";
-$proto51["m_columns"][] = "fileTitle";
-$proto51["m_columns"][] = "fileType";
-$proto51["m_columns"][] = "id";
-$proto51["m_columns"][] = "producerName";
+$proto51["m_columns"][] = "filePath";
+$proto51["m_columns"][] = "entryUserName";
+$proto51["m_columns"][] = "entryTime";
 $obj = new SQLTable($proto51);
 
 $proto50["m_table"] = $obj;

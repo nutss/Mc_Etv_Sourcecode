@@ -47,12 +47,14 @@ function DBLookup($sql)
   */
 class tDAL
 {
+	var $tblmc_at_192_168_1_111__confPref;
 	var $tblmc_at_192_168_1_111__educationLevel;
 	var $tblmc_at_192_168_1_111__mc_audit;
 	var $tblmc_at_192_168_1_111__mc_uggroups;
 	var $tblmc_at_192_168_1_111__mc_ugmembers;
 	var $tblmc_at_192_168_1_111__mc_ugrights;
 	var $tblmc_at_192_168_1_111__mediaInfo;
+	var $tblmc_at_192_168_1_111__mediaInfo_copy1;
 	var $tblmc_at_192_168_1_111__playlistMain;
 	var $tblmc_at_192_168_1_111__playlistSub;
 	var $tblmc_at_192_168_1_111__producer;
@@ -66,12 +68,14 @@ class tDAL
 	{
 		if($this->lstTables)
 			return;
+		$this->lstTables[] = array("name" => "confPref", "varname" => "mc_at_192_168_1_111__confPref", "altvarname" => "confPref", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "educationLevel", "varname" => "mc_at_192_168_1_111__educationLevel", "altvarname" => "educationLevel", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "mc_audit", "varname" => "mc_at_192_168_1_111__mc_audit", "altvarname" => "mc_audit", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "mc_uggroups", "varname" => "mc_at_192_168_1_111__mc_uggroups", "altvarname" => "mc_uggroups", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "mc_ugmembers", "varname" => "mc_at_192_168_1_111__mc_ugmembers", "altvarname" => "mc_ugmembers", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "mc_ugrights", "varname" => "mc_at_192_168_1_111__mc_ugrights", "altvarname" => "mc_ugrights", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "mediaInfo", "varname" => "mc_at_192_168_1_111__mediaInfo", "altvarname" => "mediaInfo", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
+		$this->lstTables[] = array("name" => "mediaInfo_copy1", "varname" => "mc_at_192_168_1_111__mediaInfo_copy1", "altvarname" => "mediaInfo_copy1", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "playlistMain", "varname" => "mc_at_192_168_1_111__playlistMain", "altvarname" => "playlistMain", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "playlistSub", "varname" => "mc_at_192_168_1_111__playlistSub", "altvarname" => "playlistSub", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");
 		$this->lstTables[] = array("name" => "producer", "varname" => "mc_at_192_168_1_111__producer", "altvarname" => "producer", "connId" => "mc_at_192_168_1_111", "schema" => "", "connName" => "mc at 192.168.200.1");

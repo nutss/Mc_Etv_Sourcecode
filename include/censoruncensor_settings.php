@@ -82,6 +82,8 @@ if(mlang_getcurrentlang()=="English")
 	$fieldLabelscensoruncensor["English"]["filePath"] = "File Path";
 	$fieldToolTipscensoruncensor["English"]["filePath"] = "";
 	$placeHolderscensoruncensor["English"]["filePath"] = "";
+	$pageTitlescensoruncensor["English"]["edit"] = "Censor Uncensor, Edit [{%fileNo}]";
+	$pageTitlescensoruncensor["English"]["view"] = "Censor Uncensor [{%fileNo}]";
 	if (count($fieldToolTipscensoruncensor["English"]))
 		$tdatacensoruncensor[".isUseToolTips"] = true;
 }
@@ -148,6 +150,8 @@ if(mlang_getcurrentlang()=="Thai")
 	$fieldLabelscensoruncensor["Thai"]["filePath"] = "ที่อยู่ไฟล์";
 	$fieldToolTipscensoruncensor["Thai"]["filePath"] = "";
 	$placeHolderscensoruncensor["Thai"]["filePath"] = "";
+	$pageTitlescensoruncensor["Thai"]["edit"] = "เซ็นเซอร์ (รอตรวจสอบ), แก้ไข [{%fileNo}]";
+	$pageTitlescensoruncensor["Thai"]["view"] = "เซ็นเซอร์ (รอตรวจสอบ) [{%fileNo}]";
 	if (count($fieldToolTipscensoruncensor["Thai"]))
 		$tdatacensoruncensor[".isUseToolTips"] = true;
 }
@@ -321,7 +325,7 @@ $tdatacensoruncensor[".orderindexes"] = array();
 
 
 
-$tdatacensoruncensor[".sqlHead"] = "SELECT id, fileNo, fileName, fileType, fileDuration, fileSubject, fileTitle, fileClassLevel, fileTeacherName, fileRaw, fileMD5, fileStatus, filePath, censorApproveTime, censorUsername, censoReson, censorStatus, entryUserName, entryTime";
+$tdatacensoruncensor[".sqlHead"] = "SELECT id,  fileNo,  fileName,  fileType,  fileDuration,  fileSubject,  fileTitle,  fileClassLevel,  fileTeacherName,  fileRaw,  fileMD5,  fileStatus,  filePath,  censorApproveTime,  censorUsername,  censoReson,  censorStatus,  entryUserName,  entryTime";
 $tdatacensoruncensor[".sqlFrom"] = "FROM mediaInfo";
 $tdatacensoruncensor[".sqlWhereExpr"] = "(censorStatus =\"UNCENSOR\")";
 $tdatacensoruncensor[".sqlTail"] = "";
@@ -3064,7 +3068,7 @@ function createSqlQuery_censoruncensor()
 {
 $proto0=array();
 $proto0["m_strHead"] = "SELECT";
-$proto0["m_strFieldList"] = "id, fileNo, fileName, fileType, fileDuration, fileSubject, fileTitle, fileClassLevel, fileTeacherName, fileRaw, fileMD5, fileStatus, filePath, censorApproveTime, censorUsername, censoReson, censorStatus, entryUserName, entryTime";
+$proto0["m_strFieldList"] = "id,  fileNo,  fileName,  fileType,  fileDuration,  fileSubject,  fileTitle,  fileClassLevel,  fileTeacherName,  fileRaw,  fileMD5,  fileStatus,  filePath,  censorApproveTime,  censorUsername,  censoReson,  censorStatus,  entryUserName,  entryTime";
 $proto0["m_strFrom"] = "FROM mediaInfo";
 $proto0["m_strWhere"] = "(censorStatus =\"UNCENSOR\")";
 $proto0["m_strOrderBy"] = "ORDER BY fileNo DESC";
@@ -3379,28 +3383,28 @@ $proto44["m_link"] = "SQLL_MAIN";
 $proto45["m_strName"] = "mediaInfo";
 $proto45["m_srcTableName"] = "censorUncensor";
 $proto45["m_columns"] = array();
+$proto45["m_columns"][] = "id";
+$proto45["m_columns"][] = "fileNo";
+$proto45["m_columns"][] = "filedate";
+$proto45["m_columns"][] = "fileName";
+$proto45["m_columns"][] = "fileType";
+$proto45["m_columns"][] = "fileDuration";
+$proto45["m_columns"][] = "fileSubject";
+$proto45["m_columns"][] = "fileTitle";
+$proto45["m_columns"][] = "fileClassLevel";
+$proto45["m_columns"][] = "fileTeacherName";
+$proto45["m_columns"][] = "fileTeacherInfo";
+$proto45["m_columns"][] = "fileRaw";
+$proto45["m_columns"][] = "fileMD5";
+$proto45["m_columns"][] = "producerName";
 $proto45["m_columns"][] = "censorApproveTime";
+$proto45["m_columns"][] = "censorUsername";
 $proto45["m_columns"][] = "censoReson";
 $proto45["m_columns"][] = "censorStatus";
-$proto45["m_columns"][] = "censorUsername";
-$proto45["m_columns"][] = "entryTime";
-$proto45["m_columns"][] = "entryUserName";
-$proto45["m_columns"][] = "fileClassLevel";
-$proto45["m_columns"][] = "filedate";
-$proto45["m_columns"][] = "fileDuration";
-$proto45["m_columns"][] = "fileMD5";
-$proto45["m_columns"][] = "fileName";
-$proto45["m_columns"][] = "fileNo";
-$proto45["m_columns"][] = "filePath";
-$proto45["m_columns"][] = "fileRaw";
 $proto45["m_columns"][] = "fileStatus";
-$proto45["m_columns"][] = "fileSubject";
-$proto45["m_columns"][] = "fileTeacherInfo";
-$proto45["m_columns"][] = "fileTeacherName";
-$proto45["m_columns"][] = "fileTitle";
-$proto45["m_columns"][] = "fileType";
-$proto45["m_columns"][] = "id";
-$proto45["m_columns"][] = "producerName";
+$proto45["m_columns"][] = "filePath";
+$proto45["m_columns"][] = "entryUserName";
+$proto45["m_columns"][] = "entryTime";
 $obj = new SQLTable($proto45);
 
 $proto44["m_table"] = $obj;
